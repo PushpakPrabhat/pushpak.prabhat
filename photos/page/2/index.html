@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photos - Your Name</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        main {
+            flex-grow: 1;
+        }
+        .g-active-tab {
+            border-bottom: 3px solid #1a73e8;
+            color: #1a73e8;
+        }
+         
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <header class="border-b border-gray-200 sticky top-0 bg-white z-10">
+        
+            <div class="p-4 flex items-center">
+                <a href="/" class="mr-4">
+                    <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" alt="Google" class="h-8">
+                </a>
+                <div class="flex-grow max-w-2xl">
+                    <div class="relative">
+                        <input type="text" value="Photos" class="w-full border border-gray-300 rounded-full py-2 px-4 pl-10 pr-12 focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm">
+                        <svg class="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                        <svg class="absolute right-4 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-500 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 14a3 3 0 0 0 3-3V5a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3z"></path><path d="M17 11a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"></path></svg>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4 ml-auto">
+                    <span class="material-symbols-outlined text-gray-500 cursor-pointer">settings</span>
+                    <svg class="h-6 w-6 text-gray-500 cursor-pointer" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z"></path></svg>
+                    <img src="https://placehold.co/40x40/1d4ed8/FFFFFF?text=BG" alt="User Avatar" class="h-8 w-8 rounded-full">
+                </div>
+            </div>
+        
+
+        <div class="px-4 md:pl-36">
+            <nav class="flex space-x-4 md:space-x-8 text-sm text-gray-500 overflow-x-auto whitespace-nowrap mobile-nav-scroll">
+                <a href="/all" class="flex items-center space-x-2 py-2 flex-shrink-0 ">
+                    <span>All</span>
+                </a>
+                <a href="/photos/" class="flex items-center space-x-2 py-2 flex-shrink-0 g-active-tab">
+                    
+                    <span>Images</span>
+                </a>
+                <a href="/videos/" class="flex items-center space-x-2 py-2 flex-shrink-0 ">
+                    
+                    <span>Videos</span>
+                </a>
+                <a href="/work/" class="flex items-center space-x-2 py-2 flex-shrink-0 ">
+                    
+                    <span>Work</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+<main>
+<div class="w-full px-4 md:px-8" x-data="{ 
+    activeFilter: 'all',
+    viewerOpen: false, 
+    activeImage: '',
+    images: [],
+    currentIndex: 0
+}">
+    <div class="flex space-x-3 overflow-x-auto py-4">
+        <a href="#" @click.prevent="activeFilter = 'all'" :class="{ 'bg-blue-500 text-white': activeFilter === 'all', 'bg-gray-100 hover:bg-gray-200': activeFilter !== 'all' }" class="px-4 py-2 rounded-full text-sm whitespace-nowrap">All</a>
+        
+        <a href="#" @click.prevent="activeFilter = 'portfolio'" :class="{ 'bg-blue-500 text-white': activeFilter === 'portfolio', 'bg-gray-100 hover:bg-gray-200': activeFilter !== 'portfolio' }" class="px-4 py-2 rounded-full text-sm whitespace-nowrap">Portfolio</a>
+        
+        <a href="#" @click.prevent="activeFilter = 'sketches'" :class="{ 'bg-blue-500 text-white': activeFilter === 'sketches', 'bg-gray-100 hover:bg-gray-200': activeFilter !== 'sketches' }" class="px-4 py-2 rounded-full text-sm whitespace-nowrap">Sketches</a>
+        
+        <a href="#" @click.prevent="activeFilter = 'digital art'" :class="{ 'bg-blue-500 text-white': activeFilter === 'digital art', 'bg-gray-100 hover:bg-gray-200': activeFilter !== 'digital art' }" class="px-4 py-2 rounded-full text-sm whitespace-nowrap">Digital Art</a>
+        
+        <a href="#" @click.prevent="activeFilter = 'logos'" :class="{ 'bg-blue-500 text-white': activeFilter === 'logos', 'bg-gray-100 hover:bg-gray-200': activeFilter !== 'logos' }" class="px-4 py-2 rounded-full text-sm whitespace-nowrap">Logos</a>
+        
+        <a href="#" @click.prevent="activeFilter = 'ui/ux'" :class="{ 'bg-blue-500 text-white': activeFilter === 'ui/ux', 'bg-gray-100 hover:bg-gray-200': activeFilter !== 'ui/ux' }" class="px-4 py-2 rounded-full text-sm whitespace-nowrap">UI/UX</a>
+        
+        <a href="#" @click.prevent="activeFilter = 'concepts'" :class="{ 'bg-blue-500 text-white': activeFilter === 'concepts', 'bg-gray-100 hover:bg-gray-200': activeFilter !== 'concepts' }" class="px-4 py-2 rounded-full text-sm whitespace-nowrap">Concepts</a>
+        
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4" x-init="images = Array.from($el.querySelectorAll('img')).map(img => ({ src: img.src, title: img.alt, permalink: img.dataset.permalink }))">
+        
+        <div class="group" x-show="activeFilter === 'all' || 'portfolio' === activeFilter">
+            <a href="#" @click.prevent="viewerOpen = true; currentIndex = 0; activeImage = images[0].src">
+                <img src="https://placehold.co/400x400/eeeeee/cccccc?text=Sketch&#43;1" alt="Morning Coffee Sketch" data-permalink="http://10.225.237.77:1313/photos/sketch-01/" class="w-full h-40 object-cover rounded-lg group-hover:shadow-lg transition-shadow">
+                <div class="mt-2 text-sm">
+                    <h3 class="text-gray-800 truncate font-medium group-hover:underline">Morning Coffee Sketch</h3>
+                    <p class="text-gray-500 truncate">Personal Collection</p>
+                </div>
+            </a>
+        </div>
+        
+    </div>
+    <div class="flex items-center justify-center space-x-2 mt-12 text-blue-800">
+    <span class="text-4xl font-light text-blue-600">G</span>
+    
+    
+        <a href="/photos/" class="flex flex-col items-center text-sm hover:text-red-600">
+            <span class="text-2xl font-light text-blue-600">o</span>
+            1
+        </a>
+    
+        <a href="/photos/page/2/" class="flex flex-col items-center text-sm text-red-600 font-bold">
+            <span class="text-2xl font-light text-yellow-500">o</span>
+            2
+        </a>
+    
+    <span class="text-4xl font-light text-green-600">g</span>
+    <span class="text-4xl font-light text-red-600">l</span>
+    <span class="text-4xl font-light text-yellow-500">e</span>
+</div>
+
+    <div x-show="viewerOpen" @keydown.window.escape="viewerOpen = false" class="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50">
+        <button @click="viewerOpen = false" class="absolute top-4 right-4 text-white text-3xl">&times;</button>
+        <button @click="currentIndex = (currentIndex - 1 + images.length) % images.length; activeImage = images[currentIndex].src" class="absolute left-4 text-white text-3xl">&#10094;</button>
+        <button @click="currentIndex = (currentIndex + 1) % images.length; activeImage = images[currentIndex].src" class="absolute right-4 text-white text-3xl">&#10095;</button>
+        
+        <div class="relative">
+            <img :src="activeImage" class="max-h-[80vh] max-w-[90vw] object-contain">
+            <div class="text-white text-center mt-2">
+                <p x-text="images[currentIndex] ? images[currentIndex].title : ''"></p>
+                <a :href="images[currentIndex] ? images[currentIndex].permalink : '#'" class="text-blue-400 hover:underline">Go to page</a>
+            </div>
+        </div>
+    </div>
+</div>
+</main>
+    <footer class="bg-gray-100 text-sm text-gray-600">
+        <div class="p-4 border-b flex items-center space-x-2 md:pl-36">
+            <span class="font-bold">India</span>
+            <span class="text-gray-500">- From your IP address - Update location</span>
+        </div>
+        <div class="p-4 flex flex-col md:flex-row md:justify-between md:pl-36">
+            <div class="flex space-x-6">
+                <a href="#" class="hover:underline">Help</a>
+                <a href="#" class="hover:underline">Send feedback</a>
+                <a href="#" class="hover:underline">Privacy</a>
+                <a href="#" class="hover:underline">Terms</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        
+        if (window.innerWidth < 768) {
+          const mobileImageSlider = document.querySelector('#mobile-image-slider');
+          
+          if (mobileImageSlider) {
+            const swiper = new Swiper(mobileImageSlider, {
+              slidesPerView: 1,
+              spaceBetween: 10,
+              pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+              },
+            });
+          }
+        }
+      });
+    </script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+/* You can add any custom CSS here if needed, but Tailwind CSS should cover most things. */
+@import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif; }
+
+/* Material Design 3 Custom Properties */
+:root {
+    --md-sys-color-primary: #1a73e8;
+    --md-sys-color-on-primary: #FFFFFF;
+    --md-sys-color-primary-container: #d9e2ff;
+    --md-sys-color-on-primary-container: #001c37;
+    --md-sys-color-secondary: #535f70;
+    --md-sys-color-on-secondary: #FFFFFF;
+    --md-sys-color-secondary-container: #d8e3f7;
+    --md-sys-color-on-secondary-container: #101c2b;
+    --md-sys-color-tertiary: #6b5778;
+    --md-sys-color-on-tertiary: #FFFFFF;
+    --md-sys-color-tertiary-container: #f2daff;
+    --md-sys-color-on-tertiary-container: #251431;
+    --md-sys-color-error: #ba1a1a;
+    --md-sys-color-on-error: #FFFFFF;
+    --md-sys-color-error-container: #ffdad6;
+    --md-sys-color-on-error-container: #410002;
+    --md-sys-color-background: #fdfcff;
+    --md-sys-color-on-background: #1a1c1e;
+    --md-sys-color-surface: #fdfcff;
+    --md-sys-color-on-surface: #1a1c1e;
+    --md-sys-color-surface-variant: #e1e2ec;
+    --md-sys-color-on-surface-variant: #44474f;
+    --md-sys-color-outline: #74777f;
+    --md-sys-color-shadow: #000000;
+    --md-sys-color-inverse-surface: #2f3033;
+    --md-sys-color-inverse-on-surface: #f1f0f4;
+    --md-sys-color-inverse-primary: #a8c8ff;
+    --md-sys-color-surface-tint-color: #1a73e8;
+    --md-sys-color-surface-tint: 0.05; /* Corresponds to Elevation Level 1 */
+}
+
+@import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif; }
+
+body {
+    background-color: var(--md-sys-color-background);
+    color: var(--md-sys-color-on-background);
+}
+
+/* Material Design 3 Button Styles */
+.m3-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 24px;
+    height: 40px;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 0.875rem;
+    letter-spacing: 0.007rem;
+    text-transform: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.m3-btn-filled {
+    background-color: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+}
+.m3-btn-filled:hover {
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.3), 0 1px 3px 1px rgba(0,0,0,0.15);
+}
+.m3-btn-filled:disabled {
+    background-color: rgba(28, 27, 31, 0.12);
+    color: rgba(28, 27, 31, 0.38);
+    cursor: not-allowed;
+}
+
+.m3-btn-outlined {
+    background-color: transparent;
+    color: var(--md-sys-color-primary);
+    border: 1px solid var(--md-sys-color-outline);
+}
+.m3-btn-outlined:hover {
+    background-color: rgba(26, 115, 232, 0.08);
+}
+.m3-btn-outlined:disabled {
+    color: rgba(28, 27, 31, 0.38);
+    border-color: rgba(28, 27, 31, 0.12);
+}
+
+.m3-btn-text {
+    background-color: transparent;
+    color: var(--md-sys-color-primary);
+    padding: 0 12px;
+}
+.m3-btn-text:hover {
+    background-color: rgba(26, 115, 232, 0.08);
+}
+.m3-btn-text:disabled {
+    color: rgba(28, 27, 31, 0.38);
+}
+
+/* Card Style */
+.m3-card {
+    background-color: var(--md-sys-color-surface);
+    border-radius: 12px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3), 0 1px 3px 1px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+/* Active Tab Indicator */
+.g-active-tab {
+    border-bottom: 3px solid var(--md-sys-color-primary);
+    color: var(--md-sys-color-primary);
+    font-weight: 500;
+}
+
+/* Prose overrides for content */
+.prose {
+    color: var(--md-sys-color-on-surface);
+}
+.prose h1, .prose h2, .prose h3 {
+    color: var(--md-sys-color-on-surface);
+}
+.prose a {
+    color: var(--md-sys-color-primary);
+}
+
+/* Custom scrollbar for the image gallery on mobile */
+.image-gallery::-webkit-scrollbar {
+    display: none;
+}
+.image-gallery {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.scroll-snap-x {
+    scroll-snap-type: x mandatory;
+}
+.scroll-snap-align-start {
+    scroll-snap-align: start;
+}
+
+/* Hide scrollbar for mobile navigation */
+.mobile-nav-scroll::-webkit-scrollbar {
+    display: none;
+}
+.mobile-nav-scroll {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+
+
+
+
+
+
