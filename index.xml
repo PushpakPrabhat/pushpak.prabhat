@@ -2,199 +2,199 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Home on Pushpak Prabhat</title>
-    <link>http://10.225.237.77:1313/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content in Home on Pushpak Prabhat</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 09 Aug 2025 01:30:00 +0530</lastBuildDate>
-    <atom:link href="http://10.225.237.77:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My First Post</title>
-      <link>http://10.225.237.77:1313/all/first-post/</link>
+      <link>http://localhost:1313/all/first-post/</link>
       <pubDate>Sat, 09 Aug 2025 01:30:00 +0530</pubDate>
-      <guid>http://10.225.237.77:1313/all/first-post/</guid>
+      <guid>http://localhost:1313/all/first-post/</guid>
       <description>&lt;p&gt;This is the summary for my first blog post. It will show up on the &amp;lsquo;All&amp;rsquo; page. The full content is inside this file.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Morning Coffee Sketch</title>
-      <link>http://10.225.237.77:1313/photos/sketch-01-copy-10/</link>
+      <link>http://localhost:1313/photos/sketch-01-copy-10/</link>
       <pubDate>Fri, 08 Aug 2025 10:00:00 +0530</pubDate>
-      <guid>http://10.225.237.77:1313/photos/sketch-01-copy-10/</guid>
+      <guid>http://localhost:1313/photos/sketch-01-copy-10/</guid>
       <description>&lt;p&gt;A quick sketch I did this morning while enjoying my coffee.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Morning Coffee Sketch</title>
-      <link>http://10.225.237.77:1313/photos/sketch-01-copy-11/</link>
+      <link>http://localhost:1313/photos/sketch-01-copy-11/</link>
       <pubDate>Fri, 08 Aug 2025 10:00:00 +0530</pubDate>
-      <guid>http://10.225.237.77:1313/photos/sketch-01-copy-11/</guid>
+      <guid>http://localhost:1313/photos/sketch-01-copy-11/</guid>
       <description>&lt;p&gt;A quick sketch I did this morning while enjoying my coffee.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Morning Coffee Sketch</title>
-      <link>http://10.225.237.77:1313/photos/sketch-01-copy-2/</link>
+      <link>http://localhost:1313/photos/sketch-01-copy-2/</link>
       <pubDate>Fri, 08 Aug 2025 10:00:00 +0530</pubDate>
-      <guid>http://10.225.237.77:1313/photos/sketch-01-copy-2/</guid>
+      <guid>http://localhost:1313/photos/sketch-01-copy-2/</guid>
       <description>&lt;p&gt;A quick sketch I did this morning while enjoying my coffee.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Morning Coffee Sketch</title>
-      <link>http://10.225.237.77:1313/photos/sketch-01-copy-3/</link>
+      <link>http://localhost:1313/photos/sketch-01-copy-3/</link>
       <pubDate>Fri, 08 Aug 2025 10:00:00 +0530</pubDate>
-      <guid>http://10.225.237.77:1313/photos/sketch-01-copy-3/</guid>
+      <guid>http://localhost:1313/photos/sketch-01-copy-3/</guid>
       <description>&lt;p&gt;A quick sketch I did this morning while enjoying my coffee.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Morning Coffee Sketch</title>
-      <link>http://10.225.237.77:1313/photos/sketch-01-copy-4/</link>
+      <link>http://localhost:1313/photos/sketch-01-copy-4/</link>
       <pubDate>Fri, 08 Aug 2025 10:00:00 +0530</pubDate>
-      <guid>http://10.225.237.77:1313/photos/sketch-01-copy-4/</guid>
+      <guid>http://localhost:1313/photos/sketch-01-copy-4/</guid>
       <description>&lt;p&gt;A quick sketch I did this morning while enjoying my coffee.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Morning Coffee Sketch</title>
-      <link>http://10.225.237.77:1313/photos/sketch-01-copy-5/</link>
+      <link>http://localhost:1313/photos/sketch-01-copy-5/</link>
       <pubDate>Fri, 08 Aug 2025 10:00:00 +0530</pubDate>
-      <guid>http://10.225.237.77:1313/photos/sketch-01-copy-5/</guid>
+      <guid>http://localhost:1313/photos/sketch-01-copy-5/</guid>
       <description>&lt;p&gt;A quick sketch I did this morning while enjoying my coffee.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Morning Coffee Sketch</title>
-      <link>http://10.225.237.77:1313/photos/sketch-01-copy-6/</link>
+      <link>http://localhost:1313/photos/sketch-01-copy-6/</link>
       <pubDate>Fri, 08 Aug 2025 10:00:00 +0530</pubDate>
-      <guid>http://10.225.237.77:1313/photos/sketch-01-copy-6/</guid>
+      <guid>http://localhost:1313/photos/sketch-01-copy-6/</guid>
       <description>&lt;p&gt;A quick sketch I did this morning while enjoying my coffee.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Morning Coffee Sketch</title>
-      <link>http://10.225.237.77:1313/photos/sketch-01-copy-7/</link>
+      <link>http://localhost:1313/photos/sketch-01-copy-7/</link>
       <pubDate>Fri, 08 Aug 2025 10:00:00 +0530</pubDate>
-      <guid>http://10.225.237.77:1313/photos/sketch-01-copy-7/</guid>
+      <guid>http://localhost:1313/photos/sketch-01-copy-7/</guid>
       <description>&lt;p&gt;A quick sketch I did this morning while enjoying my coffee.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Morning Coffee Sketch</title>
-      <link>http://10.225.237.77:1313/photos/sketch-01-copy-8/</link>
+      <link>http://localhost:1313/photos/sketch-01-copy-8/</link>
       <pubDate>Fri, 08 Aug 2025 10:00:00 +0530</pubDate>
-      <guid>http://10.225.237.77:1313/photos/sketch-01-copy-8/</guid>
+      <guid>http://localhost:1313/photos/sketch-01-copy-8/</guid>
       <description>&lt;p&gt;A quick sketch I did this morning while enjoying my coffee.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Morning Coffee Sketch</title>
-      <link>http://10.225.237.77:1313/photos/sketch-01-copy-9/</link>
+      <link>http://localhost:1313/photos/sketch-01-copy-9/</link>
       <pubDate>Fri, 08 Aug 2025 10:00:00 +0530</pubDate>
-      <guid>http://10.225.237.77:1313/photos/sketch-01-copy-9/</guid>
+      <guid>http://localhost:1313/photos/sketch-01-copy-9/</guid>
       <description>&lt;p&gt;A quick sketch I did this morning while enjoying my coffee.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Morning Coffee Sketch</title>
-      <link>http://10.225.237.77:1313/photos/sketch-01-copy/</link>
+      <link>http://localhost:1313/photos/sketch-01-copy/</link>
       <pubDate>Fri, 08 Aug 2025 10:00:00 +0530</pubDate>
-      <guid>http://10.225.237.77:1313/photos/sketch-01-copy/</guid>
+      <guid>http://localhost:1313/photos/sketch-01-copy/</guid>
       <description>&lt;p&gt;A quick sketch I did this morning while enjoying my coffee.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Nature Sketch</title>
-      <link>http://10.225.237.77:1313/photos/sketch-01/</link>
+      <link>http://localhost:1313/photos/sketch-01/</link>
       <pubDate>Fri, 08 Aug 2025 10:00:00 +0530</pubDate>
-      <guid>http://10.225.237.77:1313/photos/sketch-01/</guid>
+      <guid>http://localhost:1313/photos/sketch-01/</guid>
       <description>&lt;p&gt;A quick sketch I did this morning while enjoying my coffee.&lt;/p&gt;</description>
     </item>
     <item>
       <title>A Walk in the Park</title>
-      <link>http://10.225.237.77:1313/videos/animation-short-copy-10/</link>
+      <link>http://localhost:1313/videos/animation-short-copy-10/</link>
       <pubDate>Sun, 20 Jul 2025 15:30:00 +0530</pubDate>
-      <guid>http://10.225.237.77:1313/videos/animation-short-copy-10/</guid>
+      <guid>http://localhost:1313/videos/animation-short-copy-10/</guid>
       <description>&lt;p&gt;A short, looping animation I created to practice character movement.&lt;/p&gt;</description>
     </item>
     <item>
       <title>A Walk in the Park</title>
-      <link>http://10.225.237.77:1313/videos/animation-short-copy-11/</link>
+      <link>http://localhost:1313/videos/animation-short-copy-11/</link>
       <pubDate>Sun, 20 Jul 2025 15:30:00 +0530</pubDate>
-      <guid>http://10.225.237.77:1313/videos/animation-short-copy-11/</guid>
+      <guid>http://localhost:1313/videos/animation-short-copy-11/</guid>
       <description>&lt;p&gt;A short, looping animation I created to practice character movement.&lt;/p&gt;</description>
     </item>
     <item>
       <title>A Walk in the Park</title>
-      <link>http://10.225.237.77:1313/videos/animation-short-copy-2/</link>
+      <link>http://localhost:1313/videos/animation-short-copy-2/</link>
       <pubDate>Sun, 20 Jul 2025 15:30:00 +0530</pubDate>
-      <guid>http://10.225.237.77:1313/videos/animation-short-copy-2/</guid>
+      <guid>http://localhost:1313/videos/animation-short-copy-2/</guid>
       <description>&lt;p&gt;A short, looping animation I created to practice character movement.&lt;/p&gt;</description>
     </item>
     <item>
       <title>A Walk in the Park</title>
-      <link>http://10.225.237.77:1313/videos/animation-short-copy-3/</link>
+      <link>http://localhost:1313/videos/animation-short-copy-3/</link>
       <pubDate>Sun, 20 Jul 2025 15:30:00 +0530</pubDate>
-      <guid>http://10.225.237.77:1313/videos/animation-short-copy-3/</guid>
+      <guid>http://localhost:1313/videos/animation-short-copy-3/</guid>
       <description>&lt;p&gt;A short, looping animation I created to practice character movement.&lt;/p&gt;</description>
     </item>
     <item>
       <title>A Walk in the Park</title>
-      <link>http://10.225.237.77:1313/videos/animation-short-copy-4/</link>
+      <link>http://localhost:1313/videos/animation-short-copy-4/</link>
       <pubDate>Sun, 20 Jul 2025 15:30:00 +0530</pubDate>
-      <guid>http://10.225.237.77:1313/videos/animation-short-copy-4/</guid>
+      <guid>http://localhost:1313/videos/animation-short-copy-4/</guid>
       <description>&lt;p&gt;A short, looping animation I created to practice character movement.&lt;/p&gt;</description>
     </item>
     <item>
       <title>A Walk in the Park</title>
-      <link>http://10.225.237.77:1313/videos/animation-short-copy-5/</link>
+      <link>http://localhost:1313/videos/animation-short-copy-5/</link>
       <pubDate>Sun, 20 Jul 2025 15:30:00 +0530</pubDate>
-      <guid>http://10.225.237.77:1313/videos/animation-short-copy-5/</guid>
+      <guid>http://localhost:1313/videos/animation-short-copy-5/</guid>
       <description>&lt;p&gt;A short, looping animation I created to practice character movement.&lt;/p&gt;</description>
     </item>
     <item>
       <title>A Walk in the Park</title>
-      <link>http://10.225.237.77:1313/videos/animation-short-copy-6/</link>
+      <link>http://localhost:1313/videos/animation-short-copy-6/</link>
       <pubDate>Sun, 20 Jul 2025 15:30:00 +0530</pubDate>
-      <guid>http://10.225.237.77:1313/videos/animation-short-copy-6/</guid>
+      <guid>http://localhost:1313/videos/animation-short-copy-6/</guid>
       <description>&lt;p&gt;A short, looping animation I created to practice character movement.&lt;/p&gt;</description>
     </item>
     <item>
       <title>A Walk in the Park</title>
-      <link>http://10.225.237.77:1313/videos/animation-short-copy-7/</link>
+      <link>http://localhost:1313/videos/animation-short-copy-7/</link>
       <pubDate>Sun, 20 Jul 2025 15:30:00 +0530</pubDate>
-      <guid>http://10.225.237.77:1313/videos/animation-short-copy-7/</guid>
+      <guid>http://localhost:1313/videos/animation-short-copy-7/</guid>
       <description>&lt;p&gt;A short, looping animation I created to practice character movement.&lt;/p&gt;</description>
     </item>
     <item>
       <title>A Walk in the Park</title>
-      <link>http://10.225.237.77:1313/videos/animation-short-copy-8/</link>
+      <link>http://localhost:1313/videos/animation-short-copy-8/</link>
       <pubDate>Sun, 20 Jul 2025 15:30:00 +0530</pubDate>
-      <guid>http://10.225.237.77:1313/videos/animation-short-copy-8/</guid>
+      <guid>http://localhost:1313/videos/animation-short-copy-8/</guid>
       <description>&lt;p&gt;A short, looping animation I created to practice character movement.&lt;/p&gt;</description>
     </item>
     <item>
       <title>A Walk in the Park</title>
-      <link>http://10.225.237.77:1313/videos/animation-short-copy-9/</link>
+      <link>http://localhost:1313/videos/animation-short-copy-9/</link>
       <pubDate>Sun, 20 Jul 2025 15:30:00 +0530</pubDate>
-      <guid>http://10.225.237.77:1313/videos/animation-short-copy-9/</guid>
+      <guid>http://localhost:1313/videos/animation-short-copy-9/</guid>
       <description>&lt;p&gt;A short, looping animation I created to practice character movement.&lt;/p&gt;</description>
     </item>
     <item>
       <title>A Walk in the Park</title>
-      <link>http://10.225.237.77:1313/videos/animation-short/</link>
+      <link>http://localhost:1313/videos/animation-short/</link>
       <pubDate>Sun, 20 Jul 2025 15:30:00 +0530</pubDate>
-      <guid>http://10.225.237.77:1313/videos/animation-short/</guid>
+      <guid>http://localhost:1313/videos/animation-short/</guid>
       <description>&lt;p&gt;A short, looping animation I created to practice character movement.&lt;/p&gt;</description>
     </item>
     <item>
       <title>PrepInsta Promo</title>
-      <link>http://10.225.237.77:1313/videos/animation-short-copy/</link>
+      <link>http://localhost:1313/videos/animation-short-copy/</link>
       <pubDate>Sun, 20 Jul 2025 15:30:00 +0530</pubDate>
-      <guid>http://10.225.237.77:1313/videos/animation-short-copy/</guid>
+      <guid>http://localhost:1313/videos/animation-short-copy/</guid>
       <description>&lt;p&gt;A short, looping animation I created to practice character movement.&lt;/p&gt;</description>
     </item>
     <item>
       <title>About Me</title>
-      <link>http://10.225.237.77:1313/about/</link>
+      <link>http://localhost:1313/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://10.225.237.77:1313/about/</guid>
+      <guid>http://localhost:1313/about/</guid>
       <description>&lt;p&gt;I am a creative technologist with a passion for building beautiful and functional user experiences. My journey into the world of design and development started with a curiosity for how things work, which quickly evolved into a career dedicated to crafting elegant solutions to complex problems.&lt;/p&gt;&#xA;&lt;p&gt;Motion Designer and Video Editor with 4+ years of experience and strong leadership skills in advertising, marketing, and education.&lt;/p&gt;&#xA;&lt;p&gt;I believe that the best products are born from a deep understanding of user needs, combined with a relentless pursuit of quality and innovation.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Contact Me</title>
-      <link>http://10.225.237.77:1313/contact/</link>
+      <link>http://localhost:1313/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://10.225.237.77:1313/contact/</guid>
+      <guid>http://localhost:1313/contact/</guid>
       <description>&lt;p&gt;I&amp;rsquo;m always open to discussing new projects, creative ideas, or opportunities to be part of an ambitious vision. If you have a project in mind or just want to say hi, please get in touch.&lt;/p&gt;&#xA;&lt;p&gt;You can reach me via email at &lt;strong&gt;&lt;a href=&#34;mailto:prabhat.pushpak@gmail.com&#34;&gt;prabhat.pushpak@gmail.com&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Alternatively, you can connect with me on my social profiles. I look forward to hearing from you!&lt;/p&gt;</description>
     </item>
   </channel>

@@ -6,7 +6,7 @@
     <title>Photos - Pushpak Prabhat</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/gallery.css"> <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -91,151 +91,147 @@
         </div>
     </header>
 <main>
-<div class="w-full px-4 md:px-8" x-data="{ 
-    activeFilter: 'all',
-    viewerOpen: false, 
-    activeImage: '',
-    images: [],
-    currentIndex: 0
-}">
-    <div class="flex space-x-3 overflow-x-auto py-4">
-        <a href="#" @click.prevent="activeFilter = 'all'" :class="{ 'bg-blue-500 text-white': activeFilter === 'all', 'bg-gray-100 hover:bg-gray-200': activeFilter !== 'all' }" class="px-4 py-2 rounded-full text-sm whitespace-nowrap">All</a>
-        
-        <a href="#" @click.prevent="activeFilter = 'sketches'" :class="{ 'bg-blue-500 text-white': activeFilter === 'sketches', 'bg-gray-100 hover:bg-gray-200': activeFilter !== 'sketches' }" class="px-4 py-2 rounded-full text-sm whitespace-nowrap">Sketches</a>
-        
-        <a href="#" @click.prevent="activeFilter = 'digital art'" :class="{ 'bg-blue-500 text-white': activeFilter === 'digital art', 'bg-gray-100 hover:bg-gray-200': activeFilter !== 'digital art' }" class="px-4 py-2 rounded-full text-sm whitespace-nowrap">Digital Art</a>
-        
-        <a href="#" @click.prevent="activeFilter = 'logos'" :class="{ 'bg-blue-500 text-white': activeFilter === 'logos', 'bg-gray-100 hover:bg-gray-200': activeFilter !== 'logos' }" class="px-4 py-2 rounded-full text-sm whitespace-nowrap">Logos</a>
-        
-        <a href="#" @click.prevent="activeFilter = 'graphic design'" :class="{ 'bg-blue-500 text-white': activeFilter === 'graphic design', 'bg-gray-100 hover:bg-gray-200': activeFilter !== 'graphic design' }" class="px-4 py-2 rounded-full text-sm whitespace-nowrap">Graphic Design</a>
-        
-        <a href="#" @click.prevent="activeFilter = 'concepts'" :class="{ 'bg-blue-500 text-white': activeFilter === 'concepts', 'bg-gray-100 hover:bg-gray-200': activeFilter !== 'concepts' }" class="px-4 py-2 rounded-full text-sm whitespace-nowrap">Concepts</a>
-        
-    </div>
-    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4" x-init="images = Array.from($el.querySelectorAll('img')).map(img => ({ src: img.src, title: img.alt, permalink: img.dataset.permalink }))">
-        
-        <div class="group" x-show="activeFilter === 'all' || '' === activeFilter">
-            <a href="#" @click.prevent="viewerOpen = true; currentIndex = 0; activeImage = images[0].src">
-                <img src="/Images/p3.JPG" alt="Morning Coffee Sketch" data-permalink="http://10.225.237.77:1313/photos/sketch-01-copy-10/" class="w-full h-40 object-cover rounded-lg group-hover:shadow-lg transition-shadow">
-                <div class="mt-2 text-sm">
-                    <h3 class="text-gray-800 truncate font-medium group-hover:underline">Morning Coffee Sketch</h3>
-                    <p class="text-gray-500 truncate">Personal Collection</p>
-                </div>
-            </a>
+
+<div class="flex h-full">
+    <div id="gallery-container" class="w-full p-4 transition-all duration-300" x-data="{ activeFilter: 'all' }">
+        <div class="flex space-x-3 overflow-x-auto py-4">
+            <a href="#" @click.prevent="activeFilter = 'all'" :class="{ 'bg-blue-500 text-white': activeFilter === 'all', 'bg-gray-100 hover:bg-gray-200': activeFilter !== 'all' }" class="px-4 py-2 rounded-full text-sm whitespace-nowrap">All</a>
+            
+            <a href="#" @click.prevent="activeFilter = 'sketches'" :class="{ 'bg-blue-500 text-white': activeFilter === 'sketches', 'bg-gray-100 hover:bg-gray-200': activeFilter !== 'sketches' }" class="px-4 py-2 rounded-full text-sm whitespace-nowrap">Sketches</a>
+            
+            <a href="#" @click.prevent="activeFilter = 'digital art'" :class="{ 'bg-blue-500 text-white': activeFilter === 'digital art', 'bg-gray-100 hover:bg-gray-200': activeFilter !== 'digital art' }" class="px-4 py-2 rounded-full text-sm whitespace-nowrap">Digital Art</a>
+            
+            <a href="#" @click.prevent="activeFilter = 'logos'" :class="{ 'bg-blue-500 text-white': activeFilter === 'logos', 'bg-gray-100 hover:bg-gray-200': activeFilter !== 'logos' }" class="px-4 py-2 rounded-full text-sm whitespace-nowrap">Logos</a>
+            
+            <a href="#" @click.prevent="activeFilter = 'graphic design'" :class="{ 'bg-blue-500 text-white': activeFilter === 'graphic design', 'bg-gray-100 hover:bg-gray-200': activeFilter !== 'graphic design' }" class="px-4 py-2 rounded-full text-sm whitespace-nowrap">Graphic Design</a>
+            
+            <a href="#" @click.prevent="activeFilter = 'concepts'" :class="{ 'bg-blue-500 text-white': activeFilter === 'concepts', 'bg-gray-100 hover:bg-gray-200': activeFilter !== 'concepts' }" class="px-4 py-2 rounded-full text-sm whitespace-nowrap">Concepts</a>
+            
         </div>
-        
-        <div class="group" x-show="activeFilter === 'all' || '' === activeFilter">
-            <a href="#" @click.prevent="viewerOpen = true; currentIndex = 1; activeImage = images[1].src">
-                <img src="/Images/p3.JPG" alt="Morning Coffee Sketch" data-permalink="http://10.225.237.77:1313/photos/sketch-01-copy-11/" class="w-full h-40 object-cover rounded-lg group-hover:shadow-lg transition-shadow">
-                <div class="mt-2 text-sm">
-                    <h3 class="text-gray-800 truncate font-medium group-hover:underline">Morning Coffee Sketch</h3>
-                    <p class="text-gray-500 truncate">Personal Collection</p>
-                </div>
-            </a>
+        <div id="gallery" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
+            
+            <div class="group gallery-item" x-show="activeFilter === 'all' || '' === activeFilter">
+                <a href="#" @click.prevent="openModal(0)">
+                    <img src="/Images/p3.JPG" alt="Morning Coffee Sketch" data-permalink="http://localhost:1313/photos/sketch-01-copy-10/" data-description="A quick sketch I did this morning while enjoying my coffee." data-category="" data-source="Personal Collection" class="w-full h-48 object-cover gallery-img">
+                    <div class="mt-2 text-sm">
+                        <h3 class="text-gray-800 truncate font-medium group-hover:underline">Morning Coffee Sketch</h3>
+                        <p class="text-gray-500 truncate"></p>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="group gallery-item" x-show="activeFilter === 'all' || '' === activeFilter">
+                <a href="#" @click.prevent="openModal(1)">
+                    <img src="/Images/p3.JPG" alt="Morning Coffee Sketch" data-permalink="http://localhost:1313/photos/sketch-01-copy-11/" data-description="A quick sketch I did this morning while enjoying my coffee." data-category="" data-source="Personal Collection" class="w-full h-48 object-cover gallery-img">
+                    <div class="mt-2 text-sm">
+                        <h3 class="text-gray-800 truncate font-medium group-hover:underline">Morning Coffee Sketch</h3>
+                        <p class="text-gray-500 truncate"></p>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="group gallery-item" x-show="activeFilter === 'all' || 'logos' === activeFilter">
+                <a href="#" @click.prevent="openModal(2)">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpc28b1PoQfqoueAB4gLph_lBW1t4oX8fmUQ&amp;s" alt="Morning Coffee Sketch" data-permalink="http://localhost:1313/photos/sketch-01-copy-2/" data-description="A quick sketch I did this morning while enjoying my coffee." data-category="Logos" data-source="Personal Collection" class="w-full h-48 object-cover gallery-img">
+                    <div class="mt-2 text-sm">
+                        <h3 class="text-gray-800 truncate font-medium group-hover:underline">Morning Coffee Sketch</h3>
+                        <p class="text-gray-500 truncate">Logos</p>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="group gallery-item" x-show="activeFilter === 'all' || 'digital art' === activeFilter">
+                <a href="#" @click.prevent="openModal(3)">
+                    <img src="https://placehold.co/400x400/eeeeee/cccccc?text=Sketch&#43;1" alt="Morning Coffee Sketch" data-permalink="http://localhost:1313/photos/sketch-01-copy-3/" data-description="A quick sketch I did this morning while enjoying my coffee." data-category="Digital Art" data-source="Personal Collection" class="w-full h-48 object-cover gallery-img">
+                    <div class="mt-2 text-sm">
+                        <h3 class="text-gray-800 truncate font-medium group-hover:underline">Morning Coffee Sketch</h3>
+                        <p class="text-gray-500 truncate">Digital Art</p>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="group gallery-item" x-show="activeFilter === 'all' || 'graphic design' === activeFilter">
+                <a href="#" @click.prevent="openModal(4)">
+                    <img src="/Images/p3.JPG" alt="Morning Coffee Sketch" data-permalink="http://localhost:1313/photos/sketch-01-copy-4/" data-description="A quick sketch I did this morning while enjoying my coffee." data-category="Graphic Design" data-source="Personal Collection" class="w-full h-48 object-cover gallery-img">
+                    <div class="mt-2 text-sm">
+                        <h3 class="text-gray-800 truncate font-medium group-hover:underline">Morning Coffee Sketch</h3>
+                        <p class="text-gray-500 truncate">Graphic Design</p>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="group gallery-item" x-show="activeFilter === 'all' || 'concepts' === activeFilter">
+                <a href="#" @click.prevent="openModal(5)">
+                    <img src="/Images/p2.JPG" alt="Morning Coffee Sketch" data-permalink="http://localhost:1313/photos/sketch-01-copy-5/" data-description="A quick sketch I did this morning while enjoying my coffee." data-category="Concepts" data-source="Personal Collection" class="w-full h-48 object-cover gallery-img">
+                    <div class="mt-2 text-sm">
+                        <h3 class="text-gray-800 truncate font-medium group-hover:underline">Morning Coffee Sketch</h3>
+                        <p class="text-gray-500 truncate">Concepts</p>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="group gallery-item" x-show="activeFilter === 'all' || '' === activeFilter">
+                <a href="#" @click.prevent="openModal(6)">
+                    <img src="/Images/p1.JPG" alt="Morning Coffee Sketch" data-permalink="http://localhost:1313/photos/sketch-01-copy-6/" data-description="A quick sketch I did this morning while enjoying my coffee." data-category="" data-source="Personal Collection" class="w-full h-48 object-cover gallery-img">
+                    <div class="mt-2 text-sm">
+                        <h3 class="text-gray-800 truncate font-medium group-hover:underline">Morning Coffee Sketch</h3>
+                        <p class="text-gray-500 truncate"></p>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="group gallery-item" x-show="activeFilter === 'all' || '' === activeFilter">
+                <a href="#" @click.prevent="openModal(7)">
+                    <img src="/Images/p2.JPG" alt="Morning Coffee Sketch" data-permalink="http://localhost:1313/photos/sketch-01-copy-7/" data-description="A quick sketch I did this morning while enjoying my coffee." data-category="" data-source="Personal Collection" class="w-full h-48 object-cover gallery-img">
+                    <div class="mt-2 text-sm">
+                        <h3 class="text-gray-800 truncate font-medium group-hover:underline">Morning Coffee Sketch</h3>
+                        <p class="text-gray-500 truncate"></p>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="group gallery-item" x-show="activeFilter === 'all' || '' === activeFilter">
+                <a href="#" @click.prevent="openModal(8)">
+                    <img src="/Images/p3.JPG" alt="Morning Coffee Sketch" data-permalink="http://localhost:1313/photos/sketch-01-copy-8/" data-description="A quick sketch I did this morning while enjoying my coffee." data-category="" data-source="Personal Collection" class="w-full h-48 object-cover gallery-img">
+                    <div class="mt-2 text-sm">
+                        <h3 class="text-gray-800 truncate font-medium group-hover:underline">Morning Coffee Sketch</h3>
+                        <p class="text-gray-500 truncate"></p>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="group gallery-item" x-show="activeFilter === 'all' || '' === activeFilter">
+                <a href="#" @click.prevent="openModal(9)">
+                    <img src="/Images/p1.JPG" alt="Morning Coffee Sketch" data-permalink="http://localhost:1313/photos/sketch-01-copy-9/" data-description="A quick sketch I did this morning while enjoying my coffee." data-category="" data-source="Personal Collection" class="w-full h-48 object-cover gallery-img">
+                    <div class="mt-2 text-sm">
+                        <h3 class="text-gray-800 truncate font-medium group-hover:underline">Morning Coffee Sketch</h3>
+                        <p class="text-gray-500 truncate"></p>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="group gallery-item" x-show="activeFilter === 'all' || '' === activeFilter">
+                <a href="#" @click.prevent="openModal(10)">
+                    <img src="/Images/p2.JPG" alt="Morning Coffee Sketch" data-permalink="http://localhost:1313/photos/sketch-01-copy/" data-description="A quick sketch I did this morning while enjoying my coffee." data-category="" data-source="Personal Collection" class="w-full h-48 object-cover gallery-img">
+                    <div class="mt-2 text-sm">
+                        <h3 class="text-gray-800 truncate font-medium group-hover:underline">Morning Coffee Sketch</h3>
+                        <p class="text-gray-500 truncate"></p>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="group gallery-item" x-show="activeFilter === 'all' || 'sketches' === activeFilter">
+                <a href="#" @click.prevent="openModal(11)">
+                    <img src="/Images/p1.JPG" alt="Nature Sketch" data-permalink="http://localhost:1313/photos/sketch-01/" data-description="A quick sketch I did this morning while enjoying my coffee." data-category="Sketches" data-source="Personal Collection" class="w-full h-48 object-cover gallery-img">
+                    <div class="mt-2 text-sm">
+                        <h3 class="text-gray-800 truncate font-medium group-hover:underline">Nature Sketch</h3>
+                        <p class="text-gray-500 truncate">Sketches</p>
+                    </div>
+                </a>
+            </div>
+            
         </div>
-        
-        <div class="group" x-show="activeFilter === 'all' || 'logos' === activeFilter">
-            <a href="#" @click.prevent="viewerOpen = true; currentIndex = 2; activeImage = images[2].src">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpc28b1PoQfqoueAB4gLph_lBW1t4oX8fmUQ&amp;s" alt="Morning Coffee Sketch" data-permalink="http://10.225.237.77:1313/photos/sketch-01-copy-2/" class="w-full h-40 object-cover rounded-lg group-hover:shadow-lg transition-shadow">
-                <div class="mt-2 text-sm">
-                    <h3 class="text-gray-800 truncate font-medium group-hover:underline">Morning Coffee Sketch</h3>
-                    <p class="text-gray-500 truncate">Personal Collection</p>
-                </div>
-            </a>
-        </div>
-        
-        <div class="group" x-show="activeFilter === 'all' || 'digital art' === activeFilter">
-            <a href="#" @click.prevent="viewerOpen = true; currentIndex = 3; activeImage = images[3].src">
-                <img src="https://placehold.co/400x400/eeeeee/cccccc?text=Sketch&#43;1" alt="Morning Coffee Sketch" data-permalink="http://10.225.237.77:1313/photos/sketch-01-copy-3/" class="w-full h-40 object-cover rounded-lg group-hover:shadow-lg transition-shadow">
-                <div class="mt-2 text-sm">
-                    <h3 class="text-gray-800 truncate font-medium group-hover:underline">Morning Coffee Sketch</h3>
-                    <p class="text-gray-500 truncate">Personal Collection</p>
-                </div>
-            </a>
-        </div>
-        
-        <div class="group" x-show="activeFilter === 'all' || 'graphic design' === activeFilter">
-            <a href="#" @click.prevent="viewerOpen = true; currentIndex = 4; activeImage = images[4].src">
-                <img src="/Images/p3.JPG" alt="Morning Coffee Sketch" data-permalink="http://10.225.237.77:1313/photos/sketch-01-copy-4/" class="w-full h-40 object-cover rounded-lg group-hover:shadow-lg transition-shadow">
-                <div class="mt-2 text-sm">
-                    <h3 class="text-gray-800 truncate font-medium group-hover:underline">Morning Coffee Sketch</h3>
-                    <p class="text-gray-500 truncate">Personal Collection</p>
-                </div>
-            </a>
-        </div>
-        
-        <div class="group" x-show="activeFilter === 'all' || 'concepts' === activeFilter">
-            <a href="#" @click.prevent="viewerOpen = true; currentIndex = 5; activeImage = images[5].src">
-                <img src="/Images/p2.JPG" alt="Morning Coffee Sketch" data-permalink="http://10.225.237.77:1313/photos/sketch-01-copy-5/" class="w-full h-40 object-cover rounded-lg group-hover:shadow-lg transition-shadow">
-                <div class="mt-2 text-sm">
-                    <h3 class="text-gray-800 truncate font-medium group-hover:underline">Morning Coffee Sketch</h3>
-                    <p class="text-gray-500 truncate">Personal Collection</p>
-                </div>
-            </a>
-        </div>
-        
-        <div class="group" x-show="activeFilter === 'all' || '' === activeFilter">
-            <a href="#" @click.prevent="viewerOpen = true; currentIndex = 6; activeImage = images[6].src">
-                <img src="/Images/p1.JPG" alt="Morning Coffee Sketch" data-permalink="http://10.225.237.77:1313/photos/sketch-01-copy-6/" class="w-full h-40 object-cover rounded-lg group-hover:shadow-lg transition-shadow">
-                <div class="mt-2 text-sm">
-                    <h3 class="text-gray-800 truncate font-medium group-hover:underline">Morning Coffee Sketch</h3>
-                    <p class="text-gray-500 truncate">Personal Collection</p>
-                </div>
-            </a>
-        </div>
-        
-        <div class="group" x-show="activeFilter === 'all' || '' === activeFilter">
-            <a href="#" @click.prevent="viewerOpen = true; currentIndex = 7; activeImage = images[7].src">
-                <img src="/Images/p2.JPG" alt="Morning Coffee Sketch" data-permalink="http://10.225.237.77:1313/photos/sketch-01-copy-7/" class="w-full h-40 object-cover rounded-lg group-hover:shadow-lg transition-shadow">
-                <div class="mt-2 text-sm">
-                    <h3 class="text-gray-800 truncate font-medium group-hover:underline">Morning Coffee Sketch</h3>
-                    <p class="text-gray-500 truncate">Personal Collection</p>
-                </div>
-            </a>
-        </div>
-        
-        <div class="group" x-show="activeFilter === 'all' || '' === activeFilter">
-            <a href="#" @click.prevent="viewerOpen = true; currentIndex = 8; activeImage = images[8].src">
-                <img src="/Images/p3.JPG" alt="Morning Coffee Sketch" data-permalink="http://10.225.237.77:1313/photos/sketch-01-copy-8/" class="w-full h-40 object-cover rounded-lg group-hover:shadow-lg transition-shadow">
-                <div class="mt-2 text-sm">
-                    <h3 class="text-gray-800 truncate font-medium group-hover:underline">Morning Coffee Sketch</h3>
-                    <p class="text-gray-500 truncate">Personal Collection</p>
-                </div>
-            </a>
-        </div>
-        
-        <div class="group" x-show="activeFilter === 'all' || '' === activeFilter">
-            <a href="#" @click.prevent="viewerOpen = true; currentIndex = 9; activeImage = images[9].src">
-                <img src="/Images/p1.JPG" alt="Morning Coffee Sketch" data-permalink="http://10.225.237.77:1313/photos/sketch-01-copy-9/" class="w-full h-40 object-cover rounded-lg group-hover:shadow-lg transition-shadow">
-                <div class="mt-2 text-sm">
-                    <h3 class="text-gray-800 truncate font-medium group-hover:underline">Morning Coffee Sketch</h3>
-                    <p class="text-gray-500 truncate">Personal Collection</p>
-                </div>
-            </a>
-        </div>
-        
-        <div class="group" x-show="activeFilter === 'all' || '' === activeFilter">
-            <a href="#" @click.prevent="viewerOpen = true; currentIndex = 10; activeImage = images[10].src">
-                <img src="/Images/p2.JPG" alt="Morning Coffee Sketch" data-permalink="http://10.225.237.77:1313/photos/sketch-01-copy/" class="w-full h-40 object-cover rounded-lg group-hover:shadow-lg transition-shadow">
-                <div class="mt-2 text-sm">
-                    <h3 class="text-gray-800 truncate font-medium group-hover:underline">Morning Coffee Sketch</h3>
-                    <p class="text-gray-500 truncate">Personal Collection</p>
-                </div>
-            </a>
-        </div>
-        
-        <div class="group" x-show="activeFilter === 'all' || 'sketches' === activeFilter">
-            <a href="#" @click.prevent="viewerOpen = true; currentIndex = 11; activeImage = images[11].src">
-                <img src="/Images/p1.JPG" alt="Nature Sketch" data-permalink="http://10.225.237.77:1313/photos/sketch-01/" class="w-full h-40 object-cover rounded-lg group-hover:shadow-lg transition-shadow">
-                <div class="mt-2 text-sm">
-                    <h3 class="text-gray-800 truncate font-medium group-hover:underline">Nature Sketch</h3>
-                    <p class="text-gray-500 truncate">Personal Collection</p>
-                </div>
-            </a>
-        </div>
-        
-    </div>
-    <div class="flex items-center justify-center space-x-2 mt-12 text-blue-800">
+        <div class="flex items-center justify-center space-x-2 mt-12 text-blue-800">
     <span class="text-4xl font-light text-blue-600">G</span>
     
     
@@ -248,21 +244,53 @@
     <span class="text-4xl font-light text-red-600">l</span>
     <span class="text-4xl font-light text-yellow-500">e</span>
 </div>
+    </div>
 
-    <div x-show="viewerOpen" @keydown.window.escape="viewerOpen = false" class="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50">
-        <button @click="viewerOpen = false" class="absolute top-4 right-4 text-white text-3xl">&times;</button>
-        <button @click="currentIndex = (currentIndex - 1 + images.length) % images.length; activeImage = images[currentIndex].src" class="absolute left-4 text-white text-3xl">&#10094;</button>
-        <button @click="currentIndex = (currentIndex + 1) % images.length; activeImage = images[currentIndex].src" class="absolute right-4 text-white text-3xl">&#10095;</button>
-        
-        <div class="relative">
-            <img :src="activeImage" class="max-h-[80vh] max-w-[90vw] object-contain">
-            <div class="text-white text-center mt-2">
-                <p x-text="images[currentIndex] ? images[currentIndex].title : ''"></p>
-                <a :href="images[currentIndex] ? images[currentIndex].permalink : '#'" class="text-blue-400 hover:underline">Go to page</a>
+    <div id="viewer-pane" class="fixed inset-0 bg-black bg-opacity-50 md:bg-transparent md:static md:w-[450px] lg:w-[550px] md:h-full md:border-l md:border-gray-200 flex-shrink-0 transform hidden">
+        <div id="viewer-content" class="bg-white w-full h-full overflow-y-auto">
+            <div class="sticky top-0 z-10 p-3 flex justify-between items-center bg-white border-b border-gray-200">
+                <div class="flex items-center space-x-3">
+                    <div id="sourceIcon" class="w-6 h-6 bg-gray-200 rounded-full flex items-center justify-center text-sm font-bold text-gray-600"></div>
+                    <span id="sourceName" class="text-sm text-gray-600 truncate">Source Name</span>
+                </div>
+                <button id="close-viewer" class="p-2 rounded-full hover:bg-gray-100" title="Close">
+                    <svg class="w-5 h-5 text-gray-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                </button>
+            </div>
+
+            <div class="relative bg-gray-100 group">
+                <img id="viewer-image" src="" alt="Selected image" class="w-full h-auto max-h-[70vh] object-contain">
+                <button id="prev-btn" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+                    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                </button>
+                <button id="next-btn" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+                    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+            </div>
+
+            <div class="p-4">
+                <h2 id="image-title" class="font-semibold text-lg">Image Title</h2>
+                <a id="visit-link" href="#" class="inline-block mt-3 px-8 py-2 bg-[#1a73e8] text-white rounded-full text-sm font-medium hover:bg-blue-700">Visit</a>
+                
+                <div class="mt-4 flex space-x-2">
+                    <button id="share-btn" class="flex-1 flex items-center justify-center space-x-2 py-2 bg-gray-100 rounded-full text-sm font-medium hover:bg-gray-200">
+                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg>
+                        <span>Share</span>
+                    </button>
+                    <button id="save-btn" class="flex-1 flex items-center justify-center space-x-2 py-2 bg-gray-100 rounded-full text-sm font-medium hover:bg-gray-200">
+                         <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>
+                        <span>Save</span>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+<div id="messageBox" class="fixed bottom-5 left-1/2 -translate-x-1/2 bg-gray-800 text-white px-4 py-2 rounded-md shadow-lg opacity-0 transition-opacity duration-300 z-50">
+    Link copied to clipboard!
+</div>
+
 </main>
     <footer class="bg-gray-100 text-sm text-gray-600">
         <div class="p-4 border-b flex items-center space-x-2 md:pl-36">
@@ -279,7 +307,7 @@
         </div>
     </footer>
 
-    <script>
+    <script src="/js/gallery.js"></script> <script>
       document.addEventListener('DOMContentLoaded', () => {
         
         if (window.innerWidth < 768) {

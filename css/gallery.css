@@ -1,0 +1,44 @@
+/* Custom styles for the image viewer */
+#viewer-content::-webkit-scrollbar {
+    width: 8px;
+}
+#viewer-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+#viewer-content::-webkit-scrollbar-thumb {
+    background: #5f6368;
+    border-radius: 4px;
+}
+#viewer-content::-webkit-scrollbar-thumb:hover {
+    background: #7c8186;
+}
+
+/* Transition for the viewer pane */
+#viewer-pane {
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Prevent background scroll ONLY on mobile when modal is open */
+@media (max-width: 767px) {
+
+    .body-no-scroll {
+        overflow: hidden;
+    }
+#viewer-pane {
+  z-index: 50;
+}
+
+}
+
+/* Image gallery styles */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+.gallery-img {
+    transition: transform 0.3s ease;
+}
+.gallery-item:hover .gallery-img {
+    transform: scale(1.05);
+}
