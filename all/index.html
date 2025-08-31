@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All Results - Pushpak Prabhat</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/gallery.css"> <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/gallery.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -30,6 +31,12 @@
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
             font-size: 24px;
+        }
+        .line-clamp-2 {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
         }
     </style>
 </head>
@@ -73,6 +80,7 @@
         <div class="px-4 md:pl-36">
             <nav class="flex space-x-4 md:space-x-8 text-sm text-gray-500 overflow-x-auto whitespace-nowrap mobile-nav-scroll">
                 <a href="/all" class="flex items-center space-x-2 py-2 flex-shrink-0 g-active-tab">
+                    <span class="material-symbols-outlined" style="font-size: 16px;">search</span>
                     <span>All</span>
                 </a>
                 <a href="/photos/" class="flex items-center space-x-2 py-2 flex-shrink-0 ">
@@ -128,6 +136,7 @@
             </div>
             </div>
 
+            
         
         <div class="hidden md:block md:col-span-1 md:row-span-2 relative overflow-hidden rounded-lg">
             <div class="h-full w-full bg-cover bg-center" style="background-image: url('/Images/p1.JPG');">
@@ -264,6 +273,7 @@
             </div>
             </div>
 
+            
         
         <div class="hidden md:block md:col-span-1 md:row-span-2 relative overflow-hidden rounded-lg">
             <div class="h-full w-full bg-cover bg-center" style="background-image: url('/Images/p1.JPG');">
@@ -338,13 +348,13 @@
                     
                     <div class="mb-8 bg-white">
                         <div class="flex items-center text-sm mb-1">
-                            <img src="https://www.google.com/s2/favicons?domain=http%3a%2f%2flocalhost%3a1313%2fall%2ffirst-post%2f" alt="Favicon" class="w-6 h-6 mr-2 rounded-full">
+                            <img src="https://www.google.com/s2/favicons?domain=https%3a%2f%2fpushpak.prabhat.co%2fall%2ffirst-post%2f" alt="Favicon" class="w-6 h-6 mr-2 rounded-full">
                             <div>
                                 <p class="font-semibold">Pushpak Prabhat</p>
-                                <p class="text-xs text-gray-500 break-all">http://localhost:1313/all/first-post/</p>
+                                <p class="text-xs text-gray-500 break-all">https://pushpak.prabhat.co/all/first-post/</p>
                             </div>
                         </div>
-                        <a href="http://localhost:1313/all/first-post/" class="text-xl text-blue-800 hover:underline">
+                        <a href="https://pushpak.prabhat.co/all/first-post/" class="text-xl text-blue-800 hover:underline">
                             <h3>My First Post</h3>
                         </a>
                         <p class="mt-2 text-gray-800"><p>This is the summary for my first blog post. It will show up on the &lsquo;All&rsquo; page. The full content is inside this file.</p></p>
@@ -466,25 +476,11 @@
             </div>
         </div>
     </footer>
+    
+    <div id="messageBox" class="fixed bottom-5 left-1/2 -translate-x-1/2 bg-gray-800 text-white px-4 py-2 rounded-md shadow-lg opacity-0 transition-opacity duration-300 z-[101]">
+        Link copied to clipboard!
+    </div>
 
-    <script src="/js/gallery.js"></script> <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        
-        if (window.innerWidth < 768) {
-          const mobileImageSlider = document.querySelector('#mobile-image-slider');
-          
-          if (mobileImageSlider) {
-            const swiper = new Swiper(mobileImageSlider, {
-              slidesPerView: 1,
-              spaceBetween: 10,
-              pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-              },
-            });
-          }
-        }
-      });
-    </script>
+    <script src="/js/gallery.js"></script>
 </body>
 </html>

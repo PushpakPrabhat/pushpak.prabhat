@@ -2,101 +2,83 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/all/</loc>
+    <loc>https://pushpak.prabhat.co/all/</loc>
     <lastmod>2025-08-09T01:30:00+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://pushpak.prabhat.co/</loc>
     <lastmod>2025-08-09T01:30:00+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/all/first-post/</loc>
+    <loc>https://pushpak.prabhat.co/all/first-post/</loc>
     <lastmod>2025-08-09T01:30:00+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/photos/sketch-01-copy-10/</loc>
+    <loc>https://pushpak.prabhat.co/photos/</loc>
     <lastmod>2025-08-08T10:00:00+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/photos/sketch-01-copy-11/</loc>
+    <loc>https://pushpak.prabhat.co/photos/sketch-01-copy-10/</loc>
     <lastmod>2025-08-08T10:00:00+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/photos/sketch-01-copy-2/</loc>
+    <loc>https://pushpak.prabhat.co/photos/sketch-01-copy-11/</loc>
     <lastmod>2025-08-08T10:00:00+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/photos/sketch-01-copy-3/</loc>
+    <loc>https://pushpak.prabhat.co/photos/sketch-01-copy-12/</loc>
     <lastmod>2025-08-08T10:00:00+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/photos/sketch-01-copy-4/</loc>
+    <loc>https://pushpak.prabhat.co/photos/sketch-01-copy-2/</loc>
     <lastmod>2025-08-08T10:00:00+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/photos/sketch-01-copy-5/</loc>
+    <loc>https://pushpak.prabhat.co/photos/sketch-01-copy-3/</loc>
     <lastmod>2025-08-08T10:00:00+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/photos/sketch-01-copy-6/</loc>
+    <loc>https://pushpak.prabhat.co/photos/sketch-01-copy-4/</loc>
     <lastmod>2025-08-08T10:00:00+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/photos/sketch-01-copy-7/</loc>
+    <loc>https://pushpak.prabhat.co/photos/sketch-01-copy-5/</loc>
     <lastmod>2025-08-08T10:00:00+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/photos/sketch-01-copy-8/</loc>
+    <loc>https://pushpak.prabhat.co/photos/sketch-01-copy-6/</loc>
     <lastmod>2025-08-08T10:00:00+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/photos/sketch-01-copy-9/</loc>
+    <loc>https://pushpak.prabhat.co/photos/sketch-01-copy-7/</loc>
     <lastmod>2025-08-08T10:00:00+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/photos/sketch-01-copy/</loc>
+    <loc>https://pushpak.prabhat.co/photos/sketch-01-copy-8/</loc>
     <lastmod>2025-08-08T10:00:00+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/photos/sketch-01/</loc>
+    <loc>https://pushpak.prabhat.co/photos/sketch-01-copy-9/</loc>
     <lastmod>2025-08-08T10:00:00+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/photos/</loc>
+    <loc>https://pushpak.prabhat.co/photos/sketch-01-copy/</loc>
     <lastmod>2025-08-08T10:00:00+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/videos/animation-short-copy-10/</loc>
+    <loc>https://pushpak.prabhat.co/photos/sketch-01/</loc>
+    <lastmod>2025-08-08T10:00:00+05:30</lastmod>
+  </url><url>
+    <loc>https://pushpak.prabhat.co/videos/yt/</loc>
     <lastmod>2025-07-20T15:30:00+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/videos/animation-short-copy-11/</loc>
+    <loc>https://pushpak.prabhat.co/videos/prepinsta-promo/</loc>
     <lastmod>2025-07-20T15:30:00+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/videos/animation-short-copy-2/</loc>
+    <loc>https://pushpak.prabhat.co/videos/</loc>
     <lastmod>2025-07-20T15:30:00+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/videos/animation-short-copy-3/</loc>
-    <lastmod>2025-07-20T15:30:00+05:30</lastmod>
+    <loc>https://pushpak.prabhat.co/videos/1.-introducing-prepladder-qbank-6.0/</loc>
+    <lastmod>2024-04-01T03:10:00+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/videos/animation-short-copy-4/</loc>
-    <lastmod>2025-07-20T15:30:00+05:30</lastmod>
+    <loc>https://pushpak.prabhat.co/videos/2.-neuros-by-prepladder-copy/</loc>
+    <lastmod>2024-04-01T03:10:00+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/videos/animation-short-copy-5/</loc>
-    <lastmod>2025-07-20T15:30:00+05:30</lastmod>
+    <loc>https://pushpak.prabhat.co/videos/3.-prepai/</loc>
+    <lastmod>2024-04-01T03:10:00+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/videos/animation-short-copy-6/</loc>
-    <lastmod>2025-07-20T15:30:00+05:30</lastmod>
+    <loc>https://pushpak.prabhat.co/about/</loc>
   </url><url>
-    <loc>http://localhost:1313/videos/animation-short-copy-7/</loc>
-    <lastmod>2025-07-20T15:30:00+05:30</lastmod>
+    <loc>https://pushpak.prabhat.co/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/videos/animation-short-copy-8/</loc>
-    <lastmod>2025-07-20T15:30:00+05:30</lastmod>
+    <loc>https://pushpak.prabhat.co/contact/</loc>
   </url><url>
-    <loc>http://localhost:1313/videos/animation-short-copy-9/</loc>
-    <lastmod>2025-07-20T15:30:00+05:30</lastmod>
+    <loc>https://pushpak.prabhat.co/tags/</loc>
   </url><url>
-    <loc>http://localhost:1313/videos/animation-short/</loc>
-    <lastmod>2025-07-20T15:30:00+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/videos/animation-short-copy/</loc>
-    <lastmod>2025-07-20T15:30:00+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/videos/</loc>
-    <lastmod>2025-07-20T15:30:00+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/about/</loc>
-  </url><url>
-    <loc>http://localhost:1313/categories/</loc>
-  </url><url>
-    <loc>http://localhost:1313/contact/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-  </url><url>
-    <loc>http://localhost:1313/work/</loc>
+    <loc>https://pushpak.prabhat.co/work/</loc>
   </url>
 </urlset>

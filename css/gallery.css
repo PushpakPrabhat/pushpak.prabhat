@@ -42,3 +42,36 @@
 .gallery-item:hover .gallery-img {
     transform: scale(1.05);
 }
+
+#thumbnail-container {
+    padding-bottom: 8px;
+}
+
+.thumbnail-img {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.thumbnail-img.active {
+    border-color: #1a73e8;
+}
+
+/* Zoom styles */
+#viewer-image.zoomable {
+    cursor: grab;
+    transition: transform 0.1s ease-out; /* Smoother zoom/pan */
+    object-fit: contain; /* Ensure it starts contained */
+    max-height: none; /* Allow image to exceed initial max height when zoomed */
+}
+
+#viewer-image.zoomable.dragging {
+    cursor: grabbing;
+}
+
+
+

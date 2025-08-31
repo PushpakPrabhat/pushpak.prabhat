@@ -1,0 +1,33 @@
+/* Video Modal Styles */
+#video-viewer-pane {
+    z-index: 100;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#video-viewer-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+#video-viewer-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#video-viewer-content::-webkit-scrollbar-thumb {
+    background: #5f6368;
+    border-radius: 4px;
+}
+
+#video-viewer-content::-webkit-scrollbar-thumb:hover {
+    background: #7c8186;
+}
+
+.body-no-scroll {
+    overflow: hidden;
+}
+
+.line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}

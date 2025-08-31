@@ -2,95 +2,46 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Videos on Pushpak Prabhat</title>
-    <link>http://localhost:1313/videos/</link>
+    <link>https://pushpak.prabhat.co/videos/</link>
     <description>Recent content in Videos on Pushpak Prabhat</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 20 Jul 2025 15:30:00 +0530</lastBuildDate>
-    <atom:link href="http://localhost:1313/videos/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://pushpak.prabhat.co/videos/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>A Walk in the Park</title>
-      <link>http://localhost:1313/videos/animation-short-copy-10/</link>
+      <link>https://pushpak.prabhat.co/videos/yt/</link>
       <pubDate>Sun, 20 Jul 2025 15:30:00 +0530</pubDate>
-      <guid>http://localhost:1313/videos/animation-short-copy-10/</guid>
-      <description>&lt;p&gt;A short, looping animation I created to practice character movement.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>A Walk in the Park</title>
-      <link>http://localhost:1313/videos/animation-short-copy-11/</link>
-      <pubDate>Sun, 20 Jul 2025 15:30:00 +0530</pubDate>
-      <guid>http://localhost:1313/videos/animation-short-copy-11/</guid>
-      <description>&lt;p&gt;A short, looping animation I created to practice character movement.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>A Walk in the Park</title>
-      <link>http://localhost:1313/videos/animation-short-copy-2/</link>
-      <pubDate>Sun, 20 Jul 2025 15:30:00 +0530</pubDate>
-      <guid>http://localhost:1313/videos/animation-short-copy-2/</guid>
-      <description>&lt;p&gt;A short, looping animation I created to practice character movement.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>A Walk in the Park</title>
-      <link>http://localhost:1313/videos/animation-short-copy-3/</link>
-      <pubDate>Sun, 20 Jul 2025 15:30:00 +0530</pubDate>
-      <guid>http://localhost:1313/videos/animation-short-copy-3/</guid>
-      <description>&lt;p&gt;A short, looping animation I created to practice character movement.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>A Walk in the Park</title>
-      <link>http://localhost:1313/videos/animation-short-copy-4/</link>
-      <pubDate>Sun, 20 Jul 2025 15:30:00 +0530</pubDate>
-      <guid>http://localhost:1313/videos/animation-short-copy-4/</guid>
-      <description>&lt;p&gt;A short, looping animation I created to practice character movement.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>A Walk in the Park</title>
-      <link>http://localhost:1313/videos/animation-short-copy-5/</link>
-      <pubDate>Sun, 20 Jul 2025 15:30:00 +0530</pubDate>
-      <guid>http://localhost:1313/videos/animation-short-copy-5/</guid>
-      <description>&lt;p&gt;A short, looping animation I created to practice character movement.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>A Walk in the Park</title>
-      <link>http://localhost:1313/videos/animation-short-copy-6/</link>
-      <pubDate>Sun, 20 Jul 2025 15:30:00 +0530</pubDate>
-      <guid>http://localhost:1313/videos/animation-short-copy-6/</guid>
-      <description>&lt;p&gt;A short, looping animation I created to practice character movement.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>A Walk in the Park</title>
-      <link>http://localhost:1313/videos/animation-short-copy-7/</link>
-      <pubDate>Sun, 20 Jul 2025 15:30:00 +0530</pubDate>
-      <guid>http://localhost:1313/videos/animation-short-copy-7/</guid>
-      <description>&lt;p&gt;A short, looping animation I created to practice character movement.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>A Walk in the Park</title>
-      <link>http://localhost:1313/videos/animation-short-copy-8/</link>
-      <pubDate>Sun, 20 Jul 2025 15:30:00 +0530</pubDate>
-      <guid>http://localhost:1313/videos/animation-short-copy-8/</guid>
-      <description>&lt;p&gt;A short, looping animation I created to practice character movement.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>A Walk in the Park</title>
-      <link>http://localhost:1313/videos/animation-short-copy-9/</link>
-      <pubDate>Sun, 20 Jul 2025 15:30:00 +0530</pubDate>
-      <guid>http://localhost:1313/videos/animation-short-copy-9/</guid>
-      <description>&lt;p&gt;A short, looping animation I created to practice character movement.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>A Walk in the Park</title>
-      <link>http://localhost:1313/videos/animation-short/</link>
-      <pubDate>Sun, 20 Jul 2025 15:30:00 +0530</pubDate>
-      <guid>http://localhost:1313/videos/animation-short/</guid>
+      <guid>https://pushpak.prabhat.co/videos/yt/</guid>
       <description>&lt;p&gt;A short, looping animation I created to practice character movement.&lt;/p&gt;</description>
     </item>
     <item>
       <title>PrepInsta Promo</title>
-      <link>http://localhost:1313/videos/animation-short-copy/</link>
+      <link>https://pushpak.prabhat.co/videos/prepinsta-promo/</link>
       <pubDate>Sun, 20 Jul 2025 15:30:00 +0530</pubDate>
-      <guid>http://localhost:1313/videos/animation-short-copy/</guid>
-      <description>&lt;p&gt;A short, looping animation I created to practice character movement.&lt;/p&gt;</description>
+      <guid>https://pushpak.prabhat.co/videos/prepinsta-promo/</guid>
+      <description>&lt;h2 id=&#34;this-is-the-full-commencement-address-delivered-by-steve-jobs-former-ceo-of-apple-computer-and-of-pixar-animation-studios-on-june-12-2005&#34;&gt;This is the full commencement address delivered by Steve Jobs, former CEO of Apple Computer and of Pixar Animation Studios, on June 12, 2005.&lt;/h2&gt;&#xA;&lt;p&gt;A short, looping animation I created to practice character movement.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://pushpak.prabhat.co/Images/p1.JPG&#34; alt=&#34;pushpak&#34; title=&#34;Optional Title Text&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://pushpak.prabhat.co/Images/p1.JPG&#34; alt=&#34;Alt text for the image&#34; title=&#34;Optional title for the image&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Introducing PrepLadder QBank 6.0</title>
+      <link>https://pushpak.prabhat.co/videos/1.-introducing-prepladder-qbank-6.0/</link>
+      <pubDate>Mon, 01 Apr 2024 03:10:00 +0530</pubDate>
+      <guid>https://pushpak.prabhat.co/videos/1.-introducing-prepladder-qbank-6.0/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>NEUROS by PrepLadder</title>
+      <link>https://pushpak.prabhat.co/videos/2.-neuros-by-prepladder-copy/</link>
+      <pubDate>Mon, 01 Apr 2024 03:10:00 +0530</pubDate>
+      <guid>https://pushpak.prabhat.co/videos/2.-neuros-by-prepladder-copy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>PrepAI</title>
+      <link>https://pushpak.prabhat.co/videos/3.-prepai/</link>
+      <pubDate>Mon, 01 Apr 2024 03:10:00 +0530</pubDate>
+      <guid>https://pushpak.prabhat.co/videos/3.-prepai/</guid>
+      <description></description>
     </item>
   </channel>
 </rss>
