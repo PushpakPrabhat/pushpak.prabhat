@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducing PrepLadder QBank 6.0 - Pushpak Prabhat</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/gallery.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        main {
+            flex-grow: 1;
+        }
+        .g-active-tab {
+            border-bottom: 3px solid #1a73e8;
+            color: #1a73e8;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+            font-size: 24px;
+        }
+        .line-clamp-2 {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <header id="header" class="border-b border-gray-200 sticky top-0 bg-white z-10">
+        <div class="p-4 md:hidden header-content">
+            <div class="flex justify-between items-center mb-4">
+                <svg class="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+                <a href="/">
+                    <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" alt="Google" class="h-8">
+                </a>
+                <img src="/img/profile1.jpg" alt="User Avatar" class="h-8 w-8 rounded-full">
+            </div>
+            <div class="relative">
+                <input type="text" value="Introducing PrepLadder QBank 6.0" class="w-full border border-gray-300 rounded-full py-2 px-4 pl-10 pr-12 focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm">
+                <svg class="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <svg class="absolute right-4 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-500 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 14a3 3 0 0 0 3-3V5a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3z"></path><path d="M17 11a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"></path></svg>
+            </div>
+        </div>
+
+        <div class="hidden md:flex p-4 items-center header-content">
+            <a href="/" class="mr-4">
+                <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" alt="Google" class="h-8">
+            </a>
+            <div class="flex-grow max-w-2xl">
+                <div class="relative">
+                    <input type="text" value="Introducing PrepLadder QBank 6.0" class="w-full border border-gray-300 rounded-full py-2 px-4 pl-10 pr-12 focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm">
+                    <svg class="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    <svg class="absolute right-4 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-500 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 14a3 3 0 0 0 3-3V5a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3z"></path><path d="M17 11a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"></path></svg>
+                </div>
+            </div>
+            <div class="flex items-center space-x-4 ml-auto">
+                <span class="ml-4 material-symbols-outlined text-gray-500 cursor-pointer">settings</span>
+                <svg class="h-6 w-6 text-gray-500 cursor-pointer" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z"></path></svg>
+                <img src="/img/profile1.jpg" alt="User Avatar" class="h-8 w-8 rounded-full">
+            </div>
+        </div>
+
+        <div class="px-4 md:pl-36">
+            <nav class="flex space-x-4 md:space-x-8 text-sm text-gray-500 overflow-x-auto whitespace-nowrap mobile-nav-scroll">
+                <a href="/all" class="flex items-center space-x-2 py-2 flex-shrink-0 ">
+                    <span class="material-symbols-outlined" style="font-size: 16px;">search</span>
+                    <span>All</span>
+                </a>
+                <a href="/images/" class="flex items-center space-x-2 py-2 flex-shrink-0 ">
+                    <span class="material-symbols-outlined" style="font-size: 16px;">image</span>
+                    <span>Images</span>
+                </a>
+                <a href="/videos/" class="flex items-center space-x-2 py-2 flex-shrink-0 g-active-tab">
+                    <span class="material-symbols-outlined" style="font-size: 16px;">play_circle</span>
+                    <span>Videos</span>
+                </a>
+                <a href="/work/" class="flex items-center space-x-2 py-2 flex-shrink-0 ">
+                    <span class="material-symbols-outlined" style="font-size: 16px;">work</span>
+                    <span>Work</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+<main>
+<style>
+   
+  #video-container {
+    position: relative;
+    width: 100%;
+    background-color: #000;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  }
+
+   
+  #video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+   
+  #video-container.is-short {
+    max-width: 320px;  
+    margin-left: auto;
+    margin-right: auto;
+    aspect-ratio: 9 / 16;
+  }
+</style>
+
+<div class="relative">
+    
+    <a href="http://172.20.168.77:1313/videos/promotional-videos/1.-introducing-prepladder-qbank-6.0/" title="Introducing PrepLadder QBank 6.0" class="hidden lg:flex fixed left-4 top-1/2 -translate-y-1/2 bg-white/80 p-3 rounded-full shadow-md hover:bg-white z-30 transition-all">
+        <svg class="w-6 h-6 text-gray-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+    </a>
+    
+    
+    <a href="http://172.20.168.77:1313/videos/youtube-videos/2.-head-injury-treatment_algorithm/" title="Head Injury (treatment_algorithm)" class="hidden lg:flex fixed right-4 top-1/2 -translate-y-1/2 bg-white/80 p-3 rounded-full shadow-md hover:bg-white z-30 transition-all">
+        <svg class="w-6 h-6 text-gray-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+    </a>
+    
+
+    <div id="swipe-container" class="w-full max-w-6xl mx-auto p-4 py-8">
+        <div class="flex flex-col lg:flex-row lg:space-x-8">
+
+            <div class="w-full lg:w-2/3">
+                <div id="video-container" class="">
+                    
+                    <iframe src="https://drive.google.com/file/d/1Uq0jaJiemghGt1H6h9Dx62tw4dltvZQB/preview" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    
+                </div>
+                <div class="mt-4">
+                    <h1 class="text-2xl md:text-3xl font-bold text-gray-800">Introducing PrepLadder QBank 6.0</h1>
+                    <div class="flex items-center space-x-4 text-sm text-gray-500 mt-2">
+                        <span>April 1, 2024</span>
+                        <span>&middot;</span><span>Promotional Video</span>
+                    </div>
+                    <div class="hidden lg:block border-t pt-4 mt-4">
+                        <h3 class="text-base font-semibold text-gray-700 mb-2">Description</h3>
+                        <div class="prose prose-sm text-gray-600">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full lg:w-1/3 mt-8 lg:mt-0">
+                <div class="sticky top-24">
+                    <div class="flex items-center space-x-2 mb-4">
+                        
+                        <a href="https://drive.google.com/file/d/1Uq0jaJiemghGt1H6h9Dx62tw4dltvZQB/view" target="_blank" class="flex-1 text-center bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 flex items-center justify-center space-x-2">
+                            <span class="material-symbols-outlined">folder</span>
+                            <span>Google Drive</span>
+                        </a>
+                        
+                        <button id="share-btn" class="flex-1 flex items-center justify-center space-x-2 py-2 bg-gray-100 rounded-full text-sm font-medium hover:bg-gray-200">
+                            <span class="material-symbols-outlined" style="font-size: 20px;">share</span>
+                            <span>Share</span>
+                        </button>
+                    </div>
+                     <div class="border-t pt-4">
+                        <div class="block lg:hidden">
+                            <h3 class="text-base font-semibold text-gray-700 mb-2">Description</h3>
+                            <div class="prose prose-sm text-gray-600 mb-6">
+                                
+                            </div>
+                        </div>
+                        
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Related Videos</h3>
+                        <div class="space-y-3">
+                           
+                           
+                           
+                           
+                            <a href="http://172.20.168.77:1313/videos/promotional-videos/1.-introducing-prepladder-qbank-6.0/" class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-100 group">
+                                <div class="w-28 h-20 flex-shrink-0">
+                                    
+                                    
+                                    
+                                        
+                                    
+
+                                    
+                                        <img src="/videos/Promotional-Videos/img/thumbnail1.png" alt="Introducing PrepLadder QBank 6.0" class="w-full h-full object-cover rounded-md">
+                                    
+                                </div>
+                                <div>
+                                    <p class="text-sm font-semibold text-gray-800 line-clamp-2 group-hover:text-blue-600">Introducing PrepLadder QBank 6.0</p>
+                                    <p class="text-xs text-gray-500">Promotional Video</p>
+                                </div>
+                            </a>
+                            
+                            <a href="http://172.20.168.77:1313/videos/promotional-videos-copy/6.-mother-sparsh/" class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-100 group">
+                                <div class="w-28 h-20 flex-shrink-0">
+                                    
+                                    
+                                    
+                                        
+                                    
+
+                                    
+                                        <img src="/videos/Promotional-Videos/img/thumbnail6.png" alt="Mother Sparsh" class="w-full h-full object-cover rounded-md">
+                                    
+                                </div>
+                                <div>
+                                    <p class="text-sm font-semibold text-gray-800 line-clamp-2 group-hover:text-blue-600">Mother Sparsh</p>
+                                    <p class="text-xs text-gray-500">Promotional Video</p>
+                                </div>
+                            </a>
+                            
+                            <a href="http://172.20.168.77:1313/videos/promotional-videos/6.-mother-sparsh/" class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-100 group">
+                                <div class="w-28 h-20 flex-shrink-0">
+                                    
+                                    
+                                    
+                                        
+                                    
+
+                                    
+                                        <img src="/videos/Promotional-Videos/img/thumbnail6.png" alt="Mother Sparsh" class="w-full h-full object-cover rounded-md">
+                                    
+                                </div>
+                                <div>
+                                    <p class="text-sm font-semibold text-gray-800 line-clamp-2 group-hover:text-blue-600">Mother Sparsh</p>
+                                    <p class="text-xs text-gray-500">Promotional Video</p>
+                                </div>
+                            </a>
+                            
+                            <a href="http://172.20.168.77:1313/videos/promotional-videos-copy/2.-neuros-by-prepladder-copy/" class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-100 group">
+                                <div class="w-28 h-20 flex-shrink-0">
+                                    
+                                    
+                                    
+                                        
+                                    
+
+                                    
+                                        <img src="/videos/Promotional-Videos/img/thumbnail2.png" alt="NEUROS by PrepLadder" class="w-full h-full object-cover rounded-md">
+                                    
+                                </div>
+                                <div>
+                                    <p class="text-sm font-semibold text-gray-800 line-clamp-2 group-hover:text-blue-600">NEUROS by PrepLadder</p>
+                                    <p class="text-xs text-gray-500">Promotional Video</p>
+                                </div>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    
+    const videoContainer = document.getElementById('video-container');
+    const isShort = videoContainer.classList.contains('is-short');
+    
+    
+    if (!isShort) {
+        const youtubeId = "";
+        if (youtubeId) {
+            fetch(`https://www.youtube.com/oembed?url=http://www.youtube.com/watch?v=${youtubeId}&format=json`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.width && data.height) {
+                        videoContainer.style.aspectRatio = `${data.width} / ${data.height}`;
+                    } else {
+                        videoContainer.style.aspectRatio = '16 / 9'; 
+                    }
+                })
+                .catch(() => {
+                    videoContainer.style.aspectRatio = '16 / 9'; 
+                });
+        } else {
+             videoContainer.style.aspectRatio = '16 / 9'; 
+        }
+    }
+
+    
+    const shareBtn = document.getElementById('share-btn');
+    const messageBox = document.getElementById('messageBox');
+
+    if (shareBtn) {
+        shareBtn.addEventListener('click', () => {
+            const postUrl = window.location.href;
+            if (navigator.share) {
+                navigator.share({
+                    title: document.title,
+                    text: `Check out this video!`,
+                    url: postUrl,
+                }).catch(console.error);
+            } else {
+                navigator.clipboard.writeText(postUrl).then(() => {
+                    showMessage('Post link copied to clipboard!');
+                }).catch(err => {
+                    console.error('Could not copy text: ', err);
+                    showMessage('Failed to copy link.', true);
+                });
+            }
+        });
+    }
+
+    function showMessage(message, isError = false) {
+        if (!messageBox) return;
+        messageBox.textContent = message;
+        messageBox.className = `fixed bottom-5 left-1/2 -translate-x-1/2 px-4 py-2 rounded-md shadow-lg transition-opacity duration-300 ${isError ? 'bg-red-600' : 'bg-gray-800'} text-white z-[101]`;
+        messageBox.classList.remove('opacity-0');
+        setTimeout(() => {
+            messageBox.classList.add('opacity-0');
+        }, 3000);
+    }
+
+    
+    if (window.innerWidth < 1024) { 
+        const swipeContainer = document.getElementById('swipe-container');
+        let touchstartX = 0;
+        let touchendX = 0;
+
+        const nextUrl = "http:\/\/172.20.168.77:1313\/videos\/youtube-videos\/2.-head-injury-treatment_algorithm\/";
+        const prevUrl = "http:\/\/172.20.168.77:1313\/videos\/promotional-videos\/1.-introducing-prepladder-qbank-6.0\/";
+
+        swipeContainer.addEventListener('touchstart', e => {
+            touchstartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        swipeContainer.addEventListener('touchend', e => {
+            touchendX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            
+            if (touchendX < touchstartX - 50) {
+                if (nextUrl) {
+                    window.location.href = nextUrl;
+                }
+            }
+            
+            if (touchendX > touchstartX + 50) {
+                if (prevUrl) {
+                    window.location.href = prevUrl;
+                }
+            }
+        }
+    }
+});
+</script>
+</main>
+    <footer class="bg-gray-100 text-sm text-gray-600">
+        <div class="p-4 border-b flex items-center space-x-2 md:pl-36">
+            <span class="text-gray-500">- Developed by pspk :)</span>
+        </div>
+        <div class="p-4 flex flex-col md:flex-row md:justify-between md:pl-36">
+            <div class="flex space-x-6">
+                <a href="#" class="hover:underline">Help</a>
+                <a href="#" class="hover:underline">Send feedback</a>
+                <a href="#" class="hover:underline">Privacy</a>
+                <a href="#" class="hover:underline">Terms</a>
+            </div>
+        </div>
+    </footer>
+    
+<div id="popup-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden"></div>
+<div id="popup-modal" class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg shadow-lg z-50 p-6 hidden w-11/12 md:w-auto md:max-w-md">
+    <h2 class="text-lg font-medium text-gray-900">Before We Proceed, a Moment of Clarity</h2>
+    <div id="popup-text-content" class="mt-2 text-sm text-gray-600 max-h-48 overflow-y-auto pr-2">
+        <p>Greetings, intrepid traveler of the digital cosmos. You've stumbled upon a peculiar nexus of pixels and code, a portfolio masquerading as a familiar search engine. This is a grand illusion, a testament to the creative whims of a motion designer and web developer who enjoys a bit of playful deception.
+        <br><br>
+        By clicking 'Accept', you acknowledge that this is not the search engine you think it is. You agree not to hold us responsible if you find yourself questioning the nature of reality, the illusion of choice, or why you suddenly have the urge to learn more about this website. If you were looking for the actual Google, you've taken a wonderfully scenic detour.
+        <br><br>
+        Should you choose to 'Deny,' you'll be sent back to the void from whence you came (or, you know, the pop-up will just close). Either way, what is 'real' anyway? Just a series of electrical impulses interpreted by your brain.
+        <br><br>
+        Proceed with a sense of humor and an open mind. The rabbit hole is deep, but the website is smooth.</p>
+    </div>
+    <div class="mt-4 flex items-center">
+        <input type="checkbox" id="terms-checkbox" class="mr-2">
+        <label for="terms-checkbox" class="text-sm text-gray-600">I agree to the terms and conditions.</label>
+    </div>
+    <div class="mt-4 flex justify-between items-center">
+        <button id="scroll-down-button" class="p-2 rounded-full text-gray-400 hover:bg-gray-100">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+        </button>
+        <div class="flex justify-end space-x-2">
+            <button id="deny-button" class="m3-btn m3-btn-text">Deny</button>
+            <button id="accept-button" class="m3-btn m3-btn-filled" disabled>Accept</button>
+        </div>
+    </div>
+</div>
+
+<script>
+      document.addEventListener('DOMContentLoaded', () => {
+        
+        if (window.innerWidth < 768) {
+          const mobileImageSlider = document.querySelector('#mobile-image-slider');
+          
+          if (mobileImageSlider) {
+            const swiper = new Swiper(mobileImageSlider, {
+              slidesPerView: 1,
+              spaceBetween: 10,
+              pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+              },
+            });
+          }
+        }
+      });
+    </script>
+    <script src="/js/gallery.js"></script>
+    <script src="/js/popup.js"></script>
+</body>
+</html>

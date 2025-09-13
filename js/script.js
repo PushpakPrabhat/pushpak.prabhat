@@ -105,22 +105,6 @@ function setupKnowledgePanel() {
         }
       });
 
-
-
-
       
-
-
-
-
-
-
-
-
-
-
-
-
-
       
 

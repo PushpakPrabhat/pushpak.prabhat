@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>The Search for Everything - Pushpak Prabhat</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/gallery.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        main {
+            flex-grow: 1;
+        }
+        .g-active-tab {
+            border-bottom: 3px solid #1a73e8;
+            color: #1a73e8;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+            font-size: 24px;
+        }
+        .line-clamp-2 {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <header id="header" class="border-b border-gray-200 sticky top-0 bg-white z-10">
+        <div class="p-4 md:hidden header-content">
+            <div class="flex justify-between items-center mb-4">
+                <svg class="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+                <a href="/">
+                    <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" alt="Google" class="h-8">
+                </a>
+                <img src="/img/profile1.jpg" alt="User Avatar" class="h-8 w-8 rounded-full">
+            </div>
+            <div class="relative">
+                <input type="text" value="Pushpak Prabhat" class="w-full border border-gray-300 rounded-full py-2 px-4 pl-10 pr-12 focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm">
+                <svg class="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <svg class="absolute right-4 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-500 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 14a3 3 0 0 0 3-3V5a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3z"></path><path d="M17 11a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"></path></svg>
+            </div>
+        </div>
+
+        <div class="hidden md:flex p-4 items-center header-content">
+            <a href="/" class="mr-4">
+                <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" alt="Google" class="h-8">
+            </a>
+            <div class="flex-grow max-w-2xl">
+                <div class="relative">
+                    <input type="text" value="Pushpak Prabhat" class="w-full border border-gray-300 rounded-full py-2 px-4 pl-10 pr-12 focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm">
+                    <svg class="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    <svg class="absolute right-4 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-500 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 14a3 3 0 0 0 3-3V5a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3z"></path><path d="M17 11a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"></path></svg>
+                </div>
+            </div>
+            <div class="flex items-center space-x-4 ml-auto">
+                <span class="ml-4 material-symbols-outlined text-gray-500 cursor-pointer">settings</span>
+                <svg class="h-6 w-6 text-gray-500 cursor-pointer" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z"></path></svg>
+                <img src="/img/profile1.jpg" alt="User Avatar" class="h-8 w-8 rounded-full">
+            </div>
+        </div>
+
+        <div class="px-4 md:pl-36">
+            <nav class="flex space-x-4 md:space-x-8 text-sm text-gray-500 overflow-x-auto whitespace-nowrap mobile-nav-scroll">
+                <a href="/all" class="flex items-center space-x-2 py-2 flex-shrink-0 g-active-tab">
+                    <span>All</span>
+                </a>
+                <a href="/images/" class="flex items-center space-x-2 py-2 flex-shrink-0 ">
+                    <span class="material-symbols-outlined" style="font-size: 16px;">image</span>
+                    <span>Images</span>
+                </a>
+                <a href="/videos/" class="flex items-center space-x-2 py-2 flex-shrink-0 ">
+                    <span class="material-symbols-outlined" style="font-size: 16px;">play_circle</span>
+                    <span>Videos</span>
+                </a>
+                <a href="/web/" class="flex items-center space-x-2 py-2 flex-shrink-0 ">
+                    <span class="material-symbols-outlined" style="font-size: 16px;">public</span>
+                    <span>Web</span>
+                </a>
+                <a href="/work/" class="flex items-center space-x-2 py-2 flex-shrink-0 ">
+                    <span class="material-symbols-outlined" style="font-size: 16px;">work</span>
+                    <span>Work</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+<main>
+<div class="w-full flex justify-center">
+    <div class="w-full max-w-4xl">
+        <div class="p-4 md:p-8">
+            <h1 class="text-3xl font-bold mb-2">The Search for Everything</h1>
+            <p class="text-gray-500 mb-2">Published on August 30, 2022 by Pushpak</p>
+            
+            <div class="prose max-w-none lg:prose-lg">
+                <p>Have you ever Googled yourself, half-curious, half-dreading what you might find? It’s a modern ritual of self-discovery. But it led me to a different question: What if you could design your own search result? What if your life <em>was</em> the search result, with all its complexities, side projects, and &ldquo;People also ask&rdquo; quirks?</p>
+<p>Welcome to the answer. This portfolio, wrapped in the familiar comfort of the world’s biggest search engine. We turn to Google for answers, for clarity in a sea of information. This website is my attempt to provide a little clarity on the curated chaos of my own life, both for you and for myself. It’s a playful nod to the idea that we are all, in essence, searching for something.</p>
+<p>Well, i&rsquo;m a tech generalist, as I like to think of myself. My mind finds its joy in connecting seemingly unrelated things, the rigid logic of code with the fluid narrative of motion design, the quiet solitude of sketching with the collaborative energy of a web build.</p>
+<p>My greatest breakthroughs don&rsquo;t happen in brainstorming sessions, but in the quiet hum of a late night, switching from a complex animation timeline to a blank canvas, or getting lost in the impossible worlds of anime and sci-fi. It&rsquo;s in that space between disciplines that the truly interesting ideas are born. This site is a map of that space.</p>
+<p>So, what am I pursuing? What&rsquo;s the ultimate query in this search?</p>
+<p>It isn&rsquo;t for a specific title or a corner office. My pursuit is for the right <em>problems</em>. I want to build the small universes people can get lost in. I want to craft the digital experiences that feel intuitive and human, and tell the visual stories that stick with you long after the screen goes dark. Whether it’s through code, animation, or design, the goal is the same: to take an idea, an emotion, or a complex thought and give it a tangible form that resonates with people.</p>
+<p>This portfolio, this search result, is just a single entry. It&rsquo;s a snapshot of what I am doing right now. But the query is my life, and the search is far from over.</p>
+<p>Thanks for stopping by to see what I&rsquo;ve done so far.</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+</main>
+    <footer class="bg-gray-100 text-sm text-gray-600">
+        <div class="p-4 border-b flex items-center space-x-2 md:pl-36">
+            <span class="text-gray-500">- Developed by pspk :)</span>
+        </div>
+        <div class="p-4 flex flex-col md:flex-row md:justify-between md:pl-36">
+            <div class="flex space-x-6">
+                <a href="#" class="hover:underline">Help</a>
+                <a href="mailto:prabhat.pushpak@gmail.com" class="hover:underline">Send feedback</a>
+                <a href="#" class="hover:underline">Privacy</a>
+                <a href="#" class="hover:underline">Terms</a>
+            </div>
+        </div>
+    </footer>
+    
+<div id="popup-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden"></div>
+<div id="popup-modal" class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg shadow-lg z-50 p-6 hidden w-11/12 md:w-auto md:max-w-md">
+    <h2 class="text-lg font-medium text-gray-900">Before We Proceed, a Moment of Clarity</h2>
+    <div id="popup-text-content" class="mt-2 text-sm text-gray-600 max-h-48 overflow-y-auto pr-2">
+        <p>Greetings, intrepid traveler of the digital cosmos. You've stumbled upon a peculiar nexus of pixels and code, a portfolio masquerading as a familiar search engine. This is a grand illusion, a testament to the creative whims of a motion designer and web developer who enjoys a bit of playful deception.
+        <br><br>
+        By clicking 'Accept', you acknowledge that this is not the search engine you think it is. You agree not to hold us responsible if you find yourself questioning the nature of reality, the illusion of choice, or why you suddenly have the urge to learn more about this website. If you were looking for the actual Google, you've taken a wonderfully scenic detour.
+        <br><br>
+        Should you choose to 'Deny,' you'll be sent back to the void from whence you came (or, you know, the pop-up will just close). Either way, what is 'real' anyway? Just a series of electrical impulses interpreted by your brain.
+        <br><br>
+        Proceed with a sense of humor and an open mind. The rabbit hole is deep, but the website is smooth.</p>
+    </div>
+    <div class="mt-4 flex items-center">
+        <input type="checkbox" id="terms-checkbox" class="mr-2">
+        <label for="terms-checkbox" class="text-sm text-gray-600">I agree to the terms and conditions.</label>
+    </div>
+    <div class="mt-4 flex justify-between items-center">
+        <button id="scroll-down-button" class="p-2 rounded-full text-gray-400 hover:bg-gray-100">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+        </button>
+        <div class="flex justify-end space-x-2">
+            <button id="deny-button" class="m3-btn m3-btn-text">Deny</button>
+            <button id="accept-button" class="m3-btn m3-btn-filled" disabled>Accept</button>
+        </div>
+    </div>
+</div>
+
+<script>
+      document.addEventListener('DOMContentLoaded', () => {
+        
+        if (window.innerWidth < 768) {
+          const mobileImageSlider = document.querySelector('#mobile-image-slider');
+          
+          if (mobileImageSlider) {
+            const swiper = new Swiper(mobileImageSlider, {
+              slidesPerView: 1,
+              spaceBetween: 10,
+              pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+              },
+            });
+          }
+        }
+      });
+    </script>
+    <script src="/js/gallery.js"></script>
+    <script src="/js/popup.js"></script>
+</body>
+</html>

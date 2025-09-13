@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const prevBtn = document.getElementById('video-prev-btn');
     const nextBtn = document.getElementById('video-next-btn');
     const shareBtn = document.getElementById('video-share-btn');
-    const messageBox = document.getElementById('messageBox'); // Assuming this exists from photos gallery
+    const messageBox = document.getElementById('messageBox'); // Assuming this exists from images gallery
 
     const videoTitle = document.getElementById('video-title');
     const videoDescription = document.getElementById('video-description');

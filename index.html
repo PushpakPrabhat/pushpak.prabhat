@@ -9,26 +9,62 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Roboto', sans-serif; }
+        #lucky-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.777);
+            z-index: 999;
+            display: none;
+            cursor: pointer;
+        }
+        #confetti-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1000;
+            pointer-events: none;
+            display: none;
+        }
+        #lucky-message {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 5rem;
+            font-weight: bold;
+            color: white;
+            z-index: 1001;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+            display: none;
+            text-align: center;
+            width: 100%;
+            cursor: pointer;  
+        }
     </style>
 </head>
 <body class="bg-white flex flex-col min-h-screen">
     <header class="text-sm p-4">
         <div class="flex md:hidden justify-between items-center">
             <div class="flex items-center space-x-4">
-                <a href="#" class="hover:underline">Gmail</a>
+                <a href="mailto:prabhat.pushpak@gmail.com" class="hover:underline">Gmail</a>
                 <a href="#" class="hover:underline">Images</a>
             </div>
             <div class="flex items-center space-x-4">
                 <svg class="h-6 w-6 text-gray-500 cursor-pointer" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z"></path></svg>
-                <img src="/Images/p3.JPG" alt="User Avatar" class="h-8 w-8 rounded-full">
+                <img src="/img/profile1.jpg" alt="User Avatar" class="h-8 w-8 rounded-full">
             </div>
         </div>
 
         <div class="hidden md:flex justify-end items-center space-x-4">
-            <a href="#" class="hover:underline">Gmail</a>
+            <a href="mailto:prabhat.pushpak@gmail.com" class="hover:underline">Gmail</a>
             <a href="#" class="hover:underline">Images</a>
             <svg class="h-6 w-6 text-gray-500 cursor-pointer" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z"></path></svg>
-            <img src="/Images/p3.JPG" alt="User Avatar" class="h-8 w-8 rounded-full">
+            <img src="/img/profile1.jpg" alt="User Avatar" class="h-8 w-8 rounded-full">
         </div>
     </header>
     <main class="flex-grow flex flex-col items-center justify-center px-4 md:px-0">
@@ -42,7 +78,7 @@
             </div>
             <div class="flex justify-center mt-8 space-x-4">
                 <button type="submit" class="bg-gray-100 py-2 px-4 rounded text-sm hover:bg-gray-200">Google Search</button>
-                <button type="submit" class="bg-gray-100 py-2 px-4 rounded text-sm hover:bg-gray-200">I'm Feeling Lucky</button>
+                <button type="button" id="im-feeling-lucky" class="bg-gray-100 py-2 px-4 rounded text-sm hover:bg-gray-200">I'm Feeling Lucky</button>
             </div>
         </form>
     </main>
@@ -61,5 +97,49 @@
             </div>
         </div>
     </footer>
+    <div id="lucky-overlay"></div>
+    <canvas id="confetti-canvas"></canvas>
+    <div class="p-6" id="lucky-message" style="font-size: 2rem;">Well, you should be…<br> you found this website!</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const luckyButton = document.getElementById('im-feeling-lucky');
+            const confettiCanvas = document.getElementById('confetti-canvas');
+            const luckyMessage = document.getElementById('lucky-message');
+            const luckyOverlay = document.getElementById('lucky-overlay');
+            
+            const showLuckyFeature = () => {
+                luckyOverlay.style.display = 'block';
+                confettiCanvas.style.display = 'block';
+                luckyMessage.style.display = 'block';
+
+                const myConfetti = confetti.create(confettiCanvas, {
+                    resize: true,
+                    useWorker: true
+                });
+
+                myConfetti({
+                    particleCount: 200,
+                    spread: 160
+                });
+            };
+
+            const hideLuckyFeature = () => {
+                luckyOverlay.style.display = 'none';
+                confettiCanvas.style.display = 'none';
+                luckyMessage.style.display = 'none';
+                if (typeof confetti !== 'undefined') {
+                    confetti.reset();
+                }
+            };
+
+            luckyButton.addEventListener('click', showLuckyFeature);
+            luckyOverlay.addEventListener('click', hideLuckyFeature);
+            luckyMessage.addEventListener('click', hideLuckyFeature); 
+            luckyOverlay.addEventListener('touchstart', hideLuckyFeature);
+            luckyMessage.addEventListener('touchstart', hideLuckyFeature); 
+        });
+    </script>
 </body>
 </html>

@@ -20,14 +20,12 @@
 
 /* Prevent background scroll ONLY on mobile when modal is open */
 @media (max-width: 767px) {
-
     .body-no-scroll {
         overflow: hidden;
     }
-#viewer-pane {
-  z-index: 50;
-}
-
+    #viewer-pane {
+      z-index: 50;
+    }
 }
 
 /* Image gallery styles */
@@ -66,12 +64,29 @@
     cursor: grab;
     transition: transform 0.1s ease-out; /* Smoother zoom/pan */
     object-fit: contain; /* Ensure it starts contained */
-    max-height: none; /* Allow image to exceed initial max height when zoomed */
 }
 
 #viewer-image.zoomable.dragging {
     cursor: grabbing;
 }
 
+/* Swipe Instruction Styles */
+.swipe-instruction {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: none;
+    z-index: 10;
+}
 
-
+.swipe-instruction.show {
+    opacity: 1;
+}

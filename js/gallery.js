@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const zoomInBtn = document.getElementById('zoom-in-btn');
     const zoomOutBtn = document.getElementById('zoom-out-btn');
     const fitToRatioBtn = document.getElementById('fit-to-ratio-btn');
+    const swipeInstruction = document.getElementById('swipe-instruction');
 
     let currentIndex = 0;
     let images = [];
@@ -29,9 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
     let isDragging = false;
     let startX, startY;
     
-    // Prioritize the global `allPhotos` array if it exists
-    if (window.allPhotos && window.allPhotos.length > 0) {
-        images = window.allPhotos;
+    // Prioritize the global `images` array if it exists
+    if (window.images && window.images.length > 0) {
+        images = window.images;
     } else {
         // Fallback to scraping from DOM if the global array isn't present
         const gallery = document.getElementById('gallery');
@@ -56,13 +57,35 @@ document.addEventListener('DOMContentLoaded', () => {
         createThumbnails();
         resetZoom();
 
-        if (window.innerWidth >= 768) {
+        // Use a media query that checks for both a coarse pointer (touch) and a narrow screen width.
+        const isPhone = window.matchMedia("(pointer: coarse) and (max-width: 767px)").matches;
+
+        // First, ensure instruction is always hidden by default when opening
+        if (swipeInstruction) {
+            swipeInstruction.classList.remove('show');
+        }
+
+        if (isPhone) {
+            // Logic for phones: show the swipe instruction after a delay
+            if (swipeInstruction) {
+                setTimeout(() => {
+                    swipeInstruction.classList.add('show');
+                }, 500);
+
+                const hideInstruction = () => {
+                    swipeInstruction.classList.remove('show');
+                };
+                viewerContent.addEventListener('touchstart', hideInstruction, { once: true });
+            }
+        } else {
+            // Logic for desktops and tablets: adjust layout
             if(galleryContainer) {
                 galleryContainer.classList.add('md:w-[calc(100%-450px)]', 'lg:w-[calc(100%-550px)]');
                 const galleryGrid = document.getElementById('gallery');
                 if(galleryGrid) galleryGrid.classList.remove('lg:grid-cols-5', 'xl:grid-cols-6');
             }
         }
+
         document.body.classList.add('body-no-scroll');
         viewerPane.classList.remove('hidden');
         isViewerOpen = true;
@@ -119,6 +142,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 if(galleryGrid) galleryGrid.classList.add('lg:grid-cols-5', 'xl:grid-cols-6');
             }
         }
+        if (swipeInstruction) {
+            swipeInstruction.classList.remove('show');
+        }
         viewerPane.classList.add('hidden');
         document.body.classList.remove('body-no-scroll');
         isViewerOpen = false;
@@ -152,23 +178,22 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.key === 'ArrowLeft') showPrevImage();
     });
 
-    shareBtn.addEventListener('click', () => {
-        const imageUrl = new URL(images[currentIndex].image, window.location.href).href;
-        if (navigator.share) {
-            navigator.share({
-                title: images[currentIndex].title,
-                text: `Check out this image: ${images[currentIndex].title}`,
-                url: imageUrl,
-            }).catch(console.error);
-        } else {
-            navigator.clipboard.writeText(imageUrl).then(() => {
-                showMessage('Image link copied to clipboard!');
-            }).catch(err => {
-                console.error('Could not copy text: ', err);
-                showMessage('Failed to copy link.', true);
-            });
-        }
-    });
+shareBtn.addEventListener('click', () => {
+    const imageUrl = new URL(images[currentIndex].image, window.location.href).href;
+    if (navigator.share) {
+        navigator.share({
+            title: images[currentIndex].title,
+            text: `Check out this image: ${images[currentIndex].title} ${imageUrl}`,
+        }).catch(console.error);
+    } else {
+        navigator.clipboard.writeText(`${images[currentIndex].title} ${imageUrl}`).then(() => {
+            showMessage('Image link copied to clipboard!');
+        }).catch(err => {
+            console.error('Could not copy text: ', err);
+            showMessage('Failed to copy link.', true);
+        });
+    }
+});
 
     function showMessage(message, isError = false) {
         messageBox.textContent = message;
@@ -198,19 +223,73 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Swipe functionality for mobile
+    // Mobile gestures: swipe and pinch-to-zoom
     let touchstartX = 0;
     let touchendX = 0;
+    let initialDistance = null;
+    let isPanning = false;
 
     viewerContent.addEventListener('touchstart', e => {
-        if (currentScale > 1) return;
-        touchstartX = e.changedTouches[0].screenX;
+        if (e.touches.length === 2) {
+            initialDistance = Math.hypot(
+                e.touches[0].pageX - e.touches[1].pageX,
+                e.touches[0].pageY - e.touches[1].pageY
+            );
+        } else if (e.touches.length === 1) {
+            if (currentScale > 1) {
+                isPanning = true;
+                startX = e.touches[0].clientX - translateX;
+                startY = e.touches[0].clientY - translateY;
+            } else {
+                touchstartX = e.changedTouches[0].screenX;
+            }
+        }
     }, { passive: true });
 
+    viewerContent.addEventListener('touchmove', e => {
+        if (e.touches.length === 2 && initialDistance) {
+            e.preventDefault(); // Prevent the browser from zooming the entire page
+            const newDistance = Math.hypot(
+                e.touches[0].pageX - e.touches[1].pageX,
+                e.touches[0].pageY - e.touches[1].pageY
+            );
+            const scaleRatio = newDistance / initialDistance;
+            
+            const newScale = currentScale * scaleRatio;
+            const clampedScale = Math.max(1, Math.min(newScale, 4));
+
+            const midX = (e.touches[0].pageX + e.touches[1].pageX) / 2;
+            const midY = (e.touches[0].pageY + e.touches[1].pageY) / 2;
+            const rect = viewerImage.getBoundingClientRect();
+            const mouseX = midX - rect.left;
+            const mouseY = midY - rect.top;
+
+            translateX = mouseX - (mouseX - translateX) * (clampedScale / currentScale);
+            translateY = mouseY - (mouseY - translateY) * (clampedScale / currentScale);
+
+            currentScale = clampedScale;
+            initialDistance = newDistance;
+
+            applyZoom();
+
+        } else if (isPanning && e.touches.length === 1) {
+            e.preventDefault();
+            translateX = e.touches[0].clientX - startX;
+            translateY = e.touches[0].clientY - startY;
+            applyZoom();
+        }
+    });
+
     viewerContent.addEventListener('touchend', e => {
-        if (currentScale > 1) return;
-        touchendX = e.changedTouches[0].screenX;
-        handleSwipe();
+        if (e.touches.length < 2) {
+            initialDistance = null;
+            isPanning = false;
+        }
+
+        if (currentScale <= 1) {
+            touchendX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }
     });
 
     function handleSwipe() {
@@ -222,23 +301,24 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Zoom functionality
-    function applyZoom() {
-        viewerImage.style.transform = `translate(${translateX}px, ${translateY}px) scale(${currentScale})`;
-        viewerImage.dataset.scale = currentScale;
 
-        if (currentScale > 1) {
-            viewerImage.classList.add('zoomable');
-            viewerContent.style.overflow = 'auto';
-        } else {
-            viewerImage.classList.remove('zoomable');
-            viewerContent.scrollTo(0, 0);
-            viewerContent.style.overflow = 'hidden';
-            translateX = 0;
-            translateY = 0;
-            viewerImage.style.transform = `translate(0px, 0px) scale(1)`;
-        }
+    // Zoom functionality
+   function applyZoom() {
+    viewerImage.style.transform = `translate(${translateX}px, ${translateY}px) scale(${currentScale})`;
+    viewerImage.dataset.scale = currentScale;
+
+    if (currentScale > 1) {
+        viewerImage.classList.add('zoomable');
+        viewerContent.style.overflow = 'auto';
+    } else {
+        viewerImage.classList.remove('zoomable');
+        viewerContent.scrollTo(0, 0);
+        viewerContent.style.overflow = 'hidden';
+        translateX = 0;
+        translateY = 0;
+        viewerImage.style.transform = `translate(0px, 0px) scale(1)`;
     }
+}
 
     function resetZoom() {
         currentScale = 1;

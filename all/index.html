@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>All Results - Pushpak Prabhat</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="/css/style.css">
@@ -10,8 +10,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
 
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <style>
@@ -41,8 +43,8 @@
     </style>
 </head>
 <body class="bg-white">
-    <header class="border-b border-gray-200 sticky top-0 bg-white z-10">
-        <div class="p-4 md:hidden">
+    <header id="header" class="border-b border-gray-200 sticky top-0 bg-white z-10">
+        <div class="p-4 md:hidden header-content">
             <div class="flex justify-between items-center mb-4">
                 <svg class="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -50,7 +52,7 @@
                 <a href="/">
                     <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" alt="Google" class="h-8">
                 </a>
-                <img src="/Images/p3.JPG" alt="User Avatar" class="h-8 w-8 rounded-full">
+                <img src="/img/profile1.jpg" alt="User Avatar" class="h-8 w-8 rounded-full">
             </div>
             <div class="relative">
                 <input type="text" value="Pushpak Prabhat" class="w-full border border-gray-300 rounded-full py-2 px-4 pl-10 pr-12 focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm">
@@ -59,7 +61,7 @@
             </div>
         </div>
 
-        <div class="hidden md:flex p-4 items-center">
+        <div class="hidden md:flex p-4 items-center header-content">
             <a href="/" class="mr-4">
                 <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" alt="Google" class="h-8">
             </a>
@@ -73,23 +75,26 @@
             <div class="flex items-center space-x-4 ml-auto">
                 <span class="ml-4 material-symbols-outlined text-gray-500 cursor-pointer">settings</span>
                 <svg class="h-6 w-6 text-gray-500 cursor-pointer" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z"></path></svg>
-                <img src="/Images/p3.JPG" alt="User Avatar" class="h-8 w-8 rounded-full">
+                <img src="/img/profile1.jpg" alt="User Avatar" class="h-8 w-8 rounded-full">
             </div>
         </div>
 
         <div class="px-4 md:pl-36">
             <nav class="flex space-x-4 md:space-x-8 text-sm text-gray-500 overflow-x-auto whitespace-nowrap mobile-nav-scroll">
                 <a href="/all" class="flex items-center space-x-2 py-2 flex-shrink-0 g-active-tab">
-                    <span class="material-symbols-outlined" style="font-size: 16px;">search</span>
                     <span>All</span>
                 </a>
-                <a href="/photos/" class="flex items-center space-x-2 py-2 flex-shrink-0 ">
+                <a href="/images/" class="flex items-center space-x-2 py-2 flex-shrink-0 ">
                     <span class="material-symbols-outlined" style="font-size: 16px;">image</span>
                     <span>Images</span>
                 </a>
                 <a href="/videos/" class="flex items-center space-x-2 py-2 flex-shrink-0 ">
                     <span class="material-symbols-outlined" style="font-size: 16px;">play_circle</span>
                     <span>Videos</span>
+                </a>
+                <a href="/web/" class="flex items-center space-x-2 py-2 flex-shrink-0 ">
+                    <span class="material-symbols-outlined" style="font-size: 16px;">public</span>
+                    <span>Web</span>
                 </a>
                 <a href="/work/" class="flex items-center space-x-2 py-2 flex-shrink-0 ">
                     <span class="material-symbols-outlined" style="font-size: 16px;">work</span>
@@ -102,72 +107,115 @@
 <div class="w-full">
     <div class="mt-4  pt-4 pr-4 pl-4 md:pl-36 md:pr-8">
         <h1 class="text-2xl md:text-3xl font-regular text-gray-800">Pushpak Prabhat</h1>
-        <p class="text-sm text-gray-500 mt-1 mb-2">Motion Designer / Web Developer</p>
+        <p class="text-sm text-gray-500 mt-1 mb-2">Web Developer / Motion Designer</p>
     </div>
     
     <div class=" p-4 md:pl-36 md:pr-4 lg:hidden">
         
 <div class="mb-6">
-    
-
     <div class="md:grid md:grid-cols-2 md:grid-rows-2 md:gap-2 md:h-80 mb-4 md:mb-0 rounded-lg">
         
         <div id="mobile-image-slider" class="swiper md:hidden relative w-full h-64 overflow-hidden rounded-lg">
             <div class="swiper-wrapper">
                 
                 <div class="swiper-slide">
-                    <div class="w-full h-full bg-cover bg-center" style="background-image: url('/Images/p1.JPG');">
-                        
-                    </div>
+                    <div class="w-full h-full bg-cover bg-center" style="background-image: url('/img/profile1.jpg');">
+                        </div>
                 </div>
                 
                 <div class="swiper-slide">
-                    <div class="w-full h-full bg-cover bg-center" style="background-image: url('/Images/p3.JPG');">
-                        
-                    </div>
+                    <div class="w-full h-full bg-cover bg-center" style="background-image: url('/img/profile2.png');">
+                        </div>
                 </div>
                 
                 <div class="swiper-slide">
-                    <div class="w-full h-full bg-cover bg-center" style="background-image: url('/Images/p2.JPG');">
-                        
-                    </div>
+                    <div class="w-full h-full bg-cover bg-center" style="background-image: url('/img/profile3.png');">
+                        </div>
                 </div>
                 
             </div>
-            </div>
+             <div id="swipe-instruction" class="swipe-instruction">Swipe &rarr;</div>
+        </div>
 
-            
         
         <div class="hidden md:block md:col-span-1 md:row-span-2 relative overflow-hidden rounded-lg">
-            <div class="h-full w-full bg-cover bg-center" style="background-image: url('/Images/p1.JPG');">
-                 
-            </div>
+            <div class="h-full w-full bg-cover bg-center" style="background-image: url('/img/profile1.jpg');">
+                 </div>
         </div>
         
         
         <div class="hidden md:block relative overflow-hidden rounded-lg">
-            <img src="/Images/p3.JPG" alt="Pushpak Prabhat portrait" class="w-full h-full object-cover">
+            <img src="/img/profile2.png" alt="Pushpak Prabhat portrait" class="w-full h-full object-cover">
         </div>
         
         <div class="hidden md:block relative overflow-hidden rounded-lg">
-            <img src="/Images/p2.JPG" alt="Pushpak Prabhat" class="w-full h-full object-cover">
+            <img src="/img/profile3.png" alt="Pushpak Prabhat" class="w-full h-full object-cover">
         </div>
         
     </div>
 </div>
+
+<style>
+@media (max-width: 767px) {
+    .swipe-instruction {
+        height: 40px;
+        width: 90px;
+        position: absolute;
+        top: 50%;
+        left: 80%;
+        transform: translate(-50%, -70%);
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        pointer-events: none;
+        z-index: 10;
+    }
+
+    .swipe-instruction.show {
+        opacity: 0.6;
+    }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const swipeInstruction = document.getElementById('swipe-instruction');
+    const mobileImageSlider = document.getElementById('mobile-image-slider');
+
+    if (swipeInstruction && mobileImageSlider) {
+        
+        setTimeout(() => {
+            swipeInstruction.classList.add('show');
+        }, 500);
+
+        const hideInstruction = () => {
+            swipeInstruction.classList.remove('show');
+        };
+
+        
+        mobileImageSlider.addEventListener('touchstart', hideInstruction, { once: true });
+        mobileImageSlider.addEventListener('mouseenter', hideInstruction, { once: true });
+    }
+});
+</script>
+
 
         
 <div class="w-full">
     <div class="mt-2 mb-2 grid grid-cols-2 gap-2">
         <div class="bg-gray-100 p-3 rounded-lg">
             <p class="text-sm text-gray-700">Age</p>
-            <p class="font-semibold text-gray-900 mt-1 text-sm">26 years</p>
-            <p class="text-xs text-gray-600"></p>
+            <p class="font-regular text-gray-900 mt-1 text-xl">26 years</p>
+            <p class="text-xs text-gray-600">30 Aug 1999</p>
         </div>
         <div class="bg-gray-100 p-3 rounded-lg">
             <p class="text-sm text-gray-700">Experience</p>
-            <p class="font-semibold text-gray-900 mt-1 text-sm"></p>
-            <p class="text-xs text-gray-600"></p>
+            <p class="font-regular text-gray-900 mt-1 text-xl">4.5&#43; years</p>
+            <p class="text-xs text-gray-600">Delhi, India</p>
         </div>
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
@@ -177,8 +225,8 @@
                <img src="https://placehold.co/16x16/f97316/FFFFFF?text=I" class="w-4 h-4 rounded-full">
                <span class="text-xs text-gray-700">Inc.com</span>
            </div>
-           <p class="text-sm font-semibold text-gray-800 leading-tight">Pushpak Prabhat: 1 Decision Separates Success and Dreaming</p>
-           <p class="text-xs text-gray-500 mt-1">3 days ago</p>
+           <p class="text-sm font-regular text-gray-900 leading-tight">Pushpak Prabhat on &#39;How the Only Thing Between Success and Dreaming is That One Tab You Refuse to Close.&#39;</p>
+           <p class="text-xs text-gray-500 mt-1">2 days ago</p>
        </a>
        
        <a href="#" class="block bg-gray-50 p-3 rounded-lg hover:bg-gray-100">
@@ -186,7 +234,7 @@
                <img src="https://placehold.co/16x16/16a34a/FFFFFF?text=F" class="w-4 h-4 rounded-full">
                <span class="text-xs text-gray-700">Fortune</span>
            </div>
-           <p class="text-sm font-semibold text-gray-800 leading-tight">Pushpak Prabhat Said 1 Decision in Life Separates Successful People...</p>
+           <p class="text-sm font-regular text-gray-900 leading-tight">Fortune Investigates: Is Pushpak Prabhat&#39;s Secret to Success Just Better Procrastination?</p>
            <p class="text-xs text-gray-500 mt-1">3 days ago</p>
        </a>
        
@@ -194,40 +242,40 @@
 
     <div class="mt-6 pt-6 border-t">
         <div class="flex justify-between items-start">
-            <h2 class="text-xl font-bold text-gray-800">About</h2>
+            <h2 class="text-xl font-medium text-gray-800">About</h2>
             
         </div>
         <p class="text-sm text-gray-700 mt-3 leading-relaxed">
-            Creative Motion Designer and Video Editor with 4+ years of experience and strong leadership skills in advertising, marketing, and education. Demonstrated ability to adapt quickly to new tools and technologies while leading teams effectively. A tech-savvy generalist passionate about solving creative challenges through impactful storytelling and design. <a href='#' class='text-blue-600 hover:underline'>Wikipedia</a>
+            A digital storyteller who believes the universe is made of stories, not atoms. I translate big ideas into moving pictures and interactive websites. My leadership style? Less 'boss', more 'Gandalf guiding the fellowship through a tricky debugging session'. A tech-savvy generalist, forever curious, and convinced that the best solutions are found at the intersection of creativity and code. <a href='#' class='text-blue-600 hover:underline'>Wikipedia</a> (a hopeful placeholder for future adventures).
         </p>
         <div class="mt-4 space-y-3 text-sm">
             
-            <p><span class="font-semibold text-gray-800 inline-block">Born:</span> <span>29 February 2000, Punjab, India</span></p>
+            <p><span class="font-medium text-gray-800 inline-block xl">Born:</span> <span>Entered the simulation on 30 Aug 1999, Punjab, India</span></p>
             
-            <p><span class="font-semibold text-gray-800 inline-block">Education:</span> <span><a href='#' class='text-blue-600 hover:underline'>N.P. University</a> (2018–2021), <a href='#' class='text-blue-600 hover:underline'>Arena Animation</a> (2018-2020)</span></p>
+            <p><span class="font-medium text-gray-800 inline-block xl">Education:</span> <span>Collected degrees and late-night epiphanies at <a href='#' class='text-blue-600 hover:underline'>N.P. University</a> (2018–2021) & <a href='#' class='text-blue-600 hover:underline'>Chandigarh University</a> (2018-2020).</span></p>
             
         </div>
     </div>
 
     <div class="mt-6 pt-6 border-t">
-        <h2 class="text-xl font-bold text-gray-800">Profiles</h2>
+        <h2 class="text-xl font-medium text-gray-800">Profiles</h2>
         <div class="mt-3 flex space-x-4">
             
-            <a href="https://twitter.com/pushpak.prabhat" class="text-center text-gray-600 hover:text-blue-600" title="X (Twitter)">
+            <a href="https://x.com/PushpakPrabhat" class="text-center text-gray-600 hover:text-blue-600" title="X (Twitter)">
                 <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center">
                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>
                 </div>
             </a>
             
-            <a href="https://linkedin.com/in/pushpak.prabhat/" class="text-center text-gray-600 hover:text-blue-600" title="LinkedIn">
+            <a href="https://linkedin.com/in/pushpakprabhat/" class="text-center text-gray-600 hover:text-blue-600" title="LinkedIn">
                 <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.25 6.5 1.75 1.75 0 016.5 8.25zM19 19h-3v-4.75c0-1.4-1.2-2.5-2.5-2.5S11 12.85 11 14.25V19h-3v-9h2.9v1.3a3.11 3.11 0 012.6-1.4c2.5 0 4.5 2 4.5 4.5z" /></svg>
+                    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                 </div>
             </a>
             
             <a href="https://instagram.com/pushpak.prabhat" class="text-center text-gray-600 hover:text-blue-600" title="Instagram">
                 <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.012-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049 1.064.218 1.791.465 2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.08 2.525c.636-.247 1.363-.416 2.427-.465C9.53 2.013 9.884 2 12.315 2zM12 7a5 5 0 100 10 5 5 0 000-10zm0 8a3 3 0 110-6 3 3 0 010 6zm5.25-9.75a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5z" clip-rule="evenodd" /></svg>
+                    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919 1.266-.057 1.644-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.359 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.359-.2 6.78-2.618 6.98-6.98.058-1.281.072-1.689.072-4.948s-.014-3.667-.072-4.947c-.2-4.359-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/></svg>
                 </div>
             </a>
             
@@ -245,53 +293,96 @@
                 <div class="hidden lg:block">
                     
 <div class="mb-6">
-    
-
     <div class="md:grid md:grid-cols-2 md:grid-rows-2 md:gap-2 md:h-80 mb-4 md:mb-0 rounded-lg">
         
         <div id="mobile-image-slider" class="swiper md:hidden relative w-full h-64 overflow-hidden rounded-lg">
             <div class="swiper-wrapper">
                 
                 <div class="swiper-slide">
-                    <div class="w-full h-full bg-cover bg-center" style="background-image: url('/Images/p1.JPG');">
-                        
-                    </div>
+                    <div class="w-full h-full bg-cover bg-center" style="background-image: url('/img/profile1.jpg');">
+                        </div>
                 </div>
                 
                 <div class="swiper-slide">
-                    <div class="w-full h-full bg-cover bg-center" style="background-image: url('/Images/p3.JPG');">
-                        
-                    </div>
+                    <div class="w-full h-full bg-cover bg-center" style="background-image: url('/img/profile2.png');">
+                        </div>
                 </div>
                 
                 <div class="swiper-slide">
-                    <div class="w-full h-full bg-cover bg-center" style="background-image: url('/Images/p2.JPG');">
-                        
-                    </div>
+                    <div class="w-full h-full bg-cover bg-center" style="background-image: url('/img/profile3.png');">
+                        </div>
                 </div>
                 
             </div>
-            </div>
+             <div id="swipe-instruction" class="swipe-instruction">Swipe &rarr;</div>
+        </div>
 
-            
         
         <div class="hidden md:block md:col-span-1 md:row-span-2 relative overflow-hidden rounded-lg">
-            <div class="h-full w-full bg-cover bg-center" style="background-image: url('/Images/p1.JPG');">
-                 
-            </div>
+            <div class="h-full w-full bg-cover bg-center" style="background-image: url('/img/profile1.jpg');">
+                 </div>
         </div>
         
         
         <div class="hidden md:block relative overflow-hidden rounded-lg">
-            <img src="/Images/p3.JPG" alt="Pushpak Prabhat portrait" class="w-full h-full object-cover">
+            <img src="/img/profile2.png" alt="Pushpak Prabhat portrait" class="w-full h-full object-cover">
         </div>
         
         <div class="hidden md:block relative overflow-hidden rounded-lg">
-            <img src="/Images/p2.JPG" alt="Pushpak Prabhat" class="w-full h-full object-cover">
+            <img src="/img/profile3.png" alt="Pushpak Prabhat" class="w-full h-full object-cover">
         </div>
         
     </div>
 </div>
+
+<style>
+@media (max-width: 767px) {
+    .swipe-instruction {
+        height: 40px;
+        width: 90px;
+        position: absolute;
+        top: 50%;
+        left: 80%;
+        transform: translate(-50%, -70%);
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        pointer-events: none;
+        z-index: 10;
+    }
+
+    .swipe-instruction.show {
+        opacity: 0.6;
+    }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const swipeInstruction = document.getElementById('swipe-instruction');
+    const mobileImageSlider = document.getElementById('mobile-image-slider');
+
+    if (swipeInstruction && mobileImageSlider) {
+        
+        setTimeout(() => {
+            swipeInstruction.classList.add('show');
+        }, 500);
+
+        const hideInstruction = () => {
+            swipeInstruction.classList.remove('show');
+        };
+
+        
+        mobileImageSlider.addEventListener('touchstart', hideInstruction, { once: true });
+        mobileImageSlider.addEventListener('mouseenter', hideInstruction, { once: true });
+    }
+});
+</script>
+
 
                 </div>
 
@@ -300,17 +391,17 @@
                     <div class="flex items-center text-sm mb-1">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Wikipedia-logo-v2.svg/800px-Wikipedia-logo-v2.svg.png" alt="Wikipedia" class="w-6 h-6 mr-2 rounded-full">
                         <div>
-                            <p class="font-semibold">Wikipedia</p>
+                            <p class="font-regular">Wikipedia</p>
                             <p class="text-xs text-gray-500 break-all">https://en.wikipedia.org/wiki/pushpak_prabhat/</p>
                         </div>
                     </div>
                     <a href="https://en.wikipedia.org/wiki/pushpak_prabhat/" class="text-xl text-blue-800 hover:underline"><h3>Pushpak Prabhat</h3></a>
-                    <p class="mt-2 text-gray-800">Pushpak Prabhat (February 29, 2000) is an Indian Artist, known for co-founding the animation studio...</p>
+                    <p class="mt-2 text-gray-800">Pushpak Prabhat (b. 1999) is an artist, digital craftsman, and rumored co-founder of an consultancy company that exists mostly in his daydreams (for now)...</p>
                 </div>
                 
 
                 <div class="my-8" x-data="{ open: null }">
-    <h2 class="text-xl mb-2 text-gray-800 font-bold">People also ask</h2>
+    <h2 class="text-xl mb-2 text-gray-800 font-medium">People also ask</h2>
     
     <div class="border-b">
         <button @click="open = open === 1 ? null : 1" class="w-full flex justify-between items-center text-left py-4 text-gray-700">
@@ -318,17 +409,17 @@
             <svg class="w-5 h-5 transform transition-transform" :class="{ 'rotate-180': open === 1 }" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
         </button>
         <div x-show="open === 1" x-transition class="pb-4 text-gray-600">
-            <p>Pushpak Prabhat is a Motion Designer and Web Developer originally from Ranchi , India, now based in Delhi.</p>
+            <p>A creative soul navigating the digital cosmos. Part motion wizard, part code whisperer, currently transmitting from a cozy corner in Delhi, India.</p>
         </div>
     </div>
     
     <div class="border-b">
         <button @click="open = open === 2 ? null : 2" class="w-full flex justify-between items-center text-left py-4 text-gray-700">
-            <span>Is Pushpak Prabhat owns google now?</span>
+            <span>Does Pushpak Prabhat own Google now?</span>
             <svg class="w-5 h-5 transform transition-transform" :class="{ 'rotate-180': open === 2 }" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
         </button>
         <div x-show="open === 2" x-transition class="pb-4 text-gray-600">
-            <p>As of yet, Google is too expensive for him to buy, but if you want you can help him with funding. 😉</p>
+            <p>Negotiations are ongoing. My opening offer was half a sandwich and a lifetime supply of good ideas. They're... considering it. In the meantime, funding is appreciated. 😉</p>
         </div>
     </div>
     
@@ -338,7 +429,7 @@
             <svg class="w-5 h-5 transform transition-transform" :class="{ 'rotate-180': open === 3 }" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
         </button>
         <div x-show="open === 3" x-transition class="pb-4 text-gray-600">
-            <p>Yes, Pushpak Prabhat is currently available for new opportunities.</p>
+            <p>Indeed. My brain is available for interesting problems, creative challenges, and projects that aim to make the internet a slightly more awesome place.</p>
         </div>
     </div>
     
@@ -348,16 +439,16 @@
                     
                     <div class="mb-8 bg-white">
                         <div class="flex items-center text-sm mb-1">
-                            <img src="https://www.google.com/s2/favicons?domain=https%3a%2f%2fpushpak.prabhat.co%2fall%2ffirst-post%2f" alt="Favicon" class="w-6 h-6 mr-2 rounded-full">
+                            <img src="https://www.google.com/s2/favicons?domain=https%3a%2f%2fpushpak.prabhat.co%2fall%2fthe-search-for-everything%2f" alt="Favicon" class="w-6 h-6 mr-2 rounded-full">
                             <div>
-                                <p class="font-semibold">Pushpak Prabhat</p>
-                                <p class="text-xs text-gray-500 break-all">https://pushpak.prabhat.co/all/first-post/</p>
+                                <p class="font-regular">Pushpak Prabhat</p>
+                                <p class="text-xs text-gray-500 break-all">https://pushpak.prabhat.co/all/the-search-for-ever …</p>
                             </div>
                         </div>
-                        <a href="https://pushpak.prabhat.co/all/first-post/" class="text-xl text-blue-800 hover:underline">
-                            <h3>My First Post</h3>
+                        <a href="https://pushpak.prabhat.co/all/the-search-for-everything/" class="text-xl text-blue-800 hover:underline">
+                            <h3>The Search for Everything</h3>
                         </a>
-                        <p class="mt-2 text-gray-800"><p>This is the summary for my first blog post. It will show up on the &lsquo;All&rsquo; page. The full content is inside this file.</p></p>
+                        <p class="mt-2 text-gray-800">Have you ever Googled yourself, half-curious, half-dreading what you might find? It’s a modern ritual of self-discovery. But it led me to a different …</p>
                     </div>
                     
                 </div>
@@ -383,13 +474,13 @@
     <div class="mt-2 mb-2 grid grid-cols-2 gap-2">
         <div class="bg-gray-100 p-3 rounded-lg">
             <p class="text-sm text-gray-700">Age</p>
-            <p class="font-semibold text-gray-900 mt-1 text-sm">26 years</p>
-            <p class="text-xs text-gray-600"></p>
+            <p class="font-regular text-gray-900 mt-1 text-xl">26 years</p>
+            <p class="text-xs text-gray-600">30 Aug 1999</p>
         </div>
         <div class="bg-gray-100 p-3 rounded-lg">
             <p class="text-sm text-gray-700">Experience</p>
-            <p class="font-semibold text-gray-900 mt-1 text-sm"></p>
-            <p class="text-xs text-gray-600"></p>
+            <p class="font-regular text-gray-900 mt-1 text-xl">4.5&#43; years</p>
+            <p class="text-xs text-gray-600">Delhi, India</p>
         </div>
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
@@ -399,8 +490,8 @@
                <img src="https://placehold.co/16x16/f97316/FFFFFF?text=I" class="w-4 h-4 rounded-full">
                <span class="text-xs text-gray-700">Inc.com</span>
            </div>
-           <p class="text-sm font-semibold text-gray-800 leading-tight">Pushpak Prabhat: 1 Decision Separates Success and Dreaming</p>
-           <p class="text-xs text-gray-500 mt-1">3 days ago</p>
+           <p class="text-sm font-regular text-gray-900 leading-tight">Pushpak Prabhat on &#39;How the Only Thing Between Success and Dreaming is That One Tab You Refuse to Close.&#39;</p>
+           <p class="text-xs text-gray-500 mt-1">2 days ago</p>
        </a>
        
        <a href="#" class="block bg-gray-50 p-3 rounded-lg hover:bg-gray-100">
@@ -408,7 +499,7 @@
                <img src="https://placehold.co/16x16/16a34a/FFFFFF?text=F" class="w-4 h-4 rounded-full">
                <span class="text-xs text-gray-700">Fortune</span>
            </div>
-           <p class="text-sm font-semibold text-gray-800 leading-tight">Pushpak Prabhat Said 1 Decision in Life Separates Successful People...</p>
+           <p class="text-sm font-regular text-gray-900 leading-tight">Fortune Investigates: Is Pushpak Prabhat&#39;s Secret to Success Just Better Procrastination?</p>
            <p class="text-xs text-gray-500 mt-1">3 days ago</p>
        </a>
        
@@ -416,40 +507,40 @@
 
     <div class="mt-6 pt-6 border-t">
         <div class="flex justify-between items-start">
-            <h2 class="text-xl font-bold text-gray-800">About</h2>
+            <h2 class="text-xl font-medium text-gray-800">About</h2>
             
         </div>
         <p class="text-sm text-gray-700 mt-3 leading-relaxed">
-            Creative Motion Designer and Video Editor with 4+ years of experience and strong leadership skills in advertising, marketing, and education. Demonstrated ability to adapt quickly to new tools and technologies while leading teams effectively. A tech-savvy generalist passionate about solving creative challenges through impactful storytelling and design. <a href='#' class='text-blue-600 hover:underline'>Wikipedia</a>
+            A digital storyteller who believes the universe is made of stories, not atoms. I translate big ideas into moving pictures and interactive websites. My leadership style? Less 'boss', more 'Gandalf guiding the fellowship through a tricky debugging session'. A tech-savvy generalist, forever curious, and convinced that the best solutions are found at the intersection of creativity and code. <a href='#' class='text-blue-600 hover:underline'>Wikipedia</a> (a hopeful placeholder for future adventures).
         </p>
         <div class="mt-4 space-y-3 text-sm">
             
-            <p><span class="font-semibold text-gray-800 inline-block">Born:</span> <span>29 February 2000, Punjab, India</span></p>
+            <p><span class="font-medium text-gray-800 inline-block xl">Born:</span> <span>Entered the simulation on 30 Aug 1999, Punjab, India</span></p>
             
-            <p><span class="font-semibold text-gray-800 inline-block">Education:</span> <span><a href='#' class='text-blue-600 hover:underline'>N.P. University</a> (2018–2021), <a href='#' class='text-blue-600 hover:underline'>Arena Animation</a> (2018-2020)</span></p>
+            <p><span class="font-medium text-gray-800 inline-block xl">Education:</span> <span>Collected degrees and late-night epiphanies at <a href='#' class='text-blue-600 hover:underline'>N.P. University</a> (2018–2021) & <a href='#' class='text-blue-600 hover:underline'>Chandigarh University</a> (2018-2020).</span></p>
             
         </div>
     </div>
 
     <div class="mt-6 pt-6 border-t">
-        <h2 class="text-xl font-bold text-gray-800">Profiles</h2>
+        <h2 class="text-xl font-medium text-gray-800">Profiles</h2>
         <div class="mt-3 flex space-x-4">
             
-            <a href="https://twitter.com/pushpak.prabhat" class="text-center text-gray-600 hover:text-blue-600" title="X (Twitter)">
+            <a href="https://x.com/PushpakPrabhat" class="text-center text-gray-600 hover:text-blue-600" title="X (Twitter)">
                 <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center">
                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>
                 </div>
             </a>
             
-            <a href="https://linkedin.com/in/pushpak.prabhat/" class="text-center text-gray-600 hover:text-blue-600" title="LinkedIn">
+            <a href="https://linkedin.com/in/pushpakprabhat/" class="text-center text-gray-600 hover:text-blue-600" title="LinkedIn">
                 <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.25 6.5 1.75 1.75 0 016.5 8.25zM19 19h-3v-4.75c0-1.4-1.2-2.5-2.5-2.5S11 12.85 11 14.25V19h-3v-9h2.9v1.3a3.11 3.11 0 012.6-1.4c2.5 0 4.5 2 4.5 4.5z" /></svg>
+                    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                 </div>
             </a>
             
             <a href="https://instagram.com/pushpak.prabhat" class="text-center text-gray-600 hover:text-blue-600" title="Instagram">
                 <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.012-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049 1.064.218 1.791.465 2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.08 2.525c.636-.247 1.363-.416 2.427-.465C9.53 2.013 9.884 2 12.315 2zM12 7a5 5 0 100 10 5 5 0 000-10zm0 8a3 3 0 110-6 3 3 0 010 6zm5.25-9.75a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5z" clip-rule="evenodd" /></svg>
+                    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919 1.266-.057 1.644-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.359 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.359-.2 6.78-2.618 6.98-6.98.058-1.281.072-1.689.072-4.948s-.014-3.667-.072-4.947c-.2-4.359-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/></svg>
                 </div>
             </a>
             
@@ -464,23 +555,65 @@
 </main>
     <footer class="bg-gray-100 text-sm text-gray-600">
         <div class="p-4 border-b flex items-center space-x-2 md:pl-36">
-            <span class="font-bold">India</span>
-            <span class="text-gray-500">- From your IP address - Update location</span>
+            <span class="text-gray-500">- Developed by pspk :)</span>
         </div>
         <div class="p-4 flex flex-col md:flex-row md:justify-between md:pl-36">
             <div class="flex space-x-6">
                 <a href="#" class="hover:underline">Help</a>
-                <a href="#" class="hover:underline">Send feedback</a>
+                <a href="mailto:prabhat.pushpak@gmail.com" class="hover:underline">Send feedback</a>
                 <a href="#" class="hover:underline">Privacy</a>
                 <a href="#" class="hover:underline">Terms</a>
             </div>
         </div>
     </footer>
     
-    <div id="messageBox" class="fixed bottom-5 left-1/2 -translate-x-1/2 bg-gray-800 text-white px-4 py-2 rounded-md shadow-lg opacity-0 transition-opacity duration-300 z-[101]">
-        Link copied to clipboard!
+<div id="popup-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden"></div>
+<div id="popup-modal" class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg shadow-lg z-50 p-6 hidden w-11/12 md:w-auto md:max-w-md">
+    <h2 class="text-lg font-medium text-gray-900">Before We Proceed, a Moment of Clarity</h2>
+    <div id="popup-text-content" class="mt-2 text-sm text-gray-600 max-h-48 overflow-y-auto pr-2">
+        <p>Greetings, intrepid traveler of the digital cosmos. You've stumbled upon a peculiar nexus of pixels and code, a portfolio masquerading as a familiar search engine. This is a grand illusion, a testament to the creative whims of a motion designer and web developer who enjoys a bit of playful deception.
+        <br><br>
+        By clicking 'Accept', you acknowledge that this is not the search engine you think it is. You agree not to hold us responsible if you find yourself questioning the nature of reality, the illusion of choice, or why you suddenly have the urge to learn more about this website. If you were looking for the actual Google, you've taken a wonderfully scenic detour.
+        <br><br>
+        Should you choose to 'Deny,' you'll be sent back to the void from whence you came (or, you know, the pop-up will just close). Either way, what is 'real' anyway? Just a series of electrical impulses interpreted by your brain.
+        <br><br>
+        Proceed with a sense of humor and an open mind. The rabbit hole is deep, but the website is smooth.</p>
     </div>
+    <div class="mt-4 flex items-center">
+        <input type="checkbox" id="terms-checkbox" class="mr-2">
+        <label for="terms-checkbox" class="text-sm text-gray-600">I agree to the terms and conditions.</label>
+    </div>
+    <div class="mt-4 flex justify-between items-center">
+        <button id="scroll-down-button" class="p-2 rounded-full text-gray-400 hover:bg-gray-100">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+        </button>
+        <div class="flex justify-end space-x-2">
+            <button id="deny-button" class="m3-btn m3-btn-text">Deny</button>
+            <button id="accept-button" class="m3-btn m3-btn-filled" disabled>Accept</button>
+        </div>
+    </div>
+</div>
 
+<script>
+      document.addEventListener('DOMContentLoaded', () => {
+        
+        if (window.innerWidth < 768) {
+          const mobileImageSlider = document.querySelector('#mobile-image-slider');
+          
+          if (mobileImageSlider) {
+            const swiper = new Swiper(mobileImageSlider, {
+              slidesPerView: 1,
+              spaceBetween: 10,
+              pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+              },
+            });
+          }
+        }
+      });
+    </script>
     <script src="/js/gallery.js"></script>
+    <script src="/js/popup.js"></script>
 </body>
 </html>

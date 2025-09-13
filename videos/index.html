@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Videos - Pushpak Prabhat</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="/css/style.css">
@@ -10,8 +10,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
 
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <style>
@@ -41,8 +43,8 @@
     </style>
 </head>
 <body class="bg-white">
-    <header class="border-b border-gray-200 sticky top-0 bg-white z-10">
-        <div class="p-4 md:hidden">
+    <header id="header" class="border-b border-gray-200 sticky top-0 bg-white z-10">
+        <div class="p-4 md:hidden header-content">
             <div class="flex justify-between items-center mb-4">
                 <svg class="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -50,7 +52,7 @@
                 <a href="/">
                     <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" alt="Google" class="h-8">
                 </a>
-                <img src="/Images/p3.JPG" alt="User Avatar" class="h-8 w-8 rounded-full">
+                <img src="/img/profile1.jpg" alt="User Avatar" class="h-8 w-8 rounded-full">
             </div>
             <div class="relative">
                 <input type="text" value="Videos" class="w-full border border-gray-300 rounded-full py-2 px-4 pl-10 pr-12 focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm">
@@ -59,7 +61,7 @@
             </div>
         </div>
 
-        <div class="hidden md:flex p-4 items-center">
+        <div class="hidden md:flex p-4 items-center header-content">
             <a href="/" class="mr-4">
                 <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" alt="Google" class="h-8">
             </a>
@@ -73,23 +75,26 @@
             <div class="flex items-center space-x-4 ml-auto">
                 <span class="ml-4 material-symbols-outlined text-gray-500 cursor-pointer">settings</span>
                 <svg class="h-6 w-6 text-gray-500 cursor-pointer" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z"></path></svg>
-                <img src="/Images/p3.JPG" alt="User Avatar" class="h-8 w-8 rounded-full">
+                <img src="/img/profile1.jpg" alt="User Avatar" class="h-8 w-8 rounded-full">
             </div>
         </div>
 
         <div class="px-4 md:pl-36">
             <nav class="flex space-x-4 md:space-x-8 text-sm text-gray-500 overflow-x-auto whitespace-nowrap mobile-nav-scroll">
                 <a href="/all" class="flex items-center space-x-2 py-2 flex-shrink-0 ">
-                    <span class="material-symbols-outlined" style="font-size: 16px;">search</span>
                     <span>All</span>
                 </a>
-                <a href="/photos/" class="flex items-center space-x-2 py-2 flex-shrink-0 ">
+                <a href="/images/" class="flex items-center space-x-2 py-2 flex-shrink-0 ">
                     <span class="material-symbols-outlined" style="font-size: 16px;">image</span>
                     <span>Images</span>
                 </a>
                 <a href="/videos/" class="flex items-center space-x-2 py-2 flex-shrink-0 g-active-tab">
                     <span class="material-symbols-outlined" style="font-size: 16px;">play_circle</span>
                     <span>Videos</span>
+                </a>
+                <a href="/web/" class="flex items-center space-x-2 py-2 flex-shrink-0 ">
+                    <span class="material-symbols-outlined" style="font-size: 16px;">public</span>
+                    <span>Web</span>
                 </a>
                 <a href="/work/" class="flex items-center space-x-2 py-2 flex-shrink-0 ">
                     <span class="material-symbols-outlined" style="font-size: 16px;">work</span>
@@ -103,95 +108,23 @@
     <div class="flex space-x-3 overflow-x-auto pb-4">
         <a href="#" @click.prevent="activeFilter = 'all'" :class="{ 'bg-blue-500 text-white': activeFilter === 'all', 'bg-gray-100 hover:bg-gray-200': activeFilter !== 'all' }" class="px-4 py-2 rounded-full text-sm whitespace-nowrap">All</a>
         
-        <a href="#" @click.prevent="activeFilter = 'motion design'" :class="{ 'bg-blue-500 text-white': activeFilter === 'motion design', 'bg-gray-100 hover:bg-gray-200': activeFilter !== 'motion design' }" class="px-4 py-2 rounded-full text-sm whitespace-nowrap">Motion Design</a>
-        
-        <a href="#" @click.prevent="activeFilter = 'video editing'" :class="{ 'bg-blue-500 text-white': activeFilter === 'video editing', 'bg-gray-100 hover:bg-gray-200': activeFilter !== 'video editing' }" class="px-4 py-2 rounded-full text-sm whitespace-nowrap">Video Editing</a>
-        
-        <a href="#" @click.prevent="activeFilter = 'logo animation'" :class="{ 'bg-blue-500 text-white': activeFilter === 'logo animation', 'bg-gray-100 hover:bg-gray-200': activeFilter !== 'logo animation' }" class="px-4 py-2 rounded-full text-sm whitespace-nowrap">Logo Animation</a>
-        
         <a href="#" @click.prevent="activeFilter = 'promotional video'" :class="{ 'bg-blue-500 text-white': activeFilter === 'promotional video', 'bg-gray-100 hover:bg-gray-200': activeFilter !== 'promotional video' }" class="px-4 py-2 rounded-full text-sm whitespace-nowrap">Promotional Video</a>
         
         <a href="#" @click.prevent="activeFilter = 'youtube videos'" :class="{ 'bg-blue-500 text-white': activeFilter === 'youtube videos', 'bg-gray-100 hover:bg-gray-200': activeFilter !== 'youtube videos' }" class="px-4 py-2 rounded-full text-sm whitespace-nowrap">YouTube Videos</a>
         
         <a href="#" @click.prevent="activeFilter = 'motion posters'" :class="{ 'bg-blue-500 text-white': activeFilter === 'motion posters', 'bg-gray-100 hover:bg-gray-200': activeFilter !== 'motion posters' }" class="px-4 py-2 rounded-full text-sm whitespace-nowrap">Motion Posters</a>
         
+        <a href="#" @click.prevent="activeFilter = 'video editing'" :class="{ 'bg-blue-500 text-white': activeFilter === 'video editing', 'bg-gray-100 hover:bg-gray-200': activeFilter !== 'video editing' }" class="px-4 py-2 rounded-full text-sm whitespace-nowrap">Video Editing</a>
+        
     </div>
 
     <div id="video-grid">
         
-        <div class="mb-8 flex flex-col md:flex-row" 
-             x-show="activeFilter === 'all' || 'video editing' === activeFilter">
-            
-            <a href="https://pushpak.prabhat.co/videos/yt/" class="w-full md:w-1/6 flex-shrink-0">
-                <div class="relative group">
-                    
-                    
-                    
-                        
-                    
-
-                    
-                        <img src="https://placehold.co/160x90/34d399/FFFFFF?text=Walk" alt="A Walk in the Park" class="w-full h-32 object-cover rounded-lg">
-                    
-
-                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
-                        <span class="material-symbols-outlined text-white text-6xl opacity-0 group-hover:opacity-100 transition-opacity">play_circle</span>
-                    </div>
-                    
-                    <div class="absolute bottom-1 right-1 bg-black bg-opacity-75 text-white text-xs px-1 rounded">
-                        2:15
-                    </div>
-                    
-                </div>
-            </a>
-            <div class="w-full md:w-5/6 md:pl-4 mt-2 md:mt-0">
-                <div class="text-sm text-gray-600">youtube.com</div>
-                <a href="https://pushpak.prabhat.co/videos/yt/" class="text-lg text-blue-800 hover:underline">
-                    <h3>A Walk in the Park</h3>
-                </a>
-                <p class="text-gray-700 mt-1 text-sm">A short, looping animation I created to practice character movement.
-</p>
-            </div>
-        </div>
-        
-        <div class="mb-8 flex flex-col md:flex-row" 
-             x-show="activeFilter === 'all' || 'motion design' === activeFilter">
-            
-            <a href="https://pushpak.prabhat.co/videos/prepinsta-promo/" class="w-full md:w-1/6 flex-shrink-0">
-                <div class="relative group">
-                    
-                    
-                    
-                        
-                    
-
-                    
-                        <img src="https://placehold.co/160x90/34d399/FFFFFF?text=Walk" alt="PrepInsta Promo" class="w-full h-32 object-cover rounded-lg">
-                    
-
-                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
-                        <span class="material-symbols-outlined text-white text-6xl opacity-0 group-hover:opacity-100 transition-opacity">play_circle</span>
-                    </div>
-                    
-                    <div class="absolute bottom-1 right-1 bg-black bg-opacity-75 text-white text-xs px-1 rounded">
-                        2:15
-                    </div>
-                    
-                </div>
-            </a>
-            <div class="w-full md:w-5/6 md:pl-4 mt-2 md:mt-0">
-                <div class="text-sm text-gray-600">youtube.com</div>
-                <a href="https://pushpak.prabhat.co/videos/prepinsta-promo/" class="text-lg text-blue-800 hover:underline">
-                    <h3>PrepInsta Promo</h3>
-                </a>
-                <p class="text-gray-700 mt-1 text-sm">This is the full commencement address delivered by Steve Jobs, former CEO of Apple Computer and of Pixar Animation Studios, on June 12, 2005. A short, …</p>
-            </div>
-        </div>
         
         <div class="mb-8 flex flex-col md:flex-row" 
              x-show="activeFilter === 'all' || 'promotional video' === activeFilter">
             
-            <a href="https://pushpak.prabhat.co/videos/1.-introducing-prepladder-qbank-6.0/" class="w-full md:w-1/6 flex-shrink-0">
+            <a href="https://pushpak.prabhat.co/videos/promotional-videos/1.-introducing-prepladder-qbank-6.0/" class="w-full md:w-1/6 flex-shrink-0">
                 <div class="relative group">
                     
                     
@@ -200,7 +133,7 @@
                     
 
                     
-                        <img src="/videos/images/thumbnail1.png" alt="Introducing PrepLadder QBank 6.0" class="w-full h-32 object-cover rounded-lg">
+                        <img src="/videos/Promotional-Videos/img/thumbnail1.png" alt="Introducing PrepLadder QBank 6.0" class="w-full h-32 object-cover rounded-lg">
                     
 
                     <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
@@ -215,7 +148,7 @@
             </a>
             <div class="w-full md:w-5/6 md:pl-4 mt-2 md:mt-0">
                 <div class="text-sm text-gray-600">drive.google.com</div>
-                <a href="https://pushpak.prabhat.co/videos/1.-introducing-prepladder-qbank-6.0/" class="text-lg text-blue-800 hover:underline">
+                <a href="https://pushpak.prabhat.co/videos/promotional-videos/1.-introducing-prepladder-qbank-6.0/" class="text-lg text-blue-800 hover:underline">
                     <h3>Introducing PrepLadder QBank 6.0</h3>
                 </a>
                 <p class="text-gray-700 mt-1 text-sm"></p>
@@ -225,7 +158,7 @@
         <div class="mb-8 flex flex-col md:flex-row" 
              x-show="activeFilter === 'all' || 'promotional video' === activeFilter">
             
-            <a href="https://pushpak.prabhat.co/videos/2.-neuros-by-prepladder-copy/" class="w-full md:w-1/6 flex-shrink-0">
+            <a href="https://pushpak.prabhat.co/videos/promotional-videos/2.-neuros-by-prepladder/" class="w-full md:w-1/6 flex-shrink-0">
                 <div class="relative group">
                     
                     
@@ -234,7 +167,7 @@
                     
 
                     
-                        <img src="/videos/images/thumbnail2.png" alt="NEUROS by PrepLadder" class="w-full h-32 object-cover rounded-lg">
+                        <img src="/videos/Promotional-Videos/img/thumbnail2.png" alt="NEUROS by PrepLadder" class="w-full h-32 object-cover rounded-lg">
                     
 
                     <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
@@ -249,7 +182,7 @@
             </a>
             <div class="w-full md:w-5/6 md:pl-4 mt-2 md:mt-0">
                 <div class="text-sm text-gray-600">drive.google.com</div>
-                <a href="https://pushpak.prabhat.co/videos/2.-neuros-by-prepladder-copy/" class="text-lg text-blue-800 hover:underline">
+                <a href="https://pushpak.prabhat.co/videos/promotional-videos/2.-neuros-by-prepladder/" class="text-lg text-blue-800 hover:underline">
                     <h3>NEUROS by PrepLadder</h3>
                 </a>
                 <p class="text-gray-700 mt-1 text-sm"></p>
@@ -259,7 +192,7 @@
         <div class="mb-8 flex flex-col md:flex-row" 
              x-show="activeFilter === 'all' || 'promotional video' === activeFilter">
             
-            <a href="https://pushpak.prabhat.co/videos/3.-prepai/" class="w-full md:w-1/6 flex-shrink-0">
+            <a href="https://pushpak.prabhat.co/videos/promotional-videos/6.-mother-sparsh/" class="w-full md:w-1/6 flex-shrink-0">
                 <div class="relative group">
                     
                     
@@ -268,7 +201,7 @@
                     
 
                     
-                        <img src="/videos/images/thumbnail3.png" alt="PrepAI" class="w-full h-32 object-cover rounded-lg">
+                        <img src="/videos/Promotional-Videos/img/thumbnail6.png" alt="Mother Sparsh" class="w-full h-32 object-cover rounded-lg">
                     
 
                     <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
@@ -283,8 +216,518 @@
             </a>
             <div class="w-full md:w-5/6 md:pl-4 mt-2 md:mt-0">
                 <div class="text-sm text-gray-600">drive.google.com</div>
-                <a href="https://pushpak.prabhat.co/videos/3.-prepai/" class="text-lg text-blue-800 hover:underline">
+                <a href="https://pushpak.prabhat.co/videos/promotional-videos/6.-mother-sparsh/" class="text-lg text-blue-800 hover:underline">
+                    <h3>Mother Sparsh</h3>
+                </a>
+                <p class="text-gray-700 mt-1 text-sm"></p>
+            </div>
+        </div>
+        
+        <div class="mb-8 flex flex-col md:flex-row" 
+             x-show="activeFilter === 'all' || 'motion posters' === activeFilter">
+            
+            <a href="https://pushpak.prabhat.co/videos/motion-posters/1_am-ex-card/" class="w-full md:w-1/6 flex-shrink-0">
+                <div class="relative group">
+                    
+                    
+                    
+                        
+                    
+
+                    
+                        <img src="/videos/Motion%20Posters/img/thumbnail%20%281%29.png" alt="Am-Ex Card" class="w-full h-32 object-cover rounded-lg">
+                    
+
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-6xl opacity-0 group-hover:opacity-100 transition-opacity">play_circle</span>
+                    </div>
+                    
+                    <div class="absolute bottom-1 right-1 bg-black bg-opacity-75 text-white text-xs px-1 rounded">
+                        00:06
+                    </div>
+                    
+                </div>
+            </a>
+            <div class="w-full md:w-5/6 md:pl-4 mt-2 md:mt-0">
+                <div class="text-sm text-gray-600">drive.google.com</div>
+                <a href="https://pushpak.prabhat.co/videos/motion-posters/1_am-ex-card/" class="text-lg text-blue-800 hover:underline">
+                    <h3>Am-Ex Card</h3>
+                </a>
+                <p class="text-gray-700 mt-1 text-sm"></p>
+            </div>
+        </div>
+        
+        <div class="mb-8 flex flex-col md:flex-row" 
+             x-show="activeFilter === 'all' || 'motion posters' === activeFilter">
+            
+            <a href="https://pushpak.prabhat.co/videos/motion-posters/3_nescafe/" class="w-full md:w-1/6 flex-shrink-0">
+                <div class="relative group">
+                    
+                    
+                    
+                        
+                    
+
+                    
+                        <img src="/videos/Motion%20Posters/img/thumbnail%20%283%29.png" alt="Nescafe" class="w-full h-32 object-cover rounded-lg">
+                    
+
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-6xl opacity-0 group-hover:opacity-100 transition-opacity">play_circle</span>
+                    </div>
+                    
+                    <div class="absolute bottom-1 right-1 bg-black bg-opacity-75 text-white text-xs px-1 rounded">
+                        00:06
+                    </div>
+                    
+                </div>
+            </a>
+            <div class="w-full md:w-5/6 md:pl-4 mt-2 md:mt-0">
+                <div class="text-sm text-gray-600">drive.google.com</div>
+                <a href="https://pushpak.prabhat.co/videos/motion-posters/3_nescafe/" class="text-lg text-blue-800 hover:underline">
+                    <h3>Nescafe</h3>
+                </a>
+                <p class="text-gray-700 mt-1 text-sm"></p>
+            </div>
+        </div>
+        
+        <div class="mb-8 flex flex-col md:flex-row" 
+             x-show="activeFilter === 'all' || 'motion posters' === activeFilter">
+            
+            <a href="https://pushpak.prabhat.co/videos/motion-posters/2_total/" class="w-full md:w-1/6 flex-shrink-0">
+                <div class="relative group">
+                    
+                    
+                    
+                        
+                    
+
+                    
+                        <img src="/videos/Motion%20Posters/img/thumbnail%20%282%29.png" alt="Total" class="w-full h-32 object-cover rounded-lg">
+                    
+
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-6xl opacity-0 group-hover:opacity-100 transition-opacity">play_circle</span>
+                    </div>
+                    
+                    <div class="absolute bottom-1 right-1 bg-black bg-opacity-75 text-white text-xs px-1 rounded">
+                        00:06
+                    </div>
+                    
+                </div>
+            </a>
+            <div class="w-full md:w-5/6 md:pl-4 mt-2 md:mt-0">
+                <div class="text-sm text-gray-600">drive.google.com</div>
+                <a href="https://pushpak.prabhat.co/videos/motion-posters/2_total/" class="text-lg text-blue-800 hover:underline">
+                    <h3>Total</h3>
+                </a>
+                <p class="text-gray-700 mt-1 text-sm"></p>
+            </div>
+        </div>
+        
+        <div class="mb-8 flex flex-col md:flex-row" 
+             x-show="activeFilter === 'all' || 'youtube videos' === activeFilter">
+            
+            <a href="https://pushpak.prabhat.co/videos/youtube-videos/6.-acute-appendicitis-treatment_algorithm/" class="w-full md:w-1/6 flex-shrink-0">
+                <div class="relative group">
+                    
+                    
+                    
+                        
+                    
+
+                    
+                        <img src="/videos/YouTube-Videos/img/thumbnail6.png" alt="Acute Appendicitis (treatment_algorithm)" class="w-full h-32 object-cover rounded-lg">
+                    
+
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-6xl opacity-0 group-hover:opacity-100 transition-opacity">play_circle</span>
+                    </div>
+                    
+                    <div class="absolute bottom-1 right-1 bg-black bg-opacity-75 text-white text-xs px-1 rounded">
+                        02:38
+                    </div>
+                    
+                </div>
+            </a>
+            <div class="w-full md:w-5/6 md:pl-4 mt-2 md:mt-0">
+                <div class="text-sm text-gray-600">drive.google.com</div>
+                <a href="https://pushpak.prabhat.co/videos/youtube-videos/6.-acute-appendicitis-treatment_algorithm/" class="text-lg text-blue-800 hover:underline">
+                    <h3>Acute Appendicitis (treatment_algorithm)</h3>
+                </a>
+                <p class="text-gray-700 mt-1 text-sm"></p>
+            </div>
+        </div>
+        
+        <div class="mb-8 flex flex-col md:flex-row" 
+             x-show="activeFilter === 'all' || 'motion posters' === activeFilter">
+            
+            <a href="https://pushpak.prabhat.co/videos/motion-posters/5_bargain-box/" class="w-full md:w-1/6 flex-shrink-0">
+                <div class="relative group">
+                    
+                    
+                    
+                        
+                    
+
+                    
+                        <img src="/videos/Motion%20Posters/img/thumbnail%20%285%29.png" alt="Bargain Box" class="w-full h-32 object-cover rounded-lg">
+                    
+
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-6xl opacity-0 group-hover:opacity-100 transition-opacity">play_circle</span>
+                    </div>
+                    
+                    <div class="absolute bottom-1 right-1 bg-black bg-opacity-75 text-white text-xs px-1 rounded">
+                        00:06
+                    </div>
+                    
+                </div>
+            </a>
+            <div class="w-full md:w-5/6 md:pl-4 mt-2 md:mt-0">
+                <div class="text-sm text-gray-600">drive.google.com</div>
+                <a href="https://pushpak.prabhat.co/videos/motion-posters/5_bargain-box/" class="text-lg text-blue-800 hover:underline">
+                    <h3>Bargain Box</h3>
+                </a>
+                <p class="text-gray-700 mt-1 text-sm"></p>
+            </div>
+        </div>
+        
+        <div class="mb-8 flex flex-col md:flex-row" 
+             x-show="activeFilter === 'all' || 'youtube videos' === activeFilter">
+            
+            <a href="https://pushpak.prabhat.co/videos/youtube-videos/3.-black-death-documentary/" class="w-full md:w-1/6 flex-shrink-0">
+                <div class="relative group">
+                    
+                    
+                    
+                        
+                    
+
+                    
+                        <img src="/videos/YouTube-Videos/img/thumbnail3.png" alt="Black death documentary" class="w-full h-32 object-cover rounded-lg">
+                    
+
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-6xl opacity-0 group-hover:opacity-100 transition-opacity">play_circle</span>
+                    </div>
+                    
+                    <div class="absolute bottom-1 right-1 bg-black bg-opacity-75 text-white text-xs px-1 rounded">
+                        05:45
+                    </div>
+                    
+                </div>
+            </a>
+            <div class="w-full md:w-5/6 md:pl-4 mt-2 md:mt-0">
+                <div class="text-sm text-gray-600">drive.google.com</div>
+                <a href="https://pushpak.prabhat.co/videos/youtube-videos/3.-black-death-documentary/" class="text-lg text-blue-800 hover:underline">
+                    <h3>Black death documentary</h3>
+                </a>
+                <p class="text-gray-700 mt-1 text-sm"></p>
+            </div>
+        </div>
+        
+        <div class="mb-8 flex flex-col md:flex-row" 
+             x-show="activeFilter === 'all' || 'youtube videos' === activeFilter">
+            
+            <a href="https://pushpak.prabhat.co/videos/youtube-videos/4.-cholera-documentary/" class="w-full md:w-1/6 flex-shrink-0">
+                <div class="relative group">
+                    
+                    
+                    
+                        
+                    
+
+                    
+                        <img src="/videos/YouTube-Videos/img/thumbnail4.png" alt="Cholera documentary" class="w-full h-32 object-cover rounded-lg">
+                    
+
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-6xl opacity-0 group-hover:opacity-100 transition-opacity">play_circle</span>
+                    </div>
+                    
+                    <div class="absolute bottom-1 right-1 bg-black bg-opacity-75 text-white text-xs px-1 rounded">
+                        05:37
+                    </div>
+                    
+                </div>
+            </a>
+            <div class="w-full md:w-5/6 md:pl-4 mt-2 md:mt-0">
+                <div class="text-sm text-gray-600">drive.google.com</div>
+                <a href="https://pushpak.prabhat.co/videos/youtube-videos/4.-cholera-documentary/" class="text-lg text-blue-800 hover:underline">
+                    <h3>Cholera documentary</h3>
+                </a>
+                <p class="text-gray-700 mt-1 text-sm"></p>
+            </div>
+        </div>
+        
+        <div class="mb-8 flex flex-col md:flex-row" 
+             x-show="activeFilter === 'all' || 'youtube videos' === activeFilter">
+            
+            <a href="https://pushpak.prabhat.co/videos/youtube-videos/2.-head-injury-treatment_algorithm/" class="w-full md:w-1/6 flex-shrink-0">
+                <div class="relative group">
+                    
+                    
+                    
+                        
+                    
+
+                    
+                        <img src="/videos/YouTube-Videos/img/thumbnail2.png" alt="Head Injury (treatment_algorithm)" class="w-full h-32 object-cover rounded-lg">
+                    
+
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-6xl opacity-0 group-hover:opacity-100 transition-opacity">play_circle</span>
+                    </div>
+                    
+                    <div class="absolute bottom-1 right-1 bg-black bg-opacity-75 text-white text-xs px-1 rounded">
+                        05:21
+                    </div>
+                    
+                </div>
+            </a>
+            <div class="w-full md:w-5/6 md:pl-4 mt-2 md:mt-0">
+                <div class="text-sm text-gray-600">drive.google.com</div>
+                <a href="https://pushpak.prabhat.co/videos/youtube-videos/2.-head-injury-treatment_algorithm/" class="text-lg text-blue-800 hover:underline">
+                    <h3>Head Injury (treatment_algorithm)</h3>
+                </a>
+                <p class="text-gray-700 mt-1 text-sm"></p>
+            </div>
+        </div>
+        
+        <div class="mb-8 flex flex-col md:flex-row" 
+             x-show="activeFilter === 'all' || 'motion posters' === activeFilter">
+            
+            <a href="https://pushpak.prabhat.co/videos/motion-posters/4_lakers/" class="w-full md:w-1/6 flex-shrink-0">
+                <div class="relative group">
+                    
+                    
+                    
+                        
+                    
+
+                    
+                        <img src="/videos/Motion%20Posters/img/thumbnail%20%284%29.png" alt="Lakers" class="w-full h-32 object-cover rounded-lg">
+                    
+
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-6xl opacity-0 group-hover:opacity-100 transition-opacity">play_circle</span>
+                    </div>
+                    
+                    <div class="absolute bottom-1 right-1 bg-black bg-opacity-75 text-white text-xs px-1 rounded">
+                        00:06
+                    </div>
+                    
+                </div>
+            </a>
+            <div class="w-full md:w-5/6 md:pl-4 mt-2 md:mt-0">
+                <div class="text-sm text-gray-600">drive.google.com</div>
+                <a href="https://pushpak.prabhat.co/videos/motion-posters/4_lakers/" class="text-lg text-blue-800 hover:underline">
+                    <h3>Lakers</h3>
+                </a>
+                <p class="text-gray-700 mt-1 text-sm"></p>
+            </div>
+        </div>
+        
+        <div class="mb-8 flex flex-col md:flex-row" 
+             x-show="activeFilter === 'all' || 'youtube videos' === activeFilter">
+            
+            <a href="https://pushpak.prabhat.co/videos/youtube-videos/1.-monkey-pox-documentary/" class="w-full md:w-1/6 flex-shrink-0">
+                <div class="relative group">
+                    
+                    
+                    
+                        
+                    
+
+                    
+                        <img src="/videos/YouTube-Videos/img/thumbnail1.png" alt="Monkey Pox documentary" class="w-full h-32 object-cover rounded-lg">
+                    
+
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-6xl opacity-0 group-hover:opacity-100 transition-opacity">play_circle</span>
+                    </div>
+                    
+                    <div class="absolute bottom-1 right-1 bg-black bg-opacity-75 text-white text-xs px-1 rounded">
+                        05:27
+                    </div>
+                    
+                </div>
+            </a>
+            <div class="w-full md:w-5/6 md:pl-4 mt-2 md:mt-0">
+                <div class="text-sm text-gray-600">drive.google.com</div>
+                <a href="https://pushpak.prabhat.co/videos/youtube-videos/1.-monkey-pox-documentary/" class="text-lg text-blue-800 hover:underline">
+                    <h3>Monkey Pox documentary</h3>
+                </a>
+                <p class="text-gray-700 mt-1 text-sm"></p>
+            </div>
+        </div>
+        
+        <div class="mb-8 flex flex-col md:flex-row" 
+             x-show="activeFilter === 'all' || 'promotional video' === activeFilter">
+            
+            <a href="https://pushpak.prabhat.co/videos/promotional-videos/4.-neuros_promo/" class="w-full md:w-1/6 flex-shrink-0">
+                <div class="relative group">
+                    
+                    
+                    
+                        
+                    
+
+                    
+                        <img src="/videos/Promotional-Videos/img/thumbnail4.png" alt="Neuros Promo" class="w-full h-32 object-cover rounded-lg">
+                    
+
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-6xl opacity-0 group-hover:opacity-100 transition-opacity">play_circle</span>
+                    </div>
+                    
+                    <div class="absolute bottom-1 right-1 bg-black bg-opacity-75 text-white text-xs px-1 rounded">
+                        0:50
+                    </div>
+                    
+                </div>
+            </a>
+            <div class="w-full md:w-5/6 md:pl-4 mt-2 md:mt-0">
+                <div class="text-sm text-gray-600">drive.google.com</div>
+                <a href="https://pushpak.prabhat.co/videos/promotional-videos/4.-neuros_promo/" class="text-lg text-blue-800 hover:underline">
+                    <h3>Neuros Promo</h3>
+                </a>
+                <p class="text-gray-700 mt-1 text-sm"></p>
+            </div>
+        </div>
+        
+        <div class="mb-8 flex flex-col md:flex-row" 
+             x-show="activeFilter === 'all' || 'youtube videos' === activeFilter">
+            
+            <a href="https://pushpak.prabhat.co/videos/youtube-videos/5.-pneumothorax/" class="w-full md:w-1/6 flex-shrink-0">
+                <div class="relative group">
+                    
+                    
+                    
+                        
+                    
+
+                    
+                        <img src="/videos/YouTube-Videos/img/thumbnail5.png" alt="Pneumothorax" class="w-full h-32 object-cover rounded-lg">
+                    
+
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-6xl opacity-0 group-hover:opacity-100 transition-opacity">play_circle</span>
+                    </div>
+                    
+                    <div class="absolute bottom-1 right-1 bg-black bg-opacity-75 text-white text-xs px-1 rounded">
+                        00:54
+                    </div>
+                    
+                </div>
+            </a>
+            <div class="w-full md:w-5/6 md:pl-4 mt-2 md:mt-0">
+                <div class="text-sm text-gray-600">drive.google.com</div>
+                <a href="https://pushpak.prabhat.co/videos/youtube-videos/5.-pneumothorax/" class="text-lg text-blue-800 hover:underline">
+                    <h3>Pneumothorax</h3>
+                </a>
+                <p class="text-gray-700 mt-1 text-sm"></p>
+            </div>
+        </div>
+        
+        <div class="mb-8 flex flex-col md:flex-row" 
+             x-show="activeFilter === 'all' || 'promotional video' === activeFilter">
+            
+            <a href="https://pushpak.prabhat.co/videos/promotional-videos/5.-prep-intro/" class="w-full md:w-1/6 flex-shrink-0">
+                <div class="relative group">
+                    
+                    
+                    
+                        
+                    
+
+                    
+                        <img src="/videos/Promotional-Videos/img/thumbnail5.png" alt="Prep Intro" class="w-full h-32 object-cover rounded-lg">
+                    
+
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-6xl opacity-0 group-hover:opacity-100 transition-opacity">play_circle</span>
+                    </div>
+                    
+                    <div class="absolute bottom-1 right-1 bg-black bg-opacity-75 text-white text-xs px-1 rounded">
+                        00:25
+                    </div>
+                    
+                </div>
+            </a>
+            <div class="w-full md:w-5/6 md:pl-4 mt-2 md:mt-0">
+                <div class="text-sm text-gray-600">drive.google.com</div>
+                <a href="https://pushpak.prabhat.co/videos/promotional-videos/5.-prep-intro/" class="text-lg text-blue-800 hover:underline">
+                    <h3>Prep Intro</h3>
+                </a>
+                <p class="text-gray-700 mt-1 text-sm"></p>
+            </div>
+        </div>
+        
+        <div class="mb-8 flex flex-col md:flex-row" 
+             x-show="activeFilter === 'all' || 'promotional video' === activeFilter">
+            
+            <a href="https://pushpak.prabhat.co/videos/promotional-videos/3.-prepai/" class="w-full md:w-1/6 flex-shrink-0">
+                <div class="relative group">
+                    
+                    
+                    
+                        
+                    
+
+                    
+                        <img src="/videos/Promotional-Videos/img/thumbnail3.png" alt="PrepAI" class="w-full h-32 object-cover rounded-lg">
+                    
+
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-6xl opacity-0 group-hover:opacity-100 transition-opacity">play_circle</span>
+                    </div>
+                    
+                    <div class="absolute bottom-1 right-1 bg-black bg-opacity-75 text-white text-xs px-1 rounded">
+                        00:24
+                    </div>
+                    
+                </div>
+            </a>
+            <div class="w-full md:w-5/6 md:pl-4 mt-2 md:mt-0">
+                <div class="text-sm text-gray-600">drive.google.com</div>
+                <a href="https://pushpak.prabhat.co/videos/promotional-videos/3.-prepai/" class="text-lg text-blue-800 hover:underline">
                     <h3>PrepAI</h3>
+                </a>
+                <p class="text-gray-700 mt-1 text-sm"></p>
+            </div>
+        </div>
+        
+        <div class="mb-8 flex flex-col md:flex-row" 
+             x-show="activeFilter === 'all' || 'motion posters' === activeFilter">
+            
+            <a href="https://pushpak.prabhat.co/videos/motion-posters/6_samsung/" class="w-full md:w-1/6 flex-shrink-0">
+                <div class="relative group">
+                    
+                    
+                    
+                        
+                    
+
+                    
+                        <img src="/videos/Motion%20Posters/img/thumbnail%20%286%29.png" alt="Samsung" class="w-full h-32 object-cover rounded-lg">
+                    
+
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-6xl opacity-0 group-hover:opacity-100 transition-opacity">play_circle</span>
+                    </div>
+                    
+                    <div class="absolute bottom-1 right-1 bg-black bg-opacity-75 text-white text-xs px-1 rounded">
+                        00:06
+                    </div>
+                    
+                </div>
+            </a>
+            <div class="w-full md:w-5/6 md:pl-4 mt-2 md:mt-0">
+                <div class="text-sm text-gray-600">drive.google.com</div>
+                <a href="https://pushpak.prabhat.co/videos/motion-posters/6_samsung/" class="text-lg text-blue-800 hover:underline">
+                    <h3>Samsung</h3>
                 </a>
                 <p class="text-gray-700 mt-1 text-sm"></p>
             </div>
@@ -301,6 +744,11 @@
             1
         </a>
     
+        <a href="/videos/page/2/" class="flex flex-col items-center text-sm hover:text-red-600">
+            <span class="text-2xl font-light text-blue-600">o</span>
+            2
+        </a>
+    
     <span class="text-4xl font-light text-green-600">g</span>
     <span class="text-4xl font-light text-red-600">l</span>
     <span class="text-4xl font-light text-yellow-500">e</span>
@@ -310,23 +758,65 @@
 </main>
     <footer class="bg-gray-100 text-sm text-gray-600">
         <div class="p-4 border-b flex items-center space-x-2 md:pl-36">
-            <span class="font-bold">India</span>
-            <span class="text-gray-500">- From your IP address - Update location</span>
+            <span class="text-gray-500">- Developed by pspk :)</span>
         </div>
         <div class="p-4 flex flex-col md:flex-row md:justify-between md:pl-36">
             <div class="flex space-x-6">
                 <a href="#" class="hover:underline">Help</a>
-                <a href="#" class="hover:underline">Send feedback</a>
+                <a href="mailto:prabhat.pushpak@gmail.com" class="hover:underline">Send feedback</a>
                 <a href="#" class="hover:underline">Privacy</a>
                 <a href="#" class="hover:underline">Terms</a>
             </div>
         </div>
     </footer>
     
-    <div id="messageBox" class="fixed bottom-5 left-1/2 -translate-x-1/2 bg-gray-800 text-white px-4 py-2 rounded-md shadow-lg opacity-0 transition-opacity duration-300 z-[101]">
-        Link copied to clipboard!
+<div id="popup-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden"></div>
+<div id="popup-modal" class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg shadow-lg z-50 p-6 hidden w-11/12 md:w-auto md:max-w-md">
+    <h2 class="text-lg font-medium text-gray-900">Before We Proceed, a Moment of Clarity</h2>
+    <div id="popup-text-content" class="mt-2 text-sm text-gray-600 max-h-48 overflow-y-auto pr-2">
+        <p>Greetings, intrepid traveler of the digital cosmos. You've stumbled upon a peculiar nexus of pixels and code, a portfolio masquerading as a familiar search engine. This is a grand illusion, a testament to the creative whims of a motion designer and web developer who enjoys a bit of playful deception.
+        <br><br>
+        By clicking 'Accept', you acknowledge that this is not the search engine you think it is. You agree not to hold us responsible if you find yourself questioning the nature of reality, the illusion of choice, or why you suddenly have the urge to learn more about this website. If you were looking for the actual Google, you've taken a wonderfully scenic detour.
+        <br><br>
+        Should you choose to 'Deny,' you'll be sent back to the void from whence you came (or, you know, the pop-up will just close). Either way, what is 'real' anyway? Just a series of electrical impulses interpreted by your brain.
+        <br><br>
+        Proceed with a sense of humor and an open mind. The rabbit hole is deep, but the website is smooth.</p>
     </div>
+    <div class="mt-4 flex items-center">
+        <input type="checkbox" id="terms-checkbox" class="mr-2">
+        <label for="terms-checkbox" class="text-sm text-gray-600">I agree to the terms and conditions.</label>
+    </div>
+    <div class="mt-4 flex justify-between items-center">
+        <button id="scroll-down-button" class="p-2 rounded-full text-gray-400 hover:bg-gray-100">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+        </button>
+        <div class="flex justify-end space-x-2">
+            <button id="deny-button" class="m3-btn m3-btn-text">Deny</button>
+            <button id="accept-button" class="m3-btn m3-btn-filled" disabled>Accept</button>
+        </div>
+    </div>
+</div>
 
+<script>
+      document.addEventListener('DOMContentLoaded', () => {
+        
+        if (window.innerWidth < 768) {
+          const mobileImageSlider = document.querySelector('#mobile-image-slider');
+          
+          if (mobileImageSlider) {
+            const swiper = new Swiper(mobileImageSlider, {
+              slidesPerView: 1,
+              spaceBetween: 10,
+              pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+              },
+            });
+          }
+        }
+      });
+    </script>
     <script src="/js/gallery.js"></script>
+    <script src="/js/popup.js"></script>
 </body>
 </html>

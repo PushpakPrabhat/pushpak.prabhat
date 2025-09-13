@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Work - Pushpak Prabhat</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="/css/style.css">
@@ -10,8 +10,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
 
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <style>
@@ -41,8 +43,8 @@
     </style>
 </head>
 <body class="bg-white">
-    <header class="border-b border-gray-200 sticky top-0 bg-white z-10">
-        <div class="p-4 md:hidden">
+    <header id="header" class="border-b border-gray-200 sticky top-0 bg-white z-10">
+        <div class="p-4 md:hidden header-content">
             <div class="flex justify-between items-center mb-4">
                 <svg class="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -50,7 +52,7 @@
                 <a href="/">
                     <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" alt="Google" class="h-8">
                 </a>
-                <img src="/Images/p3.JPG" alt="User Avatar" class="h-8 w-8 rounded-full">
+                <img src="/img/profile1.jpg" alt="User Avatar" class="h-8 w-8 rounded-full">
             </div>
             <div class="relative">
                 <input type="text" value="Work" class="w-full border border-gray-300 rounded-full py-2 px-4 pl-10 pr-12 focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm">
@@ -59,7 +61,7 @@
             </div>
         </div>
 
-        <div class="hidden md:flex p-4 items-center">
+        <div class="hidden md:flex p-4 items-center header-content">
             <a href="/" class="mr-4">
                 <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" alt="Google" class="h-8">
             </a>
@@ -73,23 +75,26 @@
             <div class="flex items-center space-x-4 ml-auto">
                 <span class="ml-4 material-symbols-outlined text-gray-500 cursor-pointer">settings</span>
                 <svg class="h-6 w-6 text-gray-500 cursor-pointer" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z"></path></svg>
-                <img src="/Images/p3.JPG" alt="User Avatar" class="h-8 w-8 rounded-full">
+                <img src="/img/profile1.jpg" alt="User Avatar" class="h-8 w-8 rounded-full">
             </div>
         </div>
 
         <div class="px-4 md:pl-36">
             <nav class="flex space-x-4 md:space-x-8 text-sm text-gray-500 overflow-x-auto whitespace-nowrap mobile-nav-scroll">
                 <a href="/all" class="flex items-center space-x-2 py-2 flex-shrink-0 ">
-                    <span class="material-symbols-outlined" style="font-size: 16px;">search</span>
                     <span>All</span>
                 </a>
-                <a href="/photos/" class="flex items-center space-x-2 py-2 flex-shrink-0 ">
+                <a href="/images/" class="flex items-center space-x-2 py-2 flex-shrink-0 ">
                     <span class="material-symbols-outlined" style="font-size: 16px;">image</span>
                     <span>Images</span>
                 </a>
                 <a href="/videos/" class="flex items-center space-x-2 py-2 flex-shrink-0 ">
                     <span class="material-symbols-outlined" style="font-size: 16px;">play_circle</span>
                     <span>Videos</span>
+                </a>
+                <a href="/web/" class="flex items-center space-x-2 py-2 flex-shrink-0 ">
+                    <span class="material-symbols-outlined" style="font-size: 16px;">public</span>
+                    <span>Web</span>
                 </a>
                 <a href="/work/" class="flex items-center space-x-2 py-2 flex-shrink-0 g-active-tab">
                     <span class="material-symbols-outlined" style="font-size: 16px;">work</span>
@@ -101,39 +106,46 @@
 <main>
 <div class="w-full p-4 md:pl-36 md:pr-8">
     <div class="max-w-4xl">
-        <h1 class="text-2xl font-bold text-gray-900 mb-6">Work Experience</h1>
+        <h1 class="text-2xl font-medium text-gray-900 mb-6">Work Experience</h1>
         
         <div class="mb-8">
-            <h2 class="text-xl font-semibold text-blue-800">Sr. Motion Designer / Video Editor</h2>
-            <p class="font-medium text-gray-800">Adda247 (PrepInsta)</p>
+            <h2 class="text-xl font-medium text-blue-800">Senior Motion Designer</h2>
+            <p class="font-regular text-gray-800">PrepInsta, Career247 (Adda247)</p>
             <p class="text-sm text-gray-500">June 2025 - Present</p>
-            <p class="mt-2 text-gray-700">Making Design and advertisements to enhance visibility and visual consistency across platforms. Boosted overall Motion Design standards, contributing to significant and viewer growth.</p>
+            <p class="mt-2 text-gray-700">Executed design and advertisement projects to enhance brand visibility and ensure visual consistency across all platforms. Elevated overall Motion Design standards, contributing to significant viewer and platform growth.</p>
         </div>
         
         <div class="mb-8">
-            <h2 class="text-xl font-semibold text-blue-800">Sr. Animator / Video Editor</h2>
-            <p class="font-medium text-gray-800">PrepLadder (Unacademy)</p>
+            <h2 class="text-xl font-medium text-blue-800">Senior Animator</h2>
+            <p class="font-regular text-gray-800">PrepLadder (Unacademy)</p>
             <p class="text-sm text-gray-500">Jul 2022 - June 2025</p>
-            <p class="mt-2 text-gray-700">Spearheaded motion design for over 25&#43; advertisement campaigns, improving video engagement by 35%. Produced 4 successful YouTube series including &#39;Treatment Algorithms&#39; and &#39;Recall Rush&#39;, helping grow the channel by 80,000&#43; subscribers and drive 1.9M &#43; views within a year.</p>
+            <p class="mt-2 text-gray-700">Spearheaded motion design for over 25 advertisement campaigns, resulting in a 35% improvement in video engagement. Produced four successful YouTube series, which contributed to an 80,000&#43; subscriber increase and generated over 4&#43; million views within one year.</p>
         </div>
         
         <div class="mb-8">
-            <h2 class="text-xl font-semibold text-blue-800">Motion Designer</h2>
-            <p class="font-medium text-gray-800">Shuttlerock (Fotografik)</p>
+            <h2 class="text-xl font-medium text-blue-800">Motion Designer</h2>
+            <p class="font-regular text-gray-800">Shuttlerock (Fotografik)</p>
             <p class="text-sm text-gray-500">Nov 2021 - July 2022</p>
-            <p class="mt-2 text-gray-700">Designed motion graphics for 30&#43; global brand campaigns, meeting 100% of tight delivery deadlines. Reduced project revision rates by 15% by improving clarity in storyboarding and client communication.</p>
+            <p class="mt-2 text-gray-700">Designed and delivered motion graphics for more than 30 global brand campaigns, consistently meeting all delivery deadlines. Reduced project revision rates by 15% through enhanced clarity in storyboarding and client communication protocols.</p>
+        </div>
+        
+        <div class="mb-8">
+            <h2 class="text-xl font-medium text-blue-800">Web Developer</h2>
+            <p class="font-regular text-gray-800">Freelance</p>
+            <p class="text-sm text-gray-500">Feb 2019 - Present</p>
+            <p class="mt-2 text-gray-700"></p>
         </div>
         
 
-        <h1 class="text-2xl font-bold text-gray-900 mt-12 mb-6">Awards & Recognitions</h1>
+        <h1 class="text-2xl font-medium text-gray-900 mt-12 mb-6">Awards & Recognitions</h1>
         
         <div class="mb-6">
-            <h2 class="text-lg font-semibold text-blue-800">PrepStar of the Year</h2>
+            <h2 class="text-lg font-medium text-blue-800">PrepStar of the Year</h2>
             <p class="text-sm text-gray-500">PrepLadder (Unacademy) - 2022</p>
         </div>
         
         <div class="mb-6">
-            <h2 class="text-lg font-semibold text-blue-800">Top Performer Award</h2>
+            <h2 class="text-lg font-medium text-blue-800">Top Performer Award</h2>
             <p class="text-sm text-gray-500">PrepLadder (Unacademy) - 2023</p>
         </div>
         
@@ -142,23 +154,65 @@
 </main>
     <footer class="bg-gray-100 text-sm text-gray-600">
         <div class="p-4 border-b flex items-center space-x-2 md:pl-36">
-            <span class="font-bold">India</span>
-            <span class="text-gray-500">- From your IP address - Update location</span>
+            <span class="text-gray-500">- Developed by pspk :)</span>
         </div>
         <div class="p-4 flex flex-col md:flex-row md:justify-between md:pl-36">
             <div class="flex space-x-6">
                 <a href="#" class="hover:underline">Help</a>
-                <a href="#" class="hover:underline">Send feedback</a>
+                <a href="mailto:prabhat.pushpak@gmail.com" class="hover:underline">Send feedback</a>
                 <a href="#" class="hover:underline">Privacy</a>
                 <a href="#" class="hover:underline">Terms</a>
             </div>
         </div>
     </footer>
     
-    <div id="messageBox" class="fixed bottom-5 left-1/2 -translate-x-1/2 bg-gray-800 text-white px-4 py-2 rounded-md shadow-lg opacity-0 transition-opacity duration-300 z-[101]">
-        Link copied to clipboard!
+<div id="popup-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden"></div>
+<div id="popup-modal" class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg shadow-lg z-50 p-6 hidden w-11/12 md:w-auto md:max-w-md">
+    <h2 class="text-lg font-medium text-gray-900">Before We Proceed, a Moment of Clarity</h2>
+    <div id="popup-text-content" class="mt-2 text-sm text-gray-600 max-h-48 overflow-y-auto pr-2">
+        <p>Greetings, intrepid traveler of the digital cosmos. You've stumbled upon a peculiar nexus of pixels and code, a portfolio masquerading as a familiar search engine. This is a grand illusion, a testament to the creative whims of a motion designer and web developer who enjoys a bit of playful deception.
+        <br><br>
+        By clicking 'Accept', you acknowledge that this is not the search engine you think it is. You agree not to hold us responsible if you find yourself questioning the nature of reality, the illusion of choice, or why you suddenly have the urge to learn more about this website. If you were looking for the actual Google, you've taken a wonderfully scenic detour.
+        <br><br>
+        Should you choose to 'Deny,' you'll be sent back to the void from whence you came (or, you know, the pop-up will just close). Either way, what is 'real' anyway? Just a series of electrical impulses interpreted by your brain.
+        <br><br>
+        Proceed with a sense of humor and an open mind. The rabbit hole is deep, but the website is smooth.</p>
     </div>
+    <div class="mt-4 flex items-center">
+        <input type="checkbox" id="terms-checkbox" class="mr-2">
+        <label for="terms-checkbox" class="text-sm text-gray-600">I agree to the terms and conditions.</label>
+    </div>
+    <div class="mt-4 flex justify-between items-center">
+        <button id="scroll-down-button" class="p-2 rounded-full text-gray-400 hover:bg-gray-100">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+        </button>
+        <div class="flex justify-end space-x-2">
+            <button id="deny-button" class="m3-btn m3-btn-text">Deny</button>
+            <button id="accept-button" class="m3-btn m3-btn-filled" disabled>Accept</button>
+        </div>
+    </div>
+</div>
 
+<script>
+      document.addEventListener('DOMContentLoaded', () => {
+        
+        if (window.innerWidth < 768) {
+          const mobileImageSlider = document.querySelector('#mobile-image-slider');
+          
+          if (mobileImageSlider) {
+            const swiper = new Swiper(mobileImageSlider, {
+              slidesPerView: 1,
+              spaceBetween: 10,
+              pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+              },
+            });
+          }
+        }
+      });
+    </script>
     <script src="/js/gallery.js"></script>
+    <script src="/js/popup.js"></script>
 </body>
 </html>
