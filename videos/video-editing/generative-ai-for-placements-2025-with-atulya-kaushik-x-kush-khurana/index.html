@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>Videos - Pushpak Prabhat</title>
+    <title>Generative AI for Placements 2025 with Atulya Kaushik X Kush Khurana - Pushpak Prabhat</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/gallery.css">
@@ -55,7 +55,7 @@
                 <img src="/img/profile1.jpg" alt="User Avatar" class="h-8 w-8 rounded-full">
             </div>
             <div class="relative">
-                <input type="text" value="Videos" class="w-full border border-gray-300 rounded-full py-2 px-4 pl-10 pr-12 focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm">
+                <input type="text" value="Generative AI for Placements 2025 with Atulya Kaushik X Kush Khurana" class="w-full border border-gray-300 rounded-full py-2 px-4 pl-10 pr-12 focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm">
                 <svg class="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
                 <svg class="absolute right-4 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-500 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 14a3 3 0 0 0 3-3V5a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3z"></path><path d="M17 11a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"></path></svg>
             </div>
@@ -67,7 +67,7 @@
             </a>
             <div class="flex-grow max-w-2xl">
                 <div class="relative">
-                    <input type="text" value="Videos" class="w-full border border-gray-300 rounded-full py-2 px-4 pl-10 pr-12 focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm">
+                    <input type="text" value="Generative AI for Placements 2025 with Atulya Kaushik X Kush Khurana" class="w-full border border-gray-300 rounded-full py-2 px-4 pl-10 pr-12 focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm">
                     <svg class="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
                     <svg class="absolute right-4 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-500 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 14a3 3 0 0 0 3-3V5a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3z"></path><path d="M17 11a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"></path></svg>
                 </div>
@@ -104,113 +104,195 @@
         </div>
     </header>
 <main>
-<div class="w-full p-4 md:pl-36 md:pr-8" x-data="{ activeFilter: localStorage.getItem('video_gallery_filter') || 'all' }" x-init="$watch('activeFilter', val => localStorage.setItem('video_gallery_filter', val))">
-    <div class="flex space-x-3 overflow-x-auto pb-4">
-        <a href="#" @click.prevent="activeFilter = 'all'" :class="{ 'bg-blue-500 text-white': activeFilter === 'all', 'bg-gray-100 hover:bg-gray-200': activeFilter !== 'all' }" class="px-4 py-2 rounded-full text-sm whitespace-nowrap">All</a>
-        
-        <a href="#" @click.prevent="activeFilter = 'promotional video'" :class="{ 'bg-blue-500 text-white': activeFilter === 'promotional video', 'bg-gray-100 hover:bg-gray-200': activeFilter !== 'promotional video' }" class="px-4 py-2 rounded-full text-sm whitespace-nowrap">Promotional Video</a>
-        
-        <a href="#" @click.prevent="activeFilter = 'youtube videos'" :class="{ 'bg-blue-500 text-white': activeFilter === 'youtube videos', 'bg-gray-100 hover:bg-gray-200': activeFilter !== 'youtube videos' }" class="px-4 py-2 rounded-full text-sm whitespace-nowrap">YouTube Videos</a>
-        
-        <a href="#" @click.prevent="activeFilter = 'motion posters'" :class="{ 'bg-blue-500 text-white': activeFilter === 'motion posters', 'bg-gray-100 hover:bg-gray-200': activeFilter !== 'motion posters' }" class="px-4 py-2 rounded-full text-sm whitespace-nowrap">Motion Posters</a>
-        
-        <a href="#" @click.prevent="activeFilter = 'video editing'" :class="{ 'bg-blue-500 text-white': activeFilter === 'video editing', 'bg-gray-100 hover:bg-gray-200': activeFilter !== 'video editing' }" class="px-4 py-2 rounded-full text-sm whitespace-nowrap">Video Editing</a>
-        
-    </div>
+<style>
+   
+  #video-container {
+    position: relative;
+    width: 100%;
+    background-color: #000;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  }
 
-    <div id="video-grid">
-        
-        
-        <div class="mb-8 flex flex-col md:flex-row" 
-             x-show="activeFilter === 'all' || 'youtube videos' === activeFilter">
-            
-            <a href="https://pushpak.prabhat.co/videos/youtube-videos/7-career247-ad/" class="w-full md:w-1/6 flex-shrink-0">
-                <div class="relative group">
-                    
-                    
-                    
-                        
-                    
+   
+  #video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 
-                    
-                        <img src="/videos/youtube-videos/img/thumbnail7.png" alt="Career247_Ad 01" class="w-full h-32 object-cover rounded-lg">
-                    
+   
+  #video-container.is-short {
+    max-width: 320px;  
+    margin-left: auto;
+    margin-right: auto;
+    aspect-ratio: 9 / 16;
+  }
+</style>
 
-                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
-                        <span class="material-symbols-outlined text-white text-6xl opacity-0 group-hover:opacity-100 transition-opacity">play_circle</span>
-                    </div>
+<div class="relative">
+    
+    
+    <a href="https://pushpak.prabhat.co/videos/youtube-videos/7-career247-ad/" title="Career247_Ad 01" class="hidden lg:flex fixed right-4 top-1/2 -translate-y-1/2 bg-white/80 p-3 rounded-full shadow-md hover:bg-white z-30 transition-all">
+        <svg class="w-6 h-6 text-gray-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+    </a>
+    
+
+    <div id="swipe-container" class="w-full max-w-6xl mx-auto p-4 py-8">
+        <div class="flex flex-col lg:flex-row lg:space-x-8">
+
+            <div class="w-full lg:w-2/3">
+                <div id="video-container" class="">
                     
-                    <div class="absolute bottom-1 right-1 bg-black bg-opacity-75 text-white text-xs px-1 rounded">
-                        00:30
-                    </div>
+                    <iframe src="https://www.youtube.com/embed/qadt4IFTwcM?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     
                 </div>
-            </a>
-            <div class="w-full md:w-5/6 md:pl-4 mt-2 md:mt-0">
-                <div class="text-sm text-gray-600">drive.google.com</div>
-                <a href="https://pushpak.prabhat.co/videos/youtube-videos/7-career247-ad/" class="text-lg text-blue-800 hover:underline">
-                    <h3>Career247_Ad 01</h3>
-                </a>
-                <p class="text-gray-700 mt-1 text-sm"></p>
-            </div>
-        </div>
-        
-        <div class="mb-8 flex flex-col md:flex-row" 
-             x-show="activeFilter === 'all' || 'video editing' === activeFilter">
-            
-            <a href="https://pushpak.prabhat.co/videos/video-editing/generative-ai-for-placements-2025-with-atulya-kaushik-x-kush-khurana/" class="w-full md:w-1/6 flex-shrink-0">
-                <div class="relative group">
-                    
-                    
-                    
+                <div class="mt-4">
+                    <h1 class="text-2xl md:text-3xl font-bold text-gray-800">Generative AI for Placements 2025 with Atulya Kaushik X Kush Khurana</h1>
+                    <div class="flex items-center space-x-4 text-sm text-gray-500 mt-2">
                         
-                    
-
-                    
-                        <img src="/videos/video-editing/img/thumbnail1.png" alt="Generative AI for Placements 2025 with Atulya Kaushik X Kush Khurana" class="w-full h-32 object-cover rounded-lg">
-                    
-
-                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
-                        <span class="material-symbols-outlined text-white text-6xl opacity-0 group-hover:opacity-100 transition-opacity">play_circle</span>
+                        
+                        
+                        <span>Video Editing</span>
                     </div>
-                    
-                    <div class="absolute bottom-1 right-1 bg-black bg-opacity-75 text-white text-xs px-1 rounded">
-                        1:07:52
+                    <div class="hidden lg:block border-t pt-4 mt-4">
+                        
                     </div>
-                    
                 </div>
-            </a>
-            <div class="w-full md:w-5/6 md:pl-4 mt-2 md:mt-0">
-                <div class="text-sm text-gray-600">youtube.com</div>
-                <a href="https://pushpak.prabhat.co/videos/video-editing/generative-ai-for-placements-2025-with-atulya-kaushik-x-kush-khurana/" class="text-lg text-blue-800 hover:underline">
-                    <h3>Generative AI for Placements 2025 with Atulya Kaushik X Kush Khurana</h3>
-                </a>
-                <p class="text-gray-700 mt-1 text-sm"></p>
+            </div>
+
+            <div class="w-full lg:w-1/3 mt-8 lg:mt-0">
+                <div class="sticky top-24">
+                    <div class="flex items-center space-x-2 mb-4">
+                        
+                        <a href="https://www.youtube.com/watch?v=qadt4IFTwcM" target="_blank" class="flex-1 text-center bg-red-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-red-700 flex items-center justify-center space-x-2">
+                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M21.582,6.186c-0.23-0.86-0.908-1.538-1.768-1.768C18.267,4,12,4,12,4S5.733,4,4.186,4.418 c-0.86,0.23-1.538,0.908-1.768,1.768C2,7.733,2,12,2,12s0,4.267,0.418,5.814c0.23,0.86,0.908,1.538,1.768,1.768 C5.733,20,12,20,12,20s6.267,0,7.814-0.418c0.861-0.23,1.538-0.908,1.768-1.768C22,16.267,22,12,22,12S22,7.733,21.582,6.186z M10,15.464V8.536L16,12L10,15.464z"></path></svg>
+                            <span>YouTube</span>
+                        </a>
+                        
+                        <button id="share-btn" class="flex-1 flex items-center justify-center space-x-2 py-2 bg-gray-100 rounded-full text-sm font-medium hover:bg-gray-200">
+                            <span class="material-symbols-outlined" style="font-size: 20px;">share</span>
+                            <span>Share</span>
+                        </button>
+                    </div>
+                     <div class="border-t pt-4">
+                        <div class="block lg:hidden">
+                            
+                        </div>
+                        
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Related Videos</h3>
+                        <div class="space-y-3">
+                           
+                           
+                           
+                           
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        
     </div>
-
-    <div class="flex items-center justify-center space-x-2 mt-12 text-blue-800">
-    <span class="text-4xl font-light text-blue-600">G</span>
-    
-    
-        <a href="/videos/" class="flex flex-col items-center text-sm hover:text-red-600">
-            <span class="text-2xl font-light text-blue-600">o</span>
-            1
-        </a>
-    
-        <a href="/videos/page/2/" class="flex flex-col items-center text-sm text-red-600 font-bold">
-            <span class="text-2xl font-light text-yellow-500">o</span>
-            2
-        </a>
-    
-    <span class="text-4xl font-light text-green-600">g</span>
-    <span class="text-4xl font-light text-red-600">l</span>
-    <span class="text-4xl font-light text-yellow-500">e</span>
 </div>
 
-</div>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    
+    const videoContainer = document.getElementById('video-container');
+    const isShort = videoContainer.classList.contains('is-short');
+    
+    
+    if (!isShort) {
+        const youtubeId = "qadt4IFTwcM";
+        if (youtubeId) {
+            fetch(`https://www.youtube.com/oembed?url=http://www.youtube.com/watch?v=${youtubeId}&format=json`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.width && data.height) {
+                        videoContainer.style.aspectRatio = `${data.width} / ${data.height}`;
+                    } else {
+                        videoContainer.style.aspectRatio = '16 / 9'; 
+                    }
+                })
+                .catch(() => {
+                    videoContainer.style.aspectRatio = '16 / 9'; 
+                });
+        } else {
+             videoContainer.style.aspectRatio = '16 / 9'; 
+        }
+    }
+
+    
+    const shareBtn = document.getElementById('share-btn');
+    const messageBox = document.getElementById('messageBox');
+
+    if (shareBtn) {
+        shareBtn.addEventListener('click', () => {
+            const postUrl = window.location.href;
+            if (navigator.share) {
+                navigator.share({
+                    title: document.title,
+                    text: `Check out this video!`,
+                    url: postUrl,
+                }).catch(console.error);
+            } else {
+                navigator.clipboard.writeText(postUrl).then(() => {
+                    showMessage('Post link copied to clipboard!');
+                }).catch(err => {
+                    console.error('Could not copy text: ', err);
+                    showMessage('Failed to copy link.', true);
+                });
+            }
+        });
+    }
+
+    function showMessage(message, isError = false) {
+        if (!messageBox) return;
+        messageBox.textContent = message;
+        messageBox.className = `fixed bottom-5 left-1/2 -translate-x-1/2 px-4 py-2 rounded-md shadow-lg transition-opacity duration-300 ${isError ? 'bg-red-600' : 'bg-gray-800'} text-white z-[101]`;
+        messageBox.classList.remove('opacity-0');
+        setTimeout(() => {
+            messageBox.classList.add('opacity-0');
+        }, 3000);
+    }
+
+    
+    if (window.innerWidth < 1024) { 
+        const swipeContainer = document.getElementById('swipe-container');
+        let touchstartX = 0;
+        let touchendX = 0;
+
+        const nextUrl = "https:\/\/pushpak.prabhat.co\/videos\/youtube-videos\/7-career247-ad\/";
+        const prevUrl = "";
+
+        swipeContainer.addEventListener('touchstart', e => {
+            touchstartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        swipeContainer.addEventListener('touchend', e => {
+            touchendX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            
+            if (touchendX < touchstartX - 50) {
+                if (nextUrl) {
+                    window.location.href = nextUrl;
+                }
+            }
+            
+            if (touchendX > touchstartX + 50) {
+                if (prevUrl) {
+                    window.location.href = prevUrl;
+                }
+            }
+        }
+    }
+});
+</script>
 </main>
     <footer class="bg-gray-100 text-sm text-gray-600">
         <div class="p-4 border-b flex items-center space-x-2 md:pl-36">
